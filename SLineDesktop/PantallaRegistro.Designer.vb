@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class PantallaISesion
+Partial Class PantallaRegistro
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -69,7 +69,7 @@ Partial Class PantallaISesion
         Me.Button1.Text = "Siguiente"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'PantallaISesion
+        'PantallaRegistro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -78,7 +78,7 @@ Partial Class PantallaISesion
         Me.Controls.Add(Me.LabelSeleccion)
         Me.Controls.Add(Me.LabelEsquina)
         Me.Controls.Add(Me.PBLogo)
-        Me.Name = "PantallaISesion"
+        Me.Name = "PantallaRegistro"
         Me.Text = "Pantalla Inicio de sesión"
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -106,10 +106,10 @@
     <Compile Include="PantallaListar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallaISesion.Designer.vb">
-      <DependentUpon>PantallaISesion.vb</DependentUpon>
+    <Compile Include="PantallaRegistro.Designer.vb">
+      <DependentUpon>PantallaRegistro.vb</DependentUpon>
     </Compile>
-    <Compile Include="PantallaISesion.vb">
+    <Compile Include="PantallaRegistro.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -147,8 +147,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallaISesion.resx">
-      <DependentUpon>PantallaISesion.vb</DependentUpon>
+    <EmbeddedResource Include="PantallaRegistro.resx">
+      <DependentUpon>PantallaRegistro.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaModerar.resx">
       <DependentUpon>PantallaModerar.vb</DependentUpon>
