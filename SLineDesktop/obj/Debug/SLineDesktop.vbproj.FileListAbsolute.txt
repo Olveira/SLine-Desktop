@@ -1,0 +1,13 @@
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\bin\Debug\SLineDesktop.exe.config
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\bin\Debug\SLineDesktop.exe
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\bin\Debug\SLineDesktop.pdb
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\bin\Debug\SLineDesktop.xml
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\obj\Debug\SLineDesktop.vbprojAssemblyReference.cache
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\obj\Debug\SLineDesktop.Resources.resources
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\obj\Debug\SLineDesktop.vbproj.GenerateResource.cache
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\obj\Debug\SLineDesktop.vbproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\obj\Debug\SLineDesktop.exe
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\obj\Debug\SLineDesktop.xml
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\obj\Debug\SLineDesktop.pdb
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\obj\Debug\SLineDesktop.DesktopWellcome.resources
+C:\Users\admin\Desktop\Progra\SLineDesktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaRegistro.resources
