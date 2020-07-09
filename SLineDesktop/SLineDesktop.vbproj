@@ -132,9 +132,6 @@
     <EmbeddedResource Include="DesktopInicio.resx">
       <DependentUpon>DesktopIWellcome.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DesktopIWellcome.resx">
-      <DependentUpon>DesktopIWellcome.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PantallaEliminar.resx">
       <DependentUpon>PantallaEliminar.vb</DependentUpon>
     </EmbeddedResource>
