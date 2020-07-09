@@ -23,11 +23,11 @@ Partial Class InicioADM
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PBLogo = New System.Windows.Forms.PictureBox()
-        Me.LabelBienvenido = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblBienvenido = New System.Windows.Forms.Label()
+        Me.tbxPasswordLog = New System.Windows.Forms.TextBox()
+        Me.tbxUserLog = New System.Windows.Forms.TextBox()
+        Me.lblUsernameLog = New System.Windows.Forms.Label()
+        Me.lblPasswoedLog = New System.Windows.Forms.Label()
         Me.BtnAtras = New System.Windows.Forms.Button()
         Me.BtnSiguiente = New System.Windows.Forms.Button()
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,49 +43,49 @@ Partial Class InicioADM
         Me.PBLogo.TabIndex = 5
         Me.PBLogo.TabStop = False
         '
-        'LabelBienvenido
+        'lblBienvenido
         '
-        Me.LabelBienvenido.AutoSize = True
-        Me.LabelBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!)
-        Me.LabelBienvenido.Location = New System.Drawing.Point(216, 97)
-        Me.LabelBienvenido.Name = "LabelBienvenido"
-        Me.LabelBienvenido.Size = New System.Drawing.Size(307, 54)
-        Me.LabelBienvenido.TabIndex = 6
-        Me.LabelBienvenido.Text = "Ingrese datos"
+        Me.lblBienvenido.AutoSize = True
+        Me.lblBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!)
+        Me.lblBienvenido.Location = New System.Drawing.Point(216, 97)
+        Me.lblBienvenido.Name = "lblBienvenido"
+        Me.lblBienvenido.Size = New System.Drawing.Size(307, 54)
+        Me.lblBienvenido.TabIndex = 6
+        Me.lblBienvenido.Text = "Ingrese datos"
         '
-        'TextBox2
+        'tbxPasswordLog
         '
-        Me.TextBox2.Location = New System.Drawing.Point(328, 213)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.tbxPasswordLog.Location = New System.Drawing.Point(328, 213)
+        Me.tbxPasswordLog.Name = "tbxPasswordLog"
+        Me.tbxPasswordLog.Size = New System.Drawing.Size(100, 20)
+        Me.tbxPasswordLog.TabIndex = 8
         '
-        'TextBox3
+        'tbxUserLog
         '
-        Me.TextBox3.Location = New System.Drawing.Point(328, 175)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 9
+        Me.tbxUserLog.Location = New System.Drawing.Point(328, 175)
+        Me.tbxUserLog.Name = "tbxUserLog"
+        Me.tbxUserLog.Size = New System.Drawing.Size(100, 20)
+        Me.tbxUserLog.TabIndex = 9
         '
-        'Label1
+        'lblUsernameLog
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Label1.Location = New System.Drawing.Point(220, 170)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(102, 25)
-        Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Username"
+        Me.lblUsernameLog.AutoSize = True
+        Me.lblUsernameLog.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.lblUsernameLog.Location = New System.Drawing.Point(220, 170)
+        Me.lblUsernameLog.Name = "lblUsernameLog"
+        Me.lblUsernameLog.Size = New System.Drawing.Size(102, 25)
+        Me.lblUsernameLog.TabIndex = 10
+        Me.lblUsernameLog.Text = "Username"
         '
-        'Label2
+        'lblPasswoedLog
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Label2.Location = New System.Drawing.Point(220, 208)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(98, 25)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Password"
+        Me.lblPasswoedLog.AutoSize = True
+        Me.lblPasswoedLog.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.lblPasswoedLog.Location = New System.Drawing.Point(220, 208)
+        Me.lblPasswoedLog.Name = "lblPasswoedLog"
+        Me.lblPasswoedLog.Size = New System.Drawing.Size(98, 25)
+        Me.lblPasswoedLog.TabIndex = 11
+        Me.lblPasswoedLog.Text = "Password"
         '
         'BtnAtras
         '
@@ -114,11 +114,11 @@ Partial Class InicioADM
         Me.ClientSize = New System.Drawing.Size(734, 461)
         Me.Controls.Add(Me.BtnSiguiente)
         Me.Controls.Add(Me.BtnAtras)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.LabelBienvenido)
+        Me.Controls.Add(Me.lblPasswoedLog)
+        Me.Controls.Add(Me.lblUsernameLog)
+        Me.Controls.Add(Me.tbxUserLog)
+        Me.Controls.Add(Me.tbxPasswordLog)
+        Me.Controls.Add(Me.lblBienvenido)
         Me.Controls.Add(Me.PBLogo)
         Me.Name = "InicioADM"
         Me.Text = "Inicio de sesión ADM"
@@ -129,11 +129,11 @@ Partial Class InicioADM
     End Sub
 
     Friend WithEvents PBLogo As PictureBox
-    Friend WithEvents LabelBienvenido As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblBienvenido As Label
+    Friend WithEvents tbxPasswordLog As TextBox
+    Friend WithEvents tbxUserLog As TextBox
+    Friend WithEvents lblUsernameLog As Label
+    Friend WithEvents lblPasswoedLog As Label
     Friend WithEvents BtnAtras As Button
     Friend WithEvents BtnSiguiente As Button
 End Class
