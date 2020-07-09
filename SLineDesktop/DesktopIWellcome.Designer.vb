@@ -79,7 +79,7 @@ Partial Class DesktopWellcome
         Me.Controls.Add(Me.LabelBienvenido)
         Me.Controls.Add(Me.BtnSiguiente)
         Me.Name = "DesktopWellcome"
-        Me.Text = "Pantalla de Inicio"
+        Me.Text = " "
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
