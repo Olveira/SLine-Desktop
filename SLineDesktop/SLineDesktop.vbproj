@@ -88,6 +88,8 @@
     <Compile Include="InicioADM.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Logica\logicaUsuario.vb" />
+    <Compile Include="Logica\logicaCaso.vb" />
     <Compile Include="PantallaModerar.Designer.vb">
       <DependentUpon>PantallaModerar.vb</DependentUpon>
     </Compile>
@@ -169,6 +171,8 @@
   <ItemGroup>
     <None Include="Resources\Logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="persistecia\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
