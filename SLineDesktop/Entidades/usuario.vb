@@ -73,7 +73,7 @@
         End Set
     End Property
 
-    Public Sub New(username As String, email As String, password As String, sexo As String, fechaNac As Date, rol As String, token As Integer, id As Integer)
+    Public Sub New(username As String, email As String, password As String, sexo As String, fechaNac As Date, rol As String, token As Integer)
         _username = username
         _email = email
         _password = password
@@ -81,7 +81,6 @@
         _fechaNac = fechaNac
         _rol = rol
         _token = token
-        _id = id
     End Sub
     Public Sub New()
 

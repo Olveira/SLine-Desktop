@@ -25,7 +25,7 @@ Partial Class PantallaRegistro
         Me.PBLogo = New System.Windows.Forms.PictureBox()
         Me.LabelEsquina = New System.Windows.Forms.Label()
         Me.lblReg = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSiguienteReg = New System.Windows.Forms.Button()
         Me.lblUserReg = New System.Windows.Forms.Label()
         Me.lblEmailReg = New System.Windows.Forms.Label()
         Me.lblPasswordReg1 = New System.Windows.Forms.Label()
@@ -35,10 +35,13 @@ Partial Class PantallaRegistro
         Me.tbxUserReg = New System.Windows.Forms.TextBox()
         Me.tbxEmailReg = New System.Windows.Forms.TextBox()
         Me.tbxContraseñaReg1 = New System.Windows.Forms.TextBox()
-        Me.tbxContraseñaReg2 = New System.Windows.Forms.TextBox()
+        Me.tbxToken = New System.Windows.Forms.TextBox()
         Me.cbxSexo = New System.Windows.Forms.ComboBox()
         Me.DTPFechaNac = New System.Windows.Forms.DateTimePicker()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.cbxRol = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -72,15 +75,15 @@ Partial Class PantallaRegistro
         Me.lblReg.TabIndex = 6
         Me.lblReg.Text = "Registrar"
         '
-        'Button1
+        'btnSiguienteReg
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.Button1.Location = New System.Drawing.Point(538, 380)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(184, 42)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Siguiente"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSiguienteReg.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.btnSiguienteReg.Location = New System.Drawing.Point(538, 380)
+        Me.btnSiguienteReg.Name = "btnSiguienteReg"
+        Me.btnSiguienteReg.Size = New System.Drawing.Size(184, 42)
+        Me.btnSiguienteReg.TabIndex = 9
+        Me.btnSiguienteReg.Text = "Siguiente"
+        Me.btnSiguienteReg.UseVisualStyleBackColor = True
         '
         'lblUserReg
         '
@@ -115,12 +118,12 @@ Partial Class PantallaRegistro
         'lblPasswordReg2
         '
         Me.lblPasswordReg2.AutoSize = True
-        Me.lblPasswordReg2.Location = New System.Drawing.Point(206, 215)
+        Me.lblPasswordReg2.Location = New System.Drawing.Point(280, 215)
         Me.lblPasswordReg2.Name = "lblPasswordReg2"
         Me.lblPasswordReg2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblPasswordReg2.Size = New System.Drawing.Size(108, 13)
+        Me.lblPasswordReg2.Size = New System.Drawing.Size(34, 13)
         Me.lblPasswordReg2.TabIndex = 14
-        Me.lblPasswordReg2.Text = "Confirmar Contraseña"
+        Me.lblPasswordReg2.Text = "token"
         '
         'lblSexo
         '
@@ -135,7 +138,7 @@ Partial Class PantallaRegistro
         'lblFechaNacReg
         '
         Me.lblFechaNacReg.AutoSize = True
-        Me.lblFechaNacReg.Location = New System.Drawing.Point(208, 259)
+        Me.lblFechaNacReg.Location = New System.Drawing.Point(208, 283)
         Me.lblFechaNacReg.Name = "lblFechaNacReg"
         Me.lblFechaNacReg.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lblFechaNacReg.Size = New System.Drawing.Size(106, 13)
@@ -164,13 +167,13 @@ Partial Class PantallaRegistro
         Me.tbxContraseñaReg1.Size = New System.Drawing.Size(100, 20)
         Me.tbxContraseñaReg1.TabIndex = 19
         '
-        'tbxContraseñaReg2
+        'tbxToken
         '
-        Me.tbxContraseñaReg2.Location = New System.Drawing.Point(320, 212)
-        Me.tbxContraseñaReg2.Name = "tbxContraseñaReg2"
-        Me.tbxContraseñaReg2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tbxContraseñaReg2.Size = New System.Drawing.Size(100, 20)
-        Me.tbxContraseñaReg2.TabIndex = 20
+        Me.tbxToken.Location = New System.Drawing.Point(320, 212)
+        Me.tbxToken.Name = "tbxToken"
+        Me.tbxToken.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.tbxToken.Size = New System.Drawing.Size(100, 20)
+        Me.tbxToken.TabIndex = 20
         '
         'cbxSexo
         '
@@ -182,7 +185,7 @@ Partial Class PantallaRegistro
         '
         'DTPFechaNac
         '
-        Me.DTPFechaNac.Location = New System.Drawing.Point(320, 259)
+        Me.DTPFechaNac.Location = New System.Drawing.Point(320, 280)
         Me.DTPFechaNac.Name = "DTPFechaNac"
         Me.DTPFechaNac.Size = New System.Drawing.Size(200, 20)
         Me.DTPFechaNac.TabIndex = 22
@@ -197,15 +200,46 @@ Partial Class PantallaRegistro
         Me.Button2.Text = "Atras"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'cbxRol
+        '
+        Me.cbxRol.FormattingEnabled = True
+        Me.cbxRol.Location = New System.Drawing.Point(320, 257)
+        Me.cbxRol.Name = "cbxRol"
+        Me.cbxRol.Size = New System.Drawing.Size(121, 21)
+        Me.cbxRol.TabIndex = 24
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(290, 260)
+        Me.Label1.Name = "Label1"
+        Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label1.Size = New System.Drawing.Size(18, 13)
+        Me.Label1.TabIndex = 25
+        Me.Label1.Text = "rol"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(535, 143)
+        Me.Label2.Name = "Label2"
+        Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.TabIndex = 26
+        Me.Label2.Text = "Username"
+        '
         'PantallaRegistro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 461)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.cbxRol)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DTPFechaNac)
         Me.Controls.Add(Me.cbxSexo)
-        Me.Controls.Add(Me.tbxContraseñaReg2)
+        Me.Controls.Add(Me.tbxToken)
         Me.Controls.Add(Me.tbxContraseñaReg1)
         Me.Controls.Add(Me.tbxEmailReg)
         Me.Controls.Add(Me.tbxUserReg)
@@ -215,7 +249,7 @@ Partial Class PantallaRegistro
         Me.Controls.Add(Me.lblPasswordReg1)
         Me.Controls.Add(Me.lblEmailReg)
         Me.Controls.Add(Me.lblUserReg)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSiguienteReg)
         Me.Controls.Add(Me.lblReg)
         Me.Controls.Add(Me.LabelEsquina)
         Me.Controls.Add(Me.PBLogo)
@@ -230,7 +264,7 @@ Partial Class PantallaRegistro
     Friend WithEvents PBLogo As PictureBox
     Friend WithEvents LabelEsquina As Label
     Friend WithEvents lblReg As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSiguienteReg As Button
     Friend WithEvents lblUserReg As Label
     Friend WithEvents lblEmailReg As Label
     Friend WithEvents lblPasswordReg1 As Label
@@ -240,8 +274,11 @@ Partial Class PantallaRegistro
     Friend WithEvents tbxUserReg As TextBox
     Friend WithEvents tbxEmailReg As TextBox
     Friend WithEvents tbxContraseñaReg1 As TextBox
-    Friend WithEvents tbxContraseñaReg2 As TextBox
+    Friend WithEvents tbxToken As TextBox
     Friend WithEvents cbxSexo As ComboBox
     Friend WithEvents DTPFechaNac As DateTimePicker
     Friend WithEvents Button2 As Button
+    Friend WithEvents cbxRol As ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class
