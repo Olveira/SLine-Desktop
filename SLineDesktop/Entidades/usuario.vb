@@ -5,7 +5,7 @@
     Private _sexo As String
     Private _fechaNac As Date
     Private _rol As String
-    Private _token As Integer
+    Private _token As String
     Private _id As Integer
 
     Public Property Username As String
@@ -56,11 +56,11 @@
             _rol = value
         End Set
     End Property
-    Public Property Token As Integer
+    Public Property Token As String
         Get
             Return _token
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _token = value
         End Set
     End Property

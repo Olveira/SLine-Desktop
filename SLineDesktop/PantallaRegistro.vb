@@ -13,7 +13,7 @@
         token = tbxToken.Text
         sexo = CStr(cbxSexo.SelectedItem)
         rol = CStr(cbxRol.SelectedItem)
-        fechaNac = DTPFechaNac.Value.ToString
+        fechaNac = DTPFechaNac.Value
 
         Dim user As usuario
         user = New usuario(username, email, password, sexo, fechaNac, rol, token)
@@ -37,9 +37,9 @@
         cbxRol.Items.Add("admin")
         cbxRol.Items.Add("user")
 
-        tbxUserReg.Text = "agustin"
-        tbxEmailReg.Text = "agustin@gmail.com"
-        tbxContraseñaReg1.Text = "agustin1234"
+        tbxUserReg.Text = "dennis"
+        tbxEmailReg.Text = "dennis@gmail.com"
+        tbxContraseñaReg1.Text = "dennis1234"
         tbxToken.Text = "1234"
         cbxRol.Text = "admin"
         cbxSexo.Text = "masculino"
