@@ -57,6 +57,7 @@ Partial Class InicioADM
         '
         Me.tbxPasswordLog.Location = New System.Drawing.Point(328, 213)
         Me.tbxPasswordLog.Name = "tbxPasswordLog"
+        Me.tbxPasswordLog.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbxPasswordLog.Size = New System.Drawing.Size(100, 20)
         Me.tbxPasswordLog.TabIndex = 8
         '

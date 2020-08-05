@@ -36,15 +36,6 @@
         cbxSexo.Items.Add("Otro")
         cbxRol.Items.Add("admin")
         cbxRol.Items.Add("user")
-
-        tbxUserReg.Text = "dennis"
-        tbxEmailReg.Text = "dennis@gmail.com"
-        tbxContraseñaReg1.Text = "dennis1234"
-        tbxToken.Text = "1234"
-        cbxRol.Text = "admin"
-        cbxSexo.Text = "masculino"
-
-
     End Sub
 
     Private Sub CerrarRegistro(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing

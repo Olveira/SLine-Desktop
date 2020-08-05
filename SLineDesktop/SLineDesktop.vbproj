@@ -104,13 +104,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DesktopIWellcome.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DesktopIWellcome.Designer.vb">
-      <DependentUpon>DesktopIWellcome.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Entidades\caso.vb" />
     <Compile Include="Entidades\usuario.vb" />
     <Compile Include="InicioADM.Designer.vb">
@@ -164,11 +157,14 @@
     <Compile Include="persistencia\conexion.vb" />
     <Compile Include="persistencia\persistenciaCaso.vb" />
     <Compile Include="persistencia\persistenciaUsuario.vb" />
+    <Compile Include="welcome.Designer.vb">
+      <DependentUpon>welcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="welcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DesktopInicio.resx">
-      <DependentUpon>DesktopIWellcome.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PantallaEliminar.resx">
       <DependentUpon>PantallaEliminar.vb</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +186,9 @@
     <EmbeddedResource Include="PantallaModerar.resx">
       <DependentUpon>PantallaModerar.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="welcome.resx">
+      <DependentUpon>welcome.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -205,8 +204,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Resources\Logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

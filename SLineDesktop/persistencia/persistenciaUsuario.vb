@@ -34,4 +34,38 @@
         End Try
 
     End Sub
+    Public Function persistenciaLog(user As String, pass As String) As Boolean
+        Try
+            Dim clasCnn = New conexion
+            Dim cadenaDeComandos As String
+
+            Dim reader
+
+            cadenaDeComandos = "select * from users where username=@username and password=@password;"
+
+            conection = clasCnn.abrirConexion()
+            Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
+
+
+            cmd.Connection = conection
+
+            cmd.Parameters.AddWithValue("@username", user)
+            cmd.Parameters.AddWithValue("@password", pass)
+
+
+
+            reader = cmd.ExecuteReader()
+
+            If reader.hasRows() Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Throw ex
+        Finally
+            conection.close
+        End Try
+
+    End Function
 End Class
