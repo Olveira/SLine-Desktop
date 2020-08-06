@@ -39,6 +39,7 @@
             Dim clasCnn = New conexion
             Dim cadenaDeComandos As String
 
+
             Dim reader
 
             cadenaDeComandos = "select * from users where username=@username and password=@password;"
@@ -52,20 +53,41 @@
             cmd.Parameters.AddWithValue("@username", user)
             cmd.Parameters.AddWithValue("@password", pass)
 
+            reader = cmd.ExecuteReader
+            Dim variable As Boolean
+            variable = reader.hasRows()
 
+            Return variable
 
-            reader = cmd.ExecuteReader()
-
-            If reader.hasRows() Then
-                Return True
-            Else
-                Return False
-            End If
         Catch ex As Exception
             Throw ex
         Finally
             conection.close
         End Try
+    End Function
+    Public Function comparePass(user As String) As Boolean
+
+        Dim clasCnn = New conexion
+        Dim cadenaDeComandos As String
+
+
+        Dim reader
+        conection = clasCnn.abrirConexion()
+        Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
+
+
+        cmd.Connection = conection
+
+
+
+        reader = cmd.ExecuteReader
+        Dim variable As Boolean
+        variable = reader.hasRows()
+
+        cadenaDeComandos = "select * from users where username=@username;"
+        cmd.Parameters.AddWithValue("@username", user)
+        reader = cmd.ExecuteReader
+        Return reader.hasRows()
 
     End Function
 End Class

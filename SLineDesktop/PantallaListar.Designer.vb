@@ -28,7 +28,11 @@ Partial Class PantallaListar
         Me.BtnAcep = New System.Windows.Forms.Button()
         Me.PBLogo = New System.Windows.Forms.PictureBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.tsmiEliminar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiModerar = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TreeView1
@@ -87,11 +91,33 @@ Partial Class PantallaListar
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 14
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiEliminar, Me.tsmiModerar})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(734, 24)
+        Me.MenuStrip1.TabIndex = 21
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'tsmiEliminar
+        '
+        Me.tsmiEliminar.Name = "tsmiEliminar"
+        Me.tsmiEliminar.Size = New System.Drawing.Size(62, 20)
+        Me.tsmiEliminar.Text = "Eliminar"
+        '
+        'tsmiModerar
+        '
+        Me.tsmiModerar.Name = "tsmiModerar"
+        Me.tsmiModerar.Size = New System.Drawing.Size(64, 20)
+        Me.tsmiModerar.Text = "moderar"
+        '
         'PantallaListar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 461)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.BtnAcep)
         Me.Controls.Add(Me.BtnIzq)
@@ -101,6 +127,8 @@ Partial Class PantallaListar
         Me.Name = "PantallaListar"
         Me.Text = "Administrador SLine! - Listar"
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -112,4 +140,7 @@ Partial Class PantallaListar
     Friend WithEvents BtnIzq As Button
     Friend WithEvents BtnAcep As Button
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents tsmiEliminar As ToolStripMenuItem
+    Friend WithEvents tsmiModerar As ToolStripMenuItem
 End Class

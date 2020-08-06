@@ -30,6 +30,7 @@ Partial Class InicioADM
         Me.lblPasswoedLog = New System.Windows.Forms.Label()
         Me.BtnAtras = New System.Windows.Forms.Button()
         Me.BtnSiguiente = New System.Windows.Forms.Button()
+        Me.lblBadLog = New System.Windows.Forms.Label()
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -59,14 +60,14 @@ Partial Class InicioADM
         Me.tbxPasswordLog.Name = "tbxPasswordLog"
         Me.tbxPasswordLog.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbxPasswordLog.Size = New System.Drawing.Size(100, 20)
-        Me.tbxPasswordLog.TabIndex = 8
+        Me.tbxPasswordLog.TabIndex = 1
         '
         'tbxUserLog
         '
         Me.tbxUserLog.Location = New System.Drawing.Point(328, 175)
         Me.tbxUserLog.Name = "tbxUserLog"
         Me.tbxUserLog.Size = New System.Drawing.Size(100, 20)
-        Me.tbxUserLog.TabIndex = 9
+        Me.tbxUserLog.TabIndex = 0
         '
         'lblUsernameLog
         '
@@ -75,7 +76,7 @@ Partial Class InicioADM
         Me.lblUsernameLog.Location = New System.Drawing.Point(220, 170)
         Me.lblUsernameLog.Name = "lblUsernameLog"
         Me.lblUsernameLog.Size = New System.Drawing.Size(102, 25)
-        Me.lblUsernameLog.TabIndex = 10
+        Me.lblUsernameLog.TabIndex = 5
         Me.lblUsernameLog.Text = "Username"
         '
         'lblPasswoedLog
@@ -85,7 +86,7 @@ Partial Class InicioADM
         Me.lblPasswoedLog.Location = New System.Drawing.Point(220, 208)
         Me.lblPasswoedLog.Name = "lblPasswoedLog"
         Me.lblPasswoedLog.Size = New System.Drawing.Size(98, 25)
-        Me.lblPasswoedLog.TabIndex = 11
+        Me.lblPasswoedLog.TabIndex = 4
         Me.lblPasswoedLog.Text = "Password"
         '
         'BtnAtras
@@ -94,7 +95,7 @@ Partial Class InicioADM
         Me.BtnAtras.Location = New System.Drawing.Point(225, 251)
         Me.BtnAtras.Name = "BtnAtras"
         Me.BtnAtras.Size = New System.Drawing.Size(75, 30)
-        Me.BtnAtras.TabIndex = 12
+        Me.BtnAtras.TabIndex = 3
         Me.BtnAtras.Text = "Atras"
         Me.BtnAtras.UseVisualStyleBackColor = True
         '
@@ -104,15 +105,25 @@ Partial Class InicioADM
         Me.BtnSiguiente.Location = New System.Drawing.Point(353, 251)
         Me.BtnSiguiente.Name = "BtnSiguiente"
         Me.BtnSiguiente.Size = New System.Drawing.Size(75, 30)
-        Me.BtnSiguiente.TabIndex = 13
+        Me.BtnSiguiente.TabIndex = 2
         Me.BtnSiguiente.Text = "Siguiente"
         Me.BtnSiguiente.UseVisualStyleBackColor = True
+        '
+        'lblBadLog
+        '
+        Me.lblBadLog.AutoSize = True
+        Me.lblBadLog.Location = New System.Drawing.Point(299, 322)
+        Me.lblBadLog.Name = "lblBadLog"
+        Me.lblBadLog.Size = New System.Drawing.Size(79, 13)
+        Me.lblBadLog.TabIndex = 7
+        Me.lblBadLog.Text = "error al ingresar"
         '
         'InicioADM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 461)
+        Me.Controls.Add(Me.lblBadLog)
         Me.Controls.Add(Me.BtnSiguiente)
         Me.Controls.Add(Me.BtnAtras)
         Me.Controls.Add(Me.lblPasswoedLog)
@@ -122,7 +133,7 @@ Partial Class InicioADM
         Me.Controls.Add(Me.lblBienvenido)
         Me.Controls.Add(Me.PBLogo)
         Me.Name = "InicioADM"
-        Me.Text = "Inicio de sesión ADM"
+        Me.Text = "agu"
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -137,4 +148,5 @@ Partial Class InicioADM
     Friend WithEvents lblPasswoedLog As Label
     Friend WithEvents BtnAtras As Button
     Friend WithEvents BtnSiguiente As Button
+    Friend WithEvents lblBadLog As Label
 End Class

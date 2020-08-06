@@ -28,7 +28,11 @@ Partial Class PantallaEliminar
         Me.BtnAcep = New System.Windows.Forms.Button()
         Me.BtnIzq = New System.Windows.Forms.Button()
         Me.cbxEliminar = New System.Windows.Forms.ComboBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ListarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModerarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TreeView1
@@ -87,6 +91,27 @@ Partial Class PantallaEliminar
         Me.cbxEliminar.Size = New System.Drawing.Size(131, 21)
         Me.cbxEliminar.TabIndex = 19
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListarToolStripMenuItem, Me.ModerarToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(734, 24)
+        Me.MenuStrip1.TabIndex = 20
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ListarToolStripMenuItem
+        '
+        Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
+        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.ListarToolStripMenuItem.Text = "listar"
+        '
+        'ModerarToolStripMenuItem
+        '
+        Me.ModerarToolStripMenuItem.Name = "ModerarToolStripMenuItem"
+        Me.ModerarToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
+        Me.ModerarToolStripMenuItem.Text = "moderar"
+        '
         'PantallaEliminar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -98,9 +123,13 @@ Partial Class PantallaEliminar
         Me.Controls.Add(Me.PBLogo)
         Me.Controls.Add(Me.LabelBienvenido)
         Me.Controls.Add(Me.TreeView1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "PantallaEliminar"
         Me.Text = "Administrador SLine! - Eliminar"
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -112,4 +141,7 @@ Partial Class PantallaEliminar
     Friend WithEvents BtnAcep As Button
     Friend WithEvents BtnIzq As Button
     Friend WithEvents cbxEliminar As ComboBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ListarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ModerarToolStripMenuItem As ToolStripMenuItem
 End Class

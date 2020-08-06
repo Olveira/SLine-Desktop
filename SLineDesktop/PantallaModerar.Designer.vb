@@ -31,7 +31,11 @@ Partial Class PantallaModerar
         Me.BtnDer = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.tsmlEliminar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiListar = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PBLogo
@@ -121,11 +125,33 @@ Partial Class PantallaModerar
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Sig."
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmlEliminar, Me.tsmiListar})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(734, 24)
+        Me.MenuStrip1.TabIndex = 22
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'tsmlEliminar
+        '
+        Me.tsmlEliminar.Name = "tsmlEliminar"
+        Me.tsmlEliminar.Size = New System.Drawing.Size(62, 20)
+        Me.tsmlEliminar.Text = "Eliminar"
+        '
+        'tsmiListar
+        '
+        Me.tsmiListar.Name = "tsmiListar"
+        Me.tsmiListar.Size = New System.Drawing.Size(44, 20)
+        Me.tsmiListar.Text = "listar"
+        '
         'PantallaModerar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 461)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnDer)
@@ -138,6 +164,8 @@ Partial Class PantallaModerar
         Me.Name = "PantallaModerar"
         Me.Text = "Administrador SLine! - Moderar"
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -152,4 +180,7 @@ Partial Class PantallaModerar
     Friend WithEvents BtnDer As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents tsmlEliminar As ToolStripMenuItem
+    Friend WithEvents tsmiListar As ToolStripMenuItem
 End Class
