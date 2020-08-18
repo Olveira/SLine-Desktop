@@ -73,7 +73,7 @@
 
         Dim reader
         conection = clasCnn.abrirConexion()
-        Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
+        Dim cmd As New Npgsql.NpgsqlCommand()
 
 
         cmd.Connection = conection
@@ -85,9 +85,49 @@
         variable = reader.hasRows()
 
         cadenaDeComandos = "select * from users where username=@username;"
+        cmd.CommandText = cadenaDeComandos
         cmd.Parameters.AddWithValue("@username", user)
         reader = cmd.ExecuteReader
         Return reader.hasRows()
 
+    End Function
+    Dim xss As New List(Of usuario)
+    Public Function listarPersonas() As List(Of usuario)
+        Try
+            Dim Persona As New usuario
+            Dim ClaseSnl As New conexion
+            conection = ClaseSnl.abrirConexion
+            Dim cmd = New Npgsql.NpgsqlCommand
+            cmd.Connection = conection
+
+            Dim cadenaDeComandos = "select * from users "
+
+            cmd.CommandText = cadenaDeComandos
+            Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
+            Dim variable As Boolean
+
+            While Lector.Read()
+                Dim newPersona As New usuario
+                newPersona.Username = Lector(0)
+                newPersona.Email = Lector(1)
+                newPersona.Password = Lector(2)
+                newPersona.Sexo = Lector(3)
+                newPersona.FechaNac = Lector(5)
+                newPersona.Rol = Lector(6)
+                newPersona.Token = Lector(7)
+                newPersona.Id = Lector(8)
+
+                xss.Add(newPersona)
+            End While
+            Debug.WriteLine(xss)
+            If IsNothing(xss) Then
+            Else
+                Return xss
+            End If
+        Catch ex As Exception
+            Throw ex
+        Finally
+            conection.close
+        End Try
     End Function
 End Class
