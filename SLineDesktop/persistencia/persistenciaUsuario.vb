@@ -104,19 +104,19 @@
 
             cmd.CommandText = cadenaDeComandos
             Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
-            Dim variable As Boolean
+
 
             While Lector.Read()
                 Dim newPersona As New usuario
-                newPersona.Username = Lector(0)
-                newPersona.Email = Lector(1)
-                newPersona.Password = Lector(2)
-                newPersona.Sexo = Lector(3)
-                newPersona.FechaNac = Lector(5)
-                newPersona.Rol = Lector(6)
-                newPersona.Token = Lector(7)
-                newPersona.Id = Lector(8)
-
+                newPersona.Username = Lector(0).ToString
+                newPersona.Email = Lector(1).ToString
+                newPersona.Password = Lector(2).ToString
+                newPersona.Sexo = Lector(3).ToString
+                newPersona.FechaNac = Lector(5).ToString
+                newPersona.Rol = Lector(6).ToString
+                newPersona.Token = Convert.ToInt32(Lector(7).ToString)
+                newPersona.Id = Convert.ToInt32(Lector(8).ToString)
+                Debug.WriteLine(Lector(0))
                 xss.Add(newPersona)
             End While
             Debug.WriteLine(xss)

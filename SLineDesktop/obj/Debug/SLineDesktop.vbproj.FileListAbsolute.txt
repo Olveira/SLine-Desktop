@@ -114,7 +114,6 @@ C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\bin\Debug\System.Text.Enc
 C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\bin\Debug\System.Text.Json.xml
 C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\bin\Debug\System.ValueTuple.xml
-C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.vbprojAssemblyReference.cache
 C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaEliminar.resources
 C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaListar.resources
 C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.InicioADM.resources
@@ -128,3 +127,4 @@ C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.vb
 C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.exe
 C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.xml
 C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.pdb
+C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.vbprojAssemblyReference.cache
