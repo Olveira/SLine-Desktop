@@ -1,10 +1,12 @@
 ﻿Public Class PantallaListar
     Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiModerar.Click
-        PantallaModerar.ShowDialog()
+        PantallaModerar.Show()
+        Me.Hide()
     End Sub
 
     Private Sub tsmiEliminar_Click(sender As Object, e As EventArgs) Handles tsmiEliminar.Click
-        PantallaEliminar.ShowDialog()
+        PantallaEliminar.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PantallaListar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -23,12 +25,12 @@
             arra(3) = lista(i).Sexo
             arra(4) = lista(i).FechaNac
             arra(5) = lista(i).Rol
-            arra(6) = lista(i).Token
             arra(7) = lista(i).Id
 
             item = New ListViewItem(arra)
             LVListadoUsuarios.Items.Add(item)
             i = i - 1
+
 
         End While
 

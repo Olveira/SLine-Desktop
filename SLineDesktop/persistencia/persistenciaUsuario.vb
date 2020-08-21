@@ -7,7 +7,7 @@
 
             Dim resultado As Integer
 
-            cadenaDeComandos = "insert into users(username,email,password,sexo,fechanac,rol,token) values (@username,@email,@password,@sexo,@fechanac,@rol,@token);"
+            cadenaDeComandos = "insert into users(username,email,password,sexo,fechanac,rol) values (@username,@email,@password,@sexo,@fechanac,@rol);"
 
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
@@ -22,8 +22,6 @@
             cmd.Parameters.Add("@sexo", NpgsqlTypes.NpgsqlDbType.Varchar, 10).Value = users.Sexo
             cmd.Parameters.Add("@fechanac", NpgsqlTypes.NpgsqlDbType.Date).Value = users.FechaNac
             cmd.Parameters.Add("@rol", NpgsqlTypes.NpgsqlDbType.Varchar, 15).Value = users.Rol
-            cmd.Parameters.Add("@token", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = users.Token
-
 
             resultado = cmd.ExecuteNonQuery()
 
@@ -42,7 +40,7 @@
 
             Dim reader
 
-            cadenaDeComandos = "select * from users where username=@username and password=@password;"
+            cadenaDeComandos = "select * from users where username=@username and password=@password and rol=@rol;"
 
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
@@ -52,6 +50,7 @@
 
             cmd.Parameters.AddWithValue("@username", user)
             cmd.Parameters.AddWithValue("@password", pass)
+            cmd.Parameters.AddWithValue("@rol", "admin")
 
             reader = cmd.ExecuteReader
             Dim variable As Boolean
@@ -64,32 +63,6 @@
         Finally
             conection.close
         End Try
-    End Function
-    Public Function comparePass(user As String) As Boolean
-
-        Dim clasCnn = New conexion
-        Dim cadenaDeComandos As String
-
-
-        Dim reader
-        conection = clasCnn.abrirConexion()
-        Dim cmd As New Npgsql.NpgsqlCommand()
-
-
-        cmd.Connection = conection
-
-
-
-        reader = cmd.ExecuteReader
-        Dim variable As Boolean
-        variable = reader.hasRows()
-
-        cadenaDeComandos = "select * from users where username=@username;"
-        cmd.CommandText = cadenaDeComandos
-        cmd.Parameters.AddWithValue("@username", user)
-        reader = cmd.ExecuteReader
-        Return reader.hasRows()
-
     End Function
     Dim xss As New List(Of usuario)
     Public Function listarPersonas() As List(Of usuario)
@@ -114,12 +87,10 @@
                 newPersona.Sexo = Lector(3).ToString
                 newPersona.FechaNac = Lector(5).ToString
                 newPersona.Rol = Lector(6).ToString
-                newPersona.Token = Convert.ToInt32(Lector(7).ToString)
                 newPersona.Id = Convert.ToInt32(Lector(8).ToString)
-                Debug.WriteLine(Lector(0))
                 xss.Add(newPersona)
             End While
-            Debug.WriteLine(xss)
+
             If IsNothing(xss) Then
             Else
                 Return xss

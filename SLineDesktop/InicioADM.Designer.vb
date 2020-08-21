@@ -112,7 +112,7 @@ Partial Class InicioADM
         'lblBadLog
         '
         Me.lblBadLog.AutoSize = True
-        Me.lblBadLog.Location = New System.Drawing.Point(299, 322)
+        Me.lblBadLog.Location = New System.Drawing.Point(522, 28)
         Me.lblBadLog.Name = "lblBadLog"
         Me.lblBadLog.Size = New System.Drawing.Size(79, 13)
         Me.lblBadLog.TabIndex = 7
@@ -133,7 +133,7 @@ Partial Class InicioADM
         Me.Controls.Add(Me.lblBienvenido)
         Me.Controls.Add(Me.PBLogo)
         Me.Name = "InicioADM"
-        Me.Text = "agu"
+        Me.Text = "Administrador SLine! - Log in"
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

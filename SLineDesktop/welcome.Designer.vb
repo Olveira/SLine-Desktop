@@ -78,7 +78,7 @@ Partial Class welcome
         Me.Controls.Add(Me.btnGoRegistrar)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "welcome"
-        Me.Text = "welcome"
+        Me.Text = "Administrador SLine! - Inicio"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

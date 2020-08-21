@@ -56,14 +56,6 @@
             _rol = value
         End Set
     End Property
-    Public Property Token As String
-        Get
-            Return _token
-        End Get
-        Set(value As String)
-            _token = value
-        End Set
-    End Property
     Public Property Id As Integer
         Get
             Return _id
@@ -73,14 +65,13 @@
         End Set
     End Property
 
-    Public Sub New(username As String, email As String, password As String, sexo As String, fechaNac As Date, rol As String, token As Integer)
+    Public Sub New(username As String, email As String, password As String, sexo As String, fechaNac As Date, rol As String)
         _username = username
         _email = email
         _password = password
         _sexo = sexo
         _fechaNac = fechaNac
         _rol = rol
-        _token = token
     End Sub
     Public Sub New()
 

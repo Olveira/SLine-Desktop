@@ -10,13 +10,12 @@
         username = tbxUserReg.Text
         email = tbxEmailReg.Text
         password = tbxContraseñaReg1.Text
-        token = tbxToken.Text
         sexo = CStr(cbxSexo.SelectedItem)
         rol = CStr(cbxRol.SelectedItem)
         fechaNac = DTPFechaNac.Value
 
         Dim user As usuario
-        user = New usuario(username, email, password, sexo, fechaNac, rol, token)
+        user = New usuario(username, email, password, sexo, fechaNac, rol)
         'user.Username = username
         'user.Email = email
         'user.Password = password
@@ -27,7 +26,8 @@
 
         Dim logicaUsuario As New logicaUsuario
         logicaUsuario.AltaUser(user)
-
+        InicioADM.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PantallaRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -45,8 +45,9 @@
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Close()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnback.Click
+        welcome.Show()
+        Me.Hide()
 
     End Sub
 End Class

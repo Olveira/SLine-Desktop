@@ -5,8 +5,9 @@
         niceLogIn = logicaUsuario.login(tbxUserLog.Text, tbxPasswordLog.Text)
 
         If niceLogIn Then
-            PantallaListar.ShowDialog()
-            Me.Close()
+            PantallaListar.Show()
+            Me.Hide()
+
         Else
 
             lblBadLog.Text = "creenciales incorrectas"
