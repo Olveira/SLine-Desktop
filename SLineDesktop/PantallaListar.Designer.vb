@@ -107,7 +107,7 @@ Partial Class PantallaListar
         Me.LVListadoUsuarios.HideSelection = False
         Me.LVListadoUsuarios.Location = New System.Drawing.Point(77, 126)
         Me.LVListadoUsuarios.Name = "LVListadoUsuarios"
-        Me.LVListadoUsuarios.Size = New System.Drawing.Size(462, 192)
+        Me.LVListadoUsuarios.Size = New System.Drawing.Size(547, 192)
         Me.LVListadoUsuarios.TabIndex = 22
         Me.LVListadoUsuarios.UseCompatibleStateImageBehavior = False
         Me.LVListadoUsuarios.View = System.Windows.Forms.View.Details
@@ -115,22 +115,27 @@ Partial Class PantallaListar
         'Username
         '
         Me.Username.Text = "Username"
+        Me.Username.Width = 68
         '
         'Email
         '
         Me.Email.Text = "Email"
+        Me.Email.Width = 125
         '
         'Password
         '
         Me.Password.Text = "Password"
+        Me.Password.Width = 122
         '
         'sexo
         '
         Me.sexo.Text = "Sexo"
+        Me.sexo.Width = 78
         '
         'FechaNac
         '
         Me.FechaNac.Text = "FechaNac"
+        Me.FechaNac.Width = 93
         '
         'rol
         '
