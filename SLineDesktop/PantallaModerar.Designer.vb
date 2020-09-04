@@ -24,16 +24,12 @@ Partial Class PantallaModerar
     Private Sub InitializeComponent()
         Me.PBLogo = New System.Windows.Forms.PictureBox()
         Me.LabelBienvenido = New System.Windows.Forms.Label()
-        Me.TreeView1 = New System.Windows.Forms.TreeView()
-        Me.BtnIzq = New System.Windows.Forms.Button()
         Me.BtnAcep = New System.Windows.Forms.Button()
         Me.BtnDec = New System.Windows.Forms.Button()
-        Me.BtnDer = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.tsmlEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiListar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListView1 = New System.Windows.Forms.ListView()
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -58,27 +54,10 @@ Partial Class PantallaModerar
         Me.LabelBienvenido.TabIndex = 7
         Me.LabelBienvenido.Text = "Moderar"
         '
-        'TreeView1
-        '
-        Me.TreeView1.Location = New System.Drawing.Point(118, 118)
-        Me.TreeView1.Name = "TreeView1"
-        Me.TreeView1.Size = New System.Drawing.Size(421, 216)
-        Me.TreeView1.TabIndex = 8
-        '
-        'BtnIzq
-        '
-        Me.BtnIzq.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.BtnIzq.Location = New System.Drawing.Point(118, 346)
-        Me.BtnIzq.Name = "BtnIzq"
-        Me.BtnIzq.Size = New System.Drawing.Size(75, 40)
-        Me.BtnIzq.TabIndex = 9
-        Me.BtnIzq.Text = "<"
-        Me.BtnIzq.UseVisualStyleBackColor = True
-        '
         'BtnAcep
         '
         Me.BtnAcep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnAcep.Location = New System.Drawing.Point(232, 346)
+        Me.BtnAcep.Location = New System.Drawing.Point(464, 330)
         Me.BtnAcep.Name = "BtnAcep"
         Me.BtnAcep.Size = New System.Drawing.Size(75, 40)
         Me.BtnAcep.TabIndex = 10
@@ -88,42 +67,12 @@ Partial Class PantallaModerar
         'BtnDec
         '
         Me.BtnDec.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnDec.Location = New System.Drawing.Point(353, 346)
+        Me.BtnDec.Location = New System.Drawing.Point(118, 330)
         Me.BtnDec.Name = "BtnDec"
         Me.BtnDec.Size = New System.Drawing.Size(75, 40)
         Me.BtnDec.TabIndex = 11
         Me.BtnDec.Text = "Declinar"
         Me.BtnDec.UseVisualStyleBackColor = True
-        '
-        'BtnDer
-        '
-        Me.BtnDer.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.BtnDer.Location = New System.Drawing.Point(464, 346)
-        Me.BtnDer.Name = "BtnDer"
-        Me.BtnDer.Size = New System.Drawing.Size(75, 40)
-        Me.BtnDer.TabIndex = 12
-        Me.BtnDer.Text = ">"
-        Me.BtnDer.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label1.Location = New System.Drawing.Point(133, 389)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(33, 17)
-        Me.Label1.TabIndex = 13
-        Me.Label1.Text = "Ant."
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label2.Location = New System.Drawing.Point(489, 389)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(32, 17)
-        Me.Label2.TabIndex = 14
-        Me.Label2.Text = "Sig."
         '
         'MenuStrip1
         '
@@ -146,19 +95,24 @@ Partial Class PantallaModerar
         Me.tsmiListar.Size = New System.Drawing.Size(44, 20)
         Me.tsmiListar.Text = "listar"
         '
+        'ListView1
+        '
+        Me.ListView1.HideSelection = False
+        Me.ListView1.Location = New System.Drawing.Point(118, 109)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(421, 203)
+        Me.ListView1.TabIndex = 24
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        '
         'PantallaModerar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 461)
+        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.BtnDer)
         Me.Controls.Add(Me.BtnDec)
         Me.Controls.Add(Me.BtnAcep)
-        Me.Controls.Add(Me.BtnIzq)
-        Me.Controls.Add(Me.TreeView1)
         Me.Controls.Add(Me.LabelBienvenido)
         Me.Controls.Add(Me.PBLogo)
         Me.Name = "PantallaModerar"
@@ -173,14 +127,10 @@ Partial Class PantallaModerar
 
     Friend WithEvents PBLogo As PictureBox
     Friend WithEvents LabelBienvenido As Label
-    Friend WithEvents TreeView1 As TreeView
-    Friend WithEvents BtnIzq As Button
     Friend WithEvents BtnAcep As Button
     Friend WithEvents BtnDec As Button
-    Friend WithEvents BtnDer As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents tsmlEliminar As ToolStripMenuItem
     Friend WithEvents tsmiListar As ToolStripMenuItem
+    Friend WithEvents ListView1 As ListView
 End Class
