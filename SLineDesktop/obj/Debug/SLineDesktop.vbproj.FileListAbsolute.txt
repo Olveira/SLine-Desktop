@@ -37,7 +37,6 @@ C:\Users\Administrador\source\repos\SLine-Desktop\SLineDesktop\bin\Debug\System.
 C:\Users\Administrador\source\repos\SLine-Desktop\SLineDesktop\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Administrador\source\repos\SLine-Desktop\SLineDesktop\bin\Debug\System.ValueTuple.xml
 C:\Users\Administrador\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.vbprojAssemblyReference.cache
-C:\Users\Administrador\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.DesktopWellcome.resources
 C:\Users\Administrador\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaEliminar.resources
 C:\Users\Administrador\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaListar.resources
 C:\Users\Administrador\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.InicioADM.resources
@@ -167,3 +166,4 @@ C:\Users\Alumno\Desktop\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.vbproj
 C:\Users\Alumno\Desktop\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.exe
 C:\Users\Alumno\Desktop\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.xml
 C:\Users\Alumno\Desktop\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.pdb
+C:\Users\Administrador\source\repos\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.welcome.resources
