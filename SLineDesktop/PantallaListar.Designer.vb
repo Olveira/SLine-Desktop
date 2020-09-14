@@ -24,7 +24,6 @@ Partial Class PantallaListar
     Private Sub InitializeComponent()
         Me.LabelBienvenido = New System.Windows.Forms.Label()
         Me.BtnIzq = New System.Windows.Forms.Button()
-        Me.BtnAcep = New System.Windows.Forms.Button()
         Me.PBLogo = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.tsmiEliminar = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,6 +35,7 @@ Partial Class PantallaListar
         Me.sexo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.FechaNac = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.rol = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.id = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -59,16 +59,6 @@ Partial Class PantallaListar
         Me.BtnIzq.TabIndex = 12
         Me.BtnIzq.Text = "Dar de baja"
         Me.BtnIzq.UseVisualStyleBackColor = True
-        '
-        'BtnAcep
-        '
-        Me.BtnAcep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnAcep.Location = New System.Drawing.Point(118, 340)
-        Me.BtnAcep.Name = "BtnAcep"
-        Me.BtnAcep.Size = New System.Drawing.Size(118, 40)
-        Me.BtnAcep.TabIndex = 13
-        Me.BtnAcep.Text = "Listar casos"
-        Me.BtnAcep.UseVisualStyleBackColor = True
         '
         'PBLogo
         '
@@ -103,11 +93,12 @@ Partial Class PantallaListar
         '
         'LVListadoUsuarios
         '
-        Me.LVListadoUsuarios.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Username, Me.Email, Me.Password, Me.sexo, Me.FechaNac, Me.rol})
+        Me.LVListadoUsuarios.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Username, Me.Email, Me.Password, Me.sexo, Me.FechaNac, Me.rol, Me.id})
         Me.LVListadoUsuarios.HideSelection = False
         Me.LVListadoUsuarios.Location = New System.Drawing.Point(77, 126)
+        Me.LVListadoUsuarios.MultiSelect = False
         Me.LVListadoUsuarios.Name = "LVListadoUsuarios"
-        Me.LVListadoUsuarios.Size = New System.Drawing.Size(547, 192)
+        Me.LVListadoUsuarios.Size = New System.Drawing.Size(588, 192)
         Me.LVListadoUsuarios.TabIndex = 22
         Me.LVListadoUsuarios.UseCompatibleStateImageBehavior = False
         Me.LVListadoUsuarios.View = System.Windows.Forms.View.Details
@@ -141,6 +132,10 @@ Partial Class PantallaListar
         '
         Me.rol.Text = "rol"
         '
+        'id
+        '
+        Me.id.Text = "id"
+        '
         'PantallaListar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -148,7 +143,6 @@ Partial Class PantallaListar
         Me.ClientSize = New System.Drawing.Size(734, 461)
         Me.Controls.Add(Me.LVListadoUsuarios)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.BtnAcep)
         Me.Controls.Add(Me.BtnIzq)
         Me.Controls.Add(Me.PBLogo)
         Me.Controls.Add(Me.LabelBienvenido)
@@ -164,7 +158,6 @@ Partial Class PantallaListar
     Friend WithEvents LabelBienvenido As Label
     Friend WithEvents PBLogo As PictureBox
     Friend WithEvents BtnIzq As Button
-    Friend WithEvents BtnAcep As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents tsmiEliminar As ToolStripMenuItem
     Friend WithEvents tsmiModerar As ToolStripMenuItem
@@ -175,4 +168,5 @@ Partial Class PantallaListar
     Friend WithEvents sexo As ColumnHeader
     Friend WithEvents FechaNac As ColumnHeader
     Friend WithEvents rol As ColumnHeader
+    Friend WithEvents id As ColumnHeader
 End Class

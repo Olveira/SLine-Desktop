@@ -22,74 +22,56 @@ Partial Class PantallaEliminar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TreeView1 = New System.Windows.Forms.TreeView()
-        Me.LabelBienvenido = New System.Windows.Forms.Label()
-        Me.PBLogo = New System.Windows.Forms.PictureBox()
-        Me.BtnAcep = New System.Windows.Forms.Button()
-        Me.BtnIzq = New System.Windows.Forms.Button()
-        Me.cbxEliminar = New System.Windows.Forms.ComboBox()
+        Me.lblModificarUsuario = New System.Windows.Forms.Label()
+        Me.BtnAceptarMod = New System.Windows.Forms.Button()
+        Me.btnCancelarMod = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ListarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModerarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lblRolMod = New System.Windows.Forms.Label()
+        Me.cbxRolMod = New System.Windows.Forms.ComboBox()
+        Me.DTPFechaNacMod = New System.Windows.Forms.DateTimePicker()
+        Me.cbxSexoMod = New System.Windows.Forms.ComboBox()
+        Me.tbxContraseñaMod = New System.Windows.Forms.TextBox()
+        Me.tbxEmailMod = New System.Windows.Forms.TextBox()
+        Me.tbxUserMod = New System.Windows.Forms.TextBox()
+        Me.lblFechaNacRegMod = New System.Windows.Forms.Label()
+        Me.lblSexoMod = New System.Windows.Forms.Label()
+        Me.lblPasswordMod = New System.Windows.Forms.Label()
+        Me.lblEmailMod = New System.Windows.Forms.Label()
+        Me.lblUserMod = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TreeView1
+        'lblModificarUsuario
         '
-        Me.TreeView1.Location = New System.Drawing.Point(139, 123)
-        Me.TreeView1.Name = "TreeView1"
-        Me.TreeView1.Size = New System.Drawing.Size(360, 171)
-        Me.TreeView1.TabIndex = 10
+        Me.lblModificarUsuario.AutoSize = True
+        Me.lblModificarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!)
+        Me.lblModificarUsuario.Location = New System.Drawing.Point(107, 49)
+        Me.lblModificarUsuario.Name = "lblModificarUsuario"
+        Me.lblModificarUsuario.Size = New System.Drawing.Size(379, 54)
+        Me.lblModificarUsuario.TabIndex = 11
+        Me.lblModificarUsuario.Text = "Modificar usuario"
         '
-        'LabelBienvenido
+        'BtnAceptarMod
         '
-        Me.LabelBienvenido.AutoSize = True
-        Me.LabelBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!)
-        Me.LabelBienvenido.Location = New System.Drawing.Point(109, 49)
-        Me.LabelBienvenido.Name = "LabelBienvenido"
-        Me.LabelBienvenido.Size = New System.Drawing.Size(199, 54)
-        Me.LabelBienvenido.TabIndex = 11
-        Me.LabelBienvenido.Text = "Listado: "
+        Me.BtnAceptarMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.BtnAceptarMod.Location = New System.Drawing.Point(492, 389)
+        Me.BtnAceptarMod.Name = "BtnAceptarMod"
+        Me.BtnAceptarMod.Size = New System.Drawing.Size(85, 40)
+        Me.BtnAceptarMod.TabIndex = 17
+        Me.BtnAceptarMod.Text = "Aceptar"
+        Me.BtnAceptarMod.UseVisualStyleBackColor = True
         '
-        'PBLogo
+        'btnCancelarMod
         '
-        Me.PBLogo.Image = Global.SLineDesktop.My.Resources.Resources.Logo
-        Me.PBLogo.Location = New System.Drawing.Point(492, 58)
-        Me.PBLogo.Name = "PBLogo"
-        Me.PBLogo.Size = New System.Drawing.Size(47, 45)
-        Me.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PBLogo.TabIndex = 16
-        Me.PBLogo.TabStop = False
-        '
-        'BtnAcep
-        '
-        Me.BtnAcep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnAcep.Location = New System.Drawing.Point(312, 241)
-        Me.BtnAcep.Name = "BtnAcep"
-        Me.BtnAcep.Size = New System.Drawing.Size(85, 40)
-        Me.BtnAcep.TabIndex = 17
-        Me.BtnAcep.Text = "Aceptar"
-        Me.BtnAcep.UseVisualStyleBackColor = True
-        '
-        'BtnIzq
-        '
-        Me.BtnIzq.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnIzq.Location = New System.Drawing.Point(403, 241)
-        Me.BtnIzq.Name = "BtnIzq"
-        Me.BtnIzq.Size = New System.Drawing.Size(85, 40)
-        Me.BtnIzq.TabIndex = 18
-        Me.BtnIzq.Text = "Cancelar"
-        Me.BtnIzq.UseVisualStyleBackColor = True
-        '
-        'cbxEliminar
-        '
-        Me.cbxEliminar.FormattingEnabled = True
-        Me.cbxEliminar.Items.AddRange(New Object() {"Usuarios", "Casos"})
-        Me.cbxEliminar.Location = New System.Drawing.Point(314, 69)
-        Me.cbxEliminar.Name = "cbxEliminar"
-        Me.cbxEliminar.Size = New System.Drawing.Size(131, 21)
-        Me.cbxEliminar.TabIndex = 19
+        Me.btnCancelarMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.btnCancelarMod.Location = New System.Drawing.Point(116, 389)
+        Me.btnCancelarMod.Name = "btnCancelarMod"
+        Me.btnCancelarMod.Size = New System.Drawing.Size(85, 40)
+        Me.btnCancelarMod.TabIndex = 18
+        Me.btnCancelarMod.Text = "Cancelar"
+        Me.btnCancelarMod.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
@@ -112,36 +94,157 @@ Partial Class PantallaEliminar
         Me.ModerarToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.ModerarToolStripMenuItem.Text = "moderar"
         '
+        'lblRolMod
+        '
+        Me.lblRolMod.AutoSize = True
+        Me.lblRolMod.Location = New System.Drawing.Point(293, 258)
+        Me.lblRolMod.Name = "lblRolMod"
+        Me.lblRolMod.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblRolMod.Size = New System.Drawing.Size(18, 13)
+        Me.lblRolMod.TabIndex = 37
+        Me.lblRolMod.Text = "rol"
+        '
+        'cbxRolMod
+        '
+        Me.cbxRolMod.FormattingEnabled = True
+        Me.cbxRolMod.Location = New System.Drawing.Point(323, 255)
+        Me.cbxRolMod.Name = "cbxRolMod"
+        Me.cbxRolMod.Size = New System.Drawing.Size(121, 21)
+        Me.cbxRolMod.TabIndex = 36
+        '
+        'DTPFechaNacMod
+        '
+        Me.DTPFechaNacMod.Location = New System.Drawing.Point(323, 278)
+        Me.DTPFechaNacMod.Name = "DTPFechaNacMod"
+        Me.DTPFechaNacMod.Size = New System.Drawing.Size(200, 20)
+        Me.DTPFechaNacMod.TabIndex = 35
+        '
+        'cbxSexoMod
+        '
+        Me.cbxSexoMod.FormattingEnabled = True
+        Me.cbxSexoMod.Location = New System.Drawing.Point(323, 232)
+        Me.cbxSexoMod.Name = "cbxSexoMod"
+        Me.cbxSexoMod.Size = New System.Drawing.Size(121, 21)
+        Me.cbxSexoMod.TabIndex = 34
+        '
+        'tbxContraseñaMod
+        '
+        Me.tbxContraseñaMod.Location = New System.Drawing.Point(323, 209)
+        Me.tbxContraseñaMod.Name = "tbxContraseñaMod"
+        Me.tbxContraseñaMod.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.tbxContraseñaMod.Size = New System.Drawing.Size(100, 20)
+        Me.tbxContraseñaMod.TabIndex = 33
+        '
+        'tbxEmailMod
+        '
+        Me.tbxEmailMod.Location = New System.Drawing.Point(323, 185)
+        Me.tbxEmailMod.Name = "tbxEmailMod"
+        Me.tbxEmailMod.Size = New System.Drawing.Size(100, 20)
+        Me.tbxEmailMod.TabIndex = 32
+        '
+        'tbxUserMod
+        '
+        Me.tbxUserMod.Location = New System.Drawing.Point(323, 162)
+        Me.tbxUserMod.Name = "tbxUserMod"
+        Me.tbxUserMod.Size = New System.Drawing.Size(100, 20)
+        Me.tbxUserMod.TabIndex = 31
+        '
+        'lblFechaNacRegMod
+        '
+        Me.lblFechaNacRegMod.AutoSize = True
+        Me.lblFechaNacRegMod.Location = New System.Drawing.Point(211, 281)
+        Me.lblFechaNacRegMod.Name = "lblFechaNacRegMod"
+        Me.lblFechaNacRegMod.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblFechaNacRegMod.Size = New System.Drawing.Size(106, 13)
+        Me.lblFechaNacRegMod.TabIndex = 30
+        Me.lblFechaNacRegMod.Text = "Fecha de nacimiento"
+        '
+        'lblSexoMod
+        '
+        Me.lblSexoMod.AutoSize = True
+        Me.lblSexoMod.Location = New System.Drawing.Point(286, 235)
+        Me.lblSexoMod.Name = "lblSexoMod"
+        Me.lblSexoMod.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblSexoMod.Size = New System.Drawing.Size(31, 13)
+        Me.lblSexoMod.TabIndex = 29
+        Me.lblSexoMod.Text = "Sexo"
+        '
+        'lblPasswordMod
+        '
+        Me.lblPasswordMod.AutoSize = True
+        Me.lblPasswordMod.Location = New System.Drawing.Point(256, 212)
+        Me.lblPasswordMod.Name = "lblPasswordMod"
+        Me.lblPasswordMod.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblPasswordMod.Size = New System.Drawing.Size(61, 13)
+        Me.lblPasswordMod.TabIndex = 28
+        Me.lblPasswordMod.Text = "Contraseña"
+        '
+        'lblEmailMod
+        '
+        Me.lblEmailMod.AutoSize = True
+        Me.lblEmailMod.Location = New System.Drawing.Point(286, 188)
+        Me.lblEmailMod.Name = "lblEmailMod"
+        Me.lblEmailMod.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblEmailMod.Size = New System.Drawing.Size(31, 13)
+        Me.lblEmailMod.TabIndex = 27
+        Me.lblEmailMod.Text = "email"
+        '
+        'lblUserMod
+        '
+        Me.lblUserMod.AutoSize = True
+        Me.lblUserMod.Location = New System.Drawing.Point(262, 165)
+        Me.lblUserMod.Name = "lblUserMod"
+        Me.lblUserMod.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblUserMod.Size = New System.Drawing.Size(55, 13)
+        Me.lblUserMod.TabIndex = 26
+        Me.lblUserMod.Text = "Username"
+        '
         'PantallaEliminar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 461)
-        Me.Controls.Add(Me.cbxEliminar)
-        Me.Controls.Add(Me.BtnIzq)
-        Me.Controls.Add(Me.BtnAcep)
-        Me.Controls.Add(Me.PBLogo)
-        Me.Controls.Add(Me.LabelBienvenido)
-        Me.Controls.Add(Me.TreeView1)
+        Me.Controls.Add(Me.lblRolMod)
+        Me.Controls.Add(Me.cbxRolMod)
+        Me.Controls.Add(Me.DTPFechaNacMod)
+        Me.Controls.Add(Me.cbxSexoMod)
+        Me.Controls.Add(Me.tbxContraseñaMod)
+        Me.Controls.Add(Me.tbxEmailMod)
+        Me.Controls.Add(Me.tbxUserMod)
+        Me.Controls.Add(Me.lblFechaNacRegMod)
+        Me.Controls.Add(Me.lblSexoMod)
+        Me.Controls.Add(Me.lblPasswordMod)
+        Me.Controls.Add(Me.lblEmailMod)
+        Me.Controls.Add(Me.lblUserMod)
+        Me.Controls.Add(Me.btnCancelarMod)
+        Me.Controls.Add(Me.BtnAceptarMod)
+        Me.Controls.Add(Me.lblModificarUsuario)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "PantallaEliminar"
         Me.Text = "Administrador SLine! - Eliminar"
-        CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TreeView1 As TreeView
-    Friend WithEvents LabelBienvenido As Label
-    Friend WithEvents PBLogo As PictureBox
-    Friend WithEvents BtnAcep As Button
-    Friend WithEvents BtnIzq As Button
-    Friend WithEvents cbxEliminar As ComboBox
+    Friend WithEvents lblModificarUsuario As Label
+    Friend WithEvents BtnAceptarMod As Button
+    Friend WithEvents btnCancelarMod As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ListarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ModerarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblRolMod As Label
+    Friend WithEvents cbxRolMod As ComboBox
+    Friend WithEvents DTPFechaNacMod As DateTimePicker
+    Friend WithEvents cbxSexoMod As ComboBox
+    Friend WithEvents tbxContraseñaMod As TextBox
+    Friend WithEvents tbxEmailMod As TextBox
+    Friend WithEvents tbxUserMod As TextBox
+    Friend WithEvents lblFechaNacRegMod As Label
+    Friend WithEvents lblSexoMod As Label
+    Friend WithEvents lblPasswordMod As Label
+    Friend WithEvents lblEmailMod As Label
+    Friend WithEvents lblUserMod As Label
 End Class

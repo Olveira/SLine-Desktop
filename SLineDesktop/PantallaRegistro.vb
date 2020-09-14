@@ -16,13 +16,7 @@
 
         Dim user As usuario
         user = New usuario(username, email, password, sexo, fechaNac, rol)
-        'user.Username = username
-        'user.Email = email
-        'user.Password = password
-        'user.Sexo = sexo
-        'user.Rol = rol
-        'user.Token = token
-        'user.FechaNac = fechaNac
+
 
         Dim logicaUsuario As New logicaUsuario
         logicaUsuario.AltaUser(user)
