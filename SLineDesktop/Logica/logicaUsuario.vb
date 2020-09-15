@@ -12,7 +12,6 @@
         Dim niceLog As Int16
         Dim persistencia As New persistenciaUsuario
         niceLog = persistencia.persistenciaLog(user, pass)
-
         Return niceLog
 
     End Function

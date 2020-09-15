@@ -79,7 +79,6 @@
             cmd.CommandText = cadenaDeComandos
             Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
 
-
             While Lector.Read()
                 Dim newPersona As New usuario
                 newPersona.Username = Lector(0).ToString
@@ -88,7 +87,7 @@
                 newPersona.Sexo = Lector(3).ToString
                 newPersona.FechaNac = Lector(5).ToString
                 newPersona.Rol = Lector(6).ToString
-                newPersona.Id = Convert.ToInt32(Lector(8).ToString)
+                newPersona.Id = Convert.ToInt32(Lector(7).ToString)
                 xss.Add(newPersona)
             End While
 
