@@ -1,5 +1,6 @@
 ﻿Public Class persistenciaUsuario
     Dim conection = New Npgsql.NpgsqlConnection
+    Dim xss As New List(Of usuario)
     Public Sub AltaUsuario(users As usuario)
         Try
             Dim clasCnn = New conexion
@@ -64,7 +65,7 @@
             conection.close
         End Try
     End Function
-    Dim xss As New List(Of usuario)
+
     Public Function listarPersonas() As List(Of usuario)
         Try
             Dim Persona As New usuario
