@@ -94,11 +94,13 @@ Partial Class PantallaListar
         'LVListadoUsuarios
         '
         Me.LVListadoUsuarios.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Username, Me.Email, Me.Password, Me.sexo, Me.FechaNac, Me.rol, Me.id})
+        Me.LVListadoUsuarios.FullRowSelect = True
+        Me.LVListadoUsuarios.GridLines = True
         Me.LVListadoUsuarios.HideSelection = False
-        Me.LVListadoUsuarios.Location = New System.Drawing.Point(77, 126)
+        Me.LVListadoUsuarios.Location = New System.Drawing.Point(59, 122)
         Me.LVListadoUsuarios.MultiSelect = False
         Me.LVListadoUsuarios.Name = "LVListadoUsuarios"
-        Me.LVListadoUsuarios.Size = New System.Drawing.Size(588, 192)
+        Me.LVListadoUsuarios.Size = New System.Drawing.Size(610, 192)
         Me.LVListadoUsuarios.TabIndex = 22
         Me.LVListadoUsuarios.UseCompatibleStateImageBehavior = False
         Me.LVListadoUsuarios.View = System.Windows.Forms.View.Details

@@ -1,4 +1,5 @@
 ﻿Public Class PantallaListar
+    Dim user As usuario
     Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiModerar.Click
         PantallaModerar.Show()
         Me.Hide()
@@ -42,5 +43,25 @@
         Dim username As String
 
         username = LVListadoUsuarios.SelectedItems(0).SubItems(0).Text
+    End Sub
+
+    Private Sub LVListadoUsuarios_MouseClick(sender As Object, e As MouseEventArgs) Handles LVListadoUsuarios.MouseClick
+
+
+
+        user.Username = LVListadoUsuarios.FocusedItem.SubItems(0).Text
+        user.Email = LVListadoUsuarios.FocusedItem.SubItems(1).Text
+        user.Password = LVListadoUsuarios.FocusedItem.SubItems(2).Text
+        user.Sexo = LVListadoUsuarios.FocusedItem.SubItems(3).Text
+        user.FechaNac = Convert.ToDateTime(LVListadoUsuarios.FocusedItem.SubItems(4).Text)
+        user.Rol = LVListadoUsuarios.FocusedItem.SubItems(5).Text
+        user.Id = Convert.ToInt32(LVListadoUsuarios.FocusedItem.SubItems(6).Text)
+
+
+
+    End Sub
+
+    Private Sub BtnIzq_Click(sender As Object, e As EventArgs) Handles BtnIzq.Click
+        PantallaEliminar.user = user
     End Sub
 End Class
