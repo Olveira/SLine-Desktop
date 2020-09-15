@@ -1,7 +1,7 @@
 ﻿Public Class persistenciaCaso
     Dim conection = New Npgsql.NpgsqlConnection
 
-    'Inecesario
+    'Inecesario'
     Public Sub AltaCaso(cases As caso)
         Try
             Dim clasCnn = New conexion
