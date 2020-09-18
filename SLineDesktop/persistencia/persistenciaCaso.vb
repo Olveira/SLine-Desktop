@@ -29,14 +29,17 @@
         End Try
     End Sub
 
-    'Public Function 
-    '
-    'if aceptar = guarda
-    'Declionar = bprra
-    'botones
-    'listbiu
-    '
+    Public Function moderarCasos() As List(Of caso)
+        'If cliquea Then
+        '   cambia la variable verificada
+        '  ElseIf () Then
+        ' BORRA / DECLINA
+        'botones
+        'listbiu
+        'End ElseIf
+        'End If
 
+    End Function
 
     Dim scaso As New List(Of caso)
     Public Function listarCasos() As List(Of caso)

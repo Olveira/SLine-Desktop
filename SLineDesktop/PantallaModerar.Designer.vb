@@ -86,8 +86,8 @@ Partial Class PantallaModerar
         'tsmlEliminar
         '
         Me.tsmlEliminar.Name = "tsmlEliminar"
-        Me.tsmlEliminar.Size = New System.Drawing.Size(62, 20)
-        Me.tsmlEliminar.Text = "Eliminar"
+        Me.tsmlEliminar.Size = New System.Drawing.Size(70, 20)
+        Me.tsmlEliminar.Text = "Modificar"
         '
         'tsmiListar
         '

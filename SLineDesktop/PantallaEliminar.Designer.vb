@@ -26,7 +26,6 @@ Partial Class PantallaEliminar
         Me.BtnAceptarMod = New System.Windows.Forms.Button()
         Me.btnCancelarMod = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ListarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModerarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblRolMod = New System.Windows.Forms.Label()
         Me.cbxRolMod = New System.Windows.Forms.ComboBox()
@@ -75,18 +74,12 @@ Partial Class PantallaEliminar
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListarToolStripMenuItem, Me.ModerarToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModerarToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(734, 24)
         Me.MenuStrip1.TabIndex = 20
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'ListarToolStripMenuItem
-        '
-        Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
-        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.ListarToolStripMenuItem.Text = "listar"
         '
         'ModerarToolStripMenuItem
         '
@@ -233,7 +226,6 @@ Partial Class PantallaEliminar
     Friend WithEvents BtnAceptarMod As Button
     Friend WithEvents btnCancelarMod As Button
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents ListarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ModerarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lblRolMod As Label
     Friend WithEvents cbxRolMod As ComboBox
