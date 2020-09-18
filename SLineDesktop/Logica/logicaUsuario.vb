@@ -15,4 +15,14 @@
         Return niceLog
 
     End Function
+
+    Public Sub ModificarUsuario(user As usuario)
+        Dim persistencia As New persistenciaUsuario
+        persistencia.modificarPersona(user)
+    End Sub
+    Public Sub eliminarUsuario(id As Integer)
+        Dim persistencia As New persistenciaUsuario
+        persistencia.eliminarUsuario(id)
+    End Sub
+
 End Class

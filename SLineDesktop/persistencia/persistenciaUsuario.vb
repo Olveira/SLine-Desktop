@@ -1,6 +1,6 @@
 ﻿Public Class persistenciaUsuario
     Dim conection = New Npgsql.NpgsqlConnection
-    Dim xss As New List(Of usuario)
+
     Public Sub AltaUsuario(users As usuario)
         Try
             Dim clasCnn = New conexion
@@ -67,6 +67,7 @@
     End Function
 
     Public Function listarPersonas() As List(Of usuario)
+        Dim xss As New List(Of usuario)
         Try
             Dim Persona As New usuario
             Dim ClaseSnl As New conexion
@@ -93,12 +94,68 @@
 
             If IsNothing(xss) Then
             Else
-                Return xss
+
             End If
         Catch ex As Exception
             Throw ex
         Finally
             conection.close
         End Try
+        Return xss
     End Function
+    Public Sub modificarPersona(user As usuario)
+        Try
+            Dim clasCnn = New conexion
+            Dim cadenaDeComandos As String
+
+            Dim resultado As Integer
+
+            cadenaDeComandos = "update users set username = @username, email = @email, password = @password, sexo = @sexo, fechanac = @fechanac, rol = @rol where id = @id"
+
+            conection = clasCnn.abrirConexion()
+            Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
+
+
+            cmd.Connection = conection
+
+
+            cmd.Parameters.Add("@username", NpgsqlTypes.NpgsqlDbType.Varchar, 50).Value = user.Username
+            cmd.Parameters.Add("@email", NpgsqlTypes.NpgsqlDbType.Varchar, 70).Value = user.Email
+            cmd.Parameters.Add("@password", NpgsqlTypes.NpgsqlDbType.Varchar, 50).Value = user.Password
+            cmd.Parameters.Add("@sexo", NpgsqlTypes.NpgsqlDbType.Varchar, 10).Value = user.Sexo
+            cmd.Parameters.Add("@fechanac", NpgsqlTypes.NpgsqlDbType.Date).Value = user.FechaNac
+            cmd.Parameters.Add("@rol", NpgsqlTypes.NpgsqlDbType.Varchar, 15).Value = user.Rol
+            cmd.Parameters.Add("@id", NpgsqlTypes.NpgsqlDbType.Integer).Value = user.Id
+
+            resultado = cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+    Public Sub eliminarUsuario(id As Integer)
+        Try
+            Dim clasCnn = New conexion
+            Dim cadenaDeComandos As String
+
+            Dim resultado As Integer
+
+            cadenaDeComandos = "delete from users where id = @id"
+
+            conection = clasCnn.abrirConexion()
+            Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
+
+
+            cmd.Connection = conection
+
+
+            cmd.Parameters.Add("@id", NpgsqlTypes.NpgsqlDbType.Integer).Value = id
+
+            resultado = cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+            Throw ex
+        Finally
+            conection.close
+        End Try
+    End Sub
 End Class
