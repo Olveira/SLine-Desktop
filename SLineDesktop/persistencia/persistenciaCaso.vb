@@ -30,14 +30,20 @@
     End Sub
 
     Public Function moderarCasos() As List(Of caso)
-        'If cliquea Then
+        Try
+
+
+        Catch ex As Exception
+
+        End Try
+
+
+        ' cliquea Then
         '   cambia la variable verificada
         '  ElseIf () Then
         ' BORRA / DECLINA
         'botones
         'listbiu
-        'End ElseIf
-        'End If
 
     End Function
 
