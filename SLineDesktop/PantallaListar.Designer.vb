@@ -23,10 +23,9 @@ Partial Class PantallaListar
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.LabelBienvenido = New System.Windows.Forms.Label()
-        Me.BtnIzq = New System.Windows.Forms.Button()
+        Me.BtnEditar = New System.Windows.Forms.Button()
         Me.PBLogo = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.tsmiEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiModerar = New System.Windows.Forms.ToolStripMenuItem()
         Me.LVListadoUsuarios = New System.Windows.Forms.ListView()
         Me.Username = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -36,6 +35,7 @@ Partial Class PantallaListar
         Me.FechaNac = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.rol = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.id = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -50,15 +50,15 @@ Partial Class PantallaListar
         Me.LabelBienvenido.TabIndex = 10
         Me.LabelBienvenido.Text = "Listado de Usuarios"
         '
-        'BtnIzq
+        'BtnEditar
         '
-        Me.BtnIzq.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnIzq.Location = New System.Drawing.Point(289, 340)
-        Me.BtnIzq.Name = "BtnIzq"
-        Me.BtnIzq.Size = New System.Drawing.Size(118, 40)
-        Me.BtnIzq.TabIndex = 12
-        Me.BtnIzq.Text = "Dar de baja"
-        Me.BtnIzq.UseVisualStyleBackColor = True
+        Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.BtnEditar.Location = New System.Drawing.Point(172, 370)
+        Me.BtnEditar.Name = "BtnEditar"
+        Me.BtnEditar.Size = New System.Drawing.Size(118, 40)
+        Me.BtnEditar.TabIndex = 12
+        Me.BtnEditar.Text = "Editar"
+        Me.BtnEditar.UseVisualStyleBackColor = True
         '
         'PBLogo
         '
@@ -72,18 +72,12 @@ Partial Class PantallaListar
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiEliminar, Me.tsmiModerar})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiModerar})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(734, 24)
         Me.MenuStrip1.TabIndex = 21
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'tsmiEliminar
-        '
-        Me.tsmiEliminar.Name = "tsmiEliminar"
-        Me.tsmiEliminar.Size = New System.Drawing.Size(62, 20)
-        Me.tsmiEliminar.Text = "Eliminar"
         '
         'tsmiModerar
         '
@@ -138,14 +132,24 @@ Partial Class PantallaListar
         '
         Me.id.Text = "id"
         '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(401, 370)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(118, 40)
+        Me.btnEliminar.TabIndex = 23
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
         'PantallaListar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 461)
+        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.LVListadoUsuarios)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.BtnIzq)
+        Me.Controls.Add(Me.BtnEditar)
         Me.Controls.Add(Me.PBLogo)
         Me.Controls.Add(Me.LabelBienvenido)
         Me.Name = "PantallaListar"
@@ -159,9 +163,8 @@ Partial Class PantallaListar
     End Sub
     Friend WithEvents LabelBienvenido As Label
     Friend WithEvents PBLogo As PictureBox
-    Friend WithEvents BtnIzq As Button
+    Friend WithEvents BtnEditar As Button
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents tsmiEliminar As ToolStripMenuItem
     Friend WithEvents tsmiModerar As ToolStripMenuItem
     Friend WithEvents LVListadoUsuarios As ListView
     Friend WithEvents Username As ColumnHeader
@@ -171,4 +174,5 @@ Partial Class PantallaListar
     Friend WithEvents FechaNac As ColumnHeader
     Friend WithEvents rol As ColumnHeader
     Friend WithEvents id As ColumnHeader
+    Friend WithEvents btnEliminar As Button
 End Class

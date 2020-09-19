@@ -79,7 +79,7 @@ Partial Class PantallaRegistro
         Me.btnSiguienteReg.Name = "btnSiguienteReg"
         Me.btnSiguienteReg.Size = New System.Drawing.Size(184, 42)
         Me.btnSiguienteReg.TabIndex = 9
-        Me.btnSiguienteReg.Text = "Siguiente"
+        Me.btnSiguienteReg.Text = "registrar"
         Me.btnSiguienteReg.UseVisualStyleBackColor = True
         '
         'lblUserReg

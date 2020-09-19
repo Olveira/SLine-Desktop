@@ -5,7 +5,6 @@
     Private _sexo As String
     Private _fechaNac As Date
     Private _rol As String
-    Private _token As String
     Private _id As Integer
 
     Public Property Username As String
