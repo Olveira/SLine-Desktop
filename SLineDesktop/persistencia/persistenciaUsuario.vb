@@ -87,15 +87,10 @@
                 newPersona.Password = Lector(2).ToString
                 newPersona.Sexo = Lector(3).ToString
                 newPersona.FechaNac = Lector(5).ToString
-                newPersona.Rol = Lector(6).ToString
-                newPersona.Id = Convert.ToInt32(Lector(7).ToString)
+                newPersona.Rol = Lector(7).ToString
+                newPersona.Id = Convert.ToInt32(Lector(6).ToString)
                 xss.Add(newPersona)
             End While
-
-            If IsNothing(xss) Then
-            Else
-
-            End If
         Catch ex As Exception
             Throw ex
         Finally

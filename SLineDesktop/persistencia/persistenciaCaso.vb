@@ -29,15 +29,25 @@
         End Try
     End Sub
 
-    Public Function moderarCasos() As List(Of caso)
-        'If cliquea Then
+    Public Function moderarCasos(idCaso As Integer) As List(Of caso)
+        Try
+            Dim cadenadecomandosModificar = "UPDATE CASES SET verificado = true WHERE idcaso = @idCaso;"
+            Dim clasCnn = New conexion
+            clasCnn = conection
+            Dim cmd As New Npgsql.NpgsqlCommand(cadenadecomandosModificar)
+            cmd.Connection = conection
+
+        Catch ex As Exception
+
+        End Try
+
+
+        ' cliquea Then
         '   cambia la variable verificada
         '  ElseIf () Then
         ' BORRA / DECLINA
         'botones
         'listbiu
-        'End ElseIf
-        'End If
 
     End Function
 
@@ -77,3 +87,6 @@
     End Function
 
 End Class
+
+'Listar casos
+'Moderar casos (Aceptar y borrar)
