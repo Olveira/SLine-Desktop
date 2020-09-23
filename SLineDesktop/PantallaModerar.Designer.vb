@@ -30,12 +30,12 @@ Partial Class PantallaModerar
         Me.tsmlEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiListar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.idCaso = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.coord = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.desc = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.idUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.verif = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.fechaR = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -43,7 +43,7 @@ Partial Class PantallaModerar
         'PBLogo
         '
         Me.PBLogo.Image = Global.SLineDesktop.My.Resources.Resources.Logo
-        Me.PBLogo.Location = New System.Drawing.Point(492, 58)
+        Me.PBLogo.Location = New System.Drawing.Point(519, 58)
         Me.PBLogo.Name = "PBLogo"
         Me.PBLogo.Size = New System.Drawing.Size(47, 45)
         Me.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -63,7 +63,7 @@ Partial Class PantallaModerar
         'BtnAcep
         '
         Me.BtnAcep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnAcep.Location = New System.Drawing.Point(464, 330)
+        Me.BtnAcep.Location = New System.Drawing.Point(491, 330)
         Me.BtnAcep.Name = "BtnAcep"
         Me.BtnAcep.Size = New System.Drawing.Size(75, 40)
         Me.BtnAcep.TabIndex = 10
@@ -103,14 +103,39 @@ Partial Class PantallaModerar
         '
         'ListView1
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.idCaso, Me.coord, Me.desc, Me.idUsuario, Me.verif, Me.fechaR})
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(118, 109)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(421, 203)
+        Me.ListView1.Size = New System.Drawing.Size(448, 203)
         Me.ListView1.TabIndex = 24
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'idCaso
+        '
+        Me.idCaso.Text = "ID Caso"
+        '
+        'coord
+        '
+        Me.coord.Text = "Coordenadas"
+        '
+        'desc
+        '
+        Me.desc.Text = "Descripción"
+        '
+        'idUsuario
+        '
+        Me.idUsuario.Text = "ID Usuario"
+        '
+        'verif
+        '
+        Me.verif.Text = "Verificado"
+        '
+        'fechaR
+        '
+        Me.fechaR.Text = "Fecha registro"
+        Me.fechaR.Width = 87
         '
         'PantallaModerar
         '
@@ -141,10 +166,10 @@ Partial Class PantallaModerar
     Friend WithEvents tsmlEliminar As ToolStripMenuItem
     Friend WithEvents tsmiListar As ToolStripMenuItem
     Friend WithEvents ListView1 As ListView
-    Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents ColumnHeader4 As ColumnHeader
-    Friend WithEvents ColumnHeader5 As ColumnHeader
-    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents idCaso As ColumnHeader
+    Friend WithEvents coord As ColumnHeader
+    Friend WithEvents desc As ColumnHeader
+    Friend WithEvents idUsuario As ColumnHeader
+    Friend WithEvents verif As ColumnHeader
+    Friend WithEvents fechaR As ColumnHeader
 End Class
