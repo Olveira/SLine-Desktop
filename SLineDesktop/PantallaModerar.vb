@@ -1,7 +1,7 @@
 ﻿Public Class PantallaModerar
     Private Sub tsmiListar_Click(sender As Object, e As EventArgs) Handles tsmiListar.Click
-        PantallaListar.LVListadoUsuarios.Clear()
-        PantallaListar.Update()
+        PantallaListar.LVListadoUsuarios.Items.Clear()
+        PantallaListar.Activate()
         PantallaListar.Show()
 
         Me.Hide()
