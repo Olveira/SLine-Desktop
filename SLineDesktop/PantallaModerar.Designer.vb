@@ -30,6 +30,12 @@ Partial Class PantallaModerar
         Me.tsmlEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiListar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -97,12 +103,14 @@ Partial Class PantallaModerar
         '
         'ListView1
         '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(118, 109)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(421, 203)
         Me.ListView1.TabIndex = 24
         Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'PantallaModerar
         '
@@ -133,4 +141,10 @@ Partial Class PantallaModerar
     Friend WithEvents tsmlEliminar As ToolStripMenuItem
     Friend WithEvents tsmiListar As ToolStripMenuItem
     Friend WithEvents ListView1 As ListView
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
 End Class

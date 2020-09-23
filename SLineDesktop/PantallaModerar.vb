@@ -15,10 +15,6 @@
     'Aceptar
     Private Sub BtnAcep_Click(sender As Object, e As EventArgs) Handles BtnAcep.Click
 
-        'seleccionado As New Variable
-        'Variable = 0
-
-
     End Sub
 
     'Declimar
