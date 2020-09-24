@@ -205,3 +205,4 @@ C:\Users\admin\Documents\GitHub\SLine-Desktop\SLineDesktop\obj\Debug\SLineDeskto
 C:\Users\admin\Documents\GitHub\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.exe
 C:\Users\admin\Documents\GitHub\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.xml
 C:\Users\admin\Documents\GitHub\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.pdb
+C:\Users\admin\Documents\GitHub\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.vbprojAssemblyReference.cache

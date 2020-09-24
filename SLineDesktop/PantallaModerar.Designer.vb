@@ -29,7 +29,7 @@ Partial Class PantallaModerar
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.tsmlEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiListar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ListCasos = New System.Windows.Forms.ListView()
         Me.idCaso = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.coord = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.desc = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -101,16 +101,16 @@ Partial Class PantallaModerar
         Me.tsmiListar.Size = New System.Drawing.Size(44, 20)
         Me.tsmiListar.Text = "listar"
         '
-        'ListView1
+        'ListCasos
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.idCaso, Me.coord, Me.desc, Me.idUsuario, Me.verif, Me.fechaR})
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(118, 109)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(448, 203)
-        Me.ListView1.TabIndex = 24
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
+        Me.ListCasos.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.idCaso, Me.coord, Me.desc, Me.idUsuario, Me.verif, Me.fechaR})
+        Me.ListCasos.HideSelection = False
+        Me.ListCasos.Location = New System.Drawing.Point(118, 109)
+        Me.ListCasos.Name = "ListCasos"
+        Me.ListCasos.Size = New System.Drawing.Size(448, 203)
+        Me.ListCasos.TabIndex = 24
+        Me.ListCasos.UseCompatibleStateImageBehavior = False
+        Me.ListCasos.View = System.Windows.Forms.View.Details
         '
         'idCaso
         '
@@ -146,7 +146,7 @@ Partial Class PantallaModerar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 461)
-        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.ListCasos)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.BtnDec)
         Me.Controls.Add(Me.BtnAcep)
@@ -169,7 +169,7 @@ Partial Class PantallaModerar
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents tsmlEliminar As ToolStripMenuItem
     Friend WithEvents tsmiListar As ToolStripMenuItem
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents ListCasos As ListView
     Friend WithEvents idCaso As ColumnHeader
     Friend WithEvents coord As ColumnHeader
     Friend WithEvents desc As ColumnHeader

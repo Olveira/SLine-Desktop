@@ -1,5 +1,8 @@
 ﻿Public Class logicaCaso
-    Friend Function listarCaso() As List(Of caso)
-        Throw New NotImplementedException()
+    Public Function listarCaso() As List(Of caso)
+        Dim perListado As New persistenciaCaso
+        Return perListado.listarCaso()
+
     End Function
+
 End Class

@@ -19,10 +19,10 @@
         End Try
 
     End Function
-
-
-
-
+    'as
+    Friend Function listarCaso() As List(Of caso)
+        Throw New NotImplementedException()
+    End Function
 
     Dim scaso As New List(Of caso)
     Public Function listarCasos() As List(Of caso)
@@ -31,7 +31,7 @@
             conection = ConCaso.abrirConexion
             Dim cmd = New Npgsql.NpgsqlCommand
             cmd.Connection = conection
-            Dim cadenaDeComandos = "select * FROM CASES "
+            Dim cadenaDeComandos = "SELECT * FROM CASES "
 
             cmd.CommandText = cadenaDeComandos
             Dim Visor As Npgsql.NpgsqlDataReader = cmd.ExecuteReader

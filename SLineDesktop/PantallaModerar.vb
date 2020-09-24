@@ -9,8 +9,8 @@
         Me.Hide()
     End Sub
 
-    Private Sub tsmlEliminar_Click(sender As Object, e As EventArgs) Handles MyBase.Activated
-        LVListarCasos.Items.Clear()
+    Private Sub tsmlEliminar_Click(sender As Object, e As EventArgs) Handles MyBase.Load
+        ListCasos.Items.Clear()
         PantallaEliminar.Show()
         Me.Hide()
 
@@ -28,9 +28,8 @@
             arra(2) = list(x).IdUsuario
             arra(3) = list(x).Verificado
             arra(4) = list(x).Fecharegistro
-
             item = New ListViewItem(arra)
-            LVListarCasos.Items.Add(item)
+            ListCasos.Items.Add(item)
             x = x - 1
 
 
