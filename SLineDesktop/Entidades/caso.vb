@@ -32,7 +32,7 @@
         End Set
     End Property
 
-    Public Property idUsuario As Integer
+    Public Property IdUsuario As Integer
         Get
             Return _idUsuario
         End Get
@@ -41,7 +41,7 @@
         End Set
     End Property
 
-    Public Property verificado As Boolean
+    Public Property Verificado As Boolean
         Get
             Return _verificado
         End Get
@@ -50,7 +50,7 @@
         End Set
     End Property
 
-    Public Property fecharegistro As Date
+    Public Property Fecharegistro As Date
         Get
             Return _fecharegistro
         End Get

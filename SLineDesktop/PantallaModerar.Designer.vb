@@ -115,18 +115,22 @@ Partial Class PantallaModerar
         'idCaso
         '
         Me.idCaso.Text = "ID Caso"
+        Me.idCaso.Width = 55
         '
         'coord
         '
         Me.coord.Text = "Coordenadas"
+        Me.coord.Width = 82
         '
         'desc
         '
         Me.desc.Text = "Descripción"
+        Me.desc.Width = 71
         '
         'idUsuario
         '
         Me.idUsuario.Text = "ID Usuario"
+        Me.idUsuario.Width = 66
         '
         'verif
         '
