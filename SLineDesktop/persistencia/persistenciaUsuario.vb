@@ -65,7 +65,6 @@
             conection.close
         End Try
     End Function
-    Dim caso As New caso
     Public Function listarPersonas() As List(Of usuario)
         Dim xss As New List(Of usuario)
         Try
