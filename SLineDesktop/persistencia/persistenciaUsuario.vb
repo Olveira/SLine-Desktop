@@ -65,7 +65,6 @@
             conection.close
         End Try
     End Function
-    Dim caso As New caso
     Public Function listarPersonas() As List(Of usuario)
         Dim xss As New List(Of usuario)
         Try
@@ -87,8 +86,8 @@
                 newPersona.Password = Lector(2).ToString
                 newPersona.Sexo = Lector(3).ToString
                 newPersona.FechaNac = Lector(5).ToString
-                newPersona.Id = Convert.ToInt32(Lector(7).ToString)
-                newPersona.Rol = Lector(6).ToString
+                newPersona.Id = Convert.ToInt32(Lector(6).ToString)
+                newPersona.Rol = Lector(7).ToString
 
                 xss.Add(newPersona)
             End While
