@@ -19,10 +19,6 @@
         End Try
 
     End Function
-    'as
-    Friend Function listarCaso() As List(Of caso)
-        Throw New NotImplementedException()
-    End Function
 
     Dim scaso As New List(Of caso)
     Public Function listarCasos() As List(Of caso)
@@ -39,17 +35,13 @@
             While Visor.Read()
                 Dim newCaso As New caso
                 newCaso.IdCaso = Convert.ToInt32(Visor(0).ToString)
-                newCaso.Coordenadas = Visor(1).ToInterger
+                'newCaso.Coordenadas = Convert.ToInt32(Visor(1).ToString)
                 newCaso.Descripcion = Visor(2).ToString
-                newCaso.idUsuario = Convert.ToInt32(Visor(8).ToString)
-                newCaso.verificado = Visor(3).ToString
-                newCaso.fecharegistro = Visor(4).ToString
+                newCaso.IdUsuario = Convert.ToInt32(Visor(3).ToString)
+                'newCaso.Verificado = Visor(4).ToString
+                newCaso.Fecharegistro = Visor(5).ToString
+                scaso.Add(newCaso)
             End While
-
-            If IsNothing(scaso) Then
-            Else
-                Return scaso
-            End If
         Catch ex As Exception
             Throw ex
         Finally

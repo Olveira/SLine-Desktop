@@ -31,10 +31,8 @@ Partial Class PantallaModerar
         Me.tsmiListar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListCasos = New System.Windows.Forms.ListView()
         Me.idCaso = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.coord = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.desc = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.idUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.verif = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.fechaR = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -98,12 +96,12 @@ Partial Class PantallaModerar
         'tsmiListar
         '
         Me.tsmiListar.Name = "tsmiListar"
-        Me.tsmiListar.Size = New System.Drawing.Size(44, 20)
-        Me.tsmiListar.Text = "listar"
+        Me.tsmiListar.Size = New System.Drawing.Size(47, 20)
+        Me.tsmiListar.Text = "Listar"
         '
         'ListCasos
         '
-        Me.ListCasos.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.idCaso, Me.coord, Me.desc, Me.idUsuario, Me.verif, Me.fechaR})
+        Me.ListCasos.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.idCaso, Me.desc, Me.idUsuario, Me.fechaR})
         Me.ListCasos.HideSelection = False
         Me.ListCasos.Location = New System.Drawing.Point(118, 109)
         Me.ListCasos.Name = "ListCasos"
@@ -117,11 +115,6 @@ Partial Class PantallaModerar
         Me.idCaso.Text = "ID Caso"
         Me.idCaso.Width = 55
         '
-        'coord
-        '
-        Me.coord.Text = "Coordenadas"
-        Me.coord.Width = 82
-        '
         'desc
         '
         Me.desc.Text = "Descripción"
@@ -131,10 +124,6 @@ Partial Class PantallaModerar
         '
         Me.idUsuario.Text = "ID Usuario"
         Me.idUsuario.Width = 66
-        '
-        'verif
-        '
-        Me.verif.Text = "Verificado"
         '
         'fechaR
         '
@@ -171,9 +160,7 @@ Partial Class PantallaModerar
     Friend WithEvents tsmiListar As ToolStripMenuItem
     Friend WithEvents ListCasos As ListView
     Friend WithEvents idCaso As ColumnHeader
-    Friend WithEvents coord As ColumnHeader
     Friend WithEvents desc As ColumnHeader
     Friend WithEvents idUsuario As ColumnHeader
-    Friend WithEvents verif As ColumnHeader
     Friend WithEvents fechaR As ColumnHeader
 End Class
