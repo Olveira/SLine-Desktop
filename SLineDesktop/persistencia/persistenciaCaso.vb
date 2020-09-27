@@ -22,32 +22,33 @@
 
     Dim scaso As New List(Of caso)
     Public Function listarCasos() As List(Of caso)
+        Dim xss As New List(Of caso)
         Try
-            Dim ConCaso As New conexion
-            conection = ConCaso.abrirConexion
+            Dim Persona As New caso
+            Dim ClaseSnl As New conexion
+            conection = ClaseSnl.abrirConexion
             Dim cmd = New Npgsql.NpgsqlCommand
             cmd.Connection = conection
-            Dim cadenaDeComandos = "SELECT * FROM CASES "
+
+            Dim cadenaDeComandos = "SELECT * FROM CASES"
 
             cmd.CommandText = cadenaDeComandos
-            Dim Visor As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
+            Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
 
-            While Visor.Read()
+            While Lector.Read()
                 Dim newCaso As New caso
-                newCaso.IdCaso = Convert.ToInt32(Visor(0).ToString)
-                'newCaso.Coordenadas = Convert.ToInt32(Visor(1).ToString)
-                newCaso.Descripcion = Visor(2).ToString
-                newCaso.IdUsuario = Convert.ToInt32(Visor(3).ToString)
-                'newCaso.Verificado = Visor(4).ToString
-                newCaso.Fecharegistro = Visor(5).ToString
-                scaso.Add(newCaso)
+                newCaso.IdCaso = Lector(0).ToString
+                newCaso.Descripcion = Lector(1).ToString
+                newCaso.IdUsuario = Lector(2).ToString
+
+                xss.Add(newCaso)
             End While
         Catch ex As Exception
             Throw ex
         Finally
             conection.close
         End Try
-        Return scaso
+        Return xss
     End Function
 
 End Class

@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub tsmlEliminar_Click(sender As Object, e As EventArgs) Handles Me.Load
-        ListCasos.Items.Clear()
+        ListaCasos.Items.Clear()
 
         Dim logica As New logicaCaso
         list = logica.listarCaso()
@@ -24,7 +24,7 @@
             arra(2) = list(x).IdUsuario
             arra(3) = list(x).Fecharegistro
             item = New ListViewItem(arra)
-            ListCasos.Items.Add(item)
+            ListaCasos.Items.Add(item)
             x = x - 1
 
 

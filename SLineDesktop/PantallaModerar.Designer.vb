@@ -29,11 +29,10 @@ Partial Class PantallaModerar
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.tsmlEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiListar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListCasos = New System.Windows.Forms.ListView()
-        Me.idCaso = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.desc = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.idUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.fechaR = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ListaCasos = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -99,43 +98,40 @@ Partial Class PantallaModerar
         Me.tsmiListar.Size = New System.Drawing.Size(47, 20)
         Me.tsmiListar.Text = "Listar"
         '
-        'ListCasos
+        'ListaCasos
         '
-        Me.ListCasos.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.idCaso, Me.desc, Me.idUsuario, Me.fechaR})
-        Me.ListCasos.HideSelection = False
-        Me.ListCasos.Location = New System.Drawing.Point(118, 109)
-        Me.ListCasos.Name = "ListCasos"
-        Me.ListCasos.Size = New System.Drawing.Size(448, 203)
-        Me.ListCasos.TabIndex = 24
-        Me.ListCasos.UseCompatibleStateImageBehavior = False
-        Me.ListCasos.View = System.Windows.Forms.View.Details
+        Me.ListaCasos.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
+        Me.ListaCasos.FullRowSelect = True
+        Me.ListaCasos.GridLines = True
+        Me.ListaCasos.HideSelection = False
+        Me.ListaCasos.Location = New System.Drawing.Point(118, 106)
+        Me.ListaCasos.MultiSelect = False
+        Me.ListaCasos.Name = "ListaCasos"
+        Me.ListaCasos.Size = New System.Drawing.Size(348, 192)
+        Me.ListaCasos.TabIndex = 24
+        Me.ListaCasos.UseCompatibleStateImageBehavior = False
+        Me.ListaCasos.View = System.Windows.Forms.View.Details
         '
-        'idCaso
+        'ColumnHeader1
         '
-        Me.idCaso.Text = "ID Caso"
-        Me.idCaso.Width = 55
+        Me.ColumnHeader1.Text = "CI"
         '
-        'desc
+        'ColumnHeader2
         '
-        Me.desc.Text = "Descripción"
-        Me.desc.Width = 71
+        Me.ColumnHeader2.Text = "Nombre"
+        Me.ColumnHeader2.Width = 114
         '
-        'idUsuario
+        'ColumnHeader3
         '
-        Me.idUsuario.Text = "ID Usuario"
-        Me.idUsuario.Width = 66
-        '
-        'fechaR
-        '
-        Me.fechaR.Text = "Fecha registro"
-        Me.fechaR.Width = 87
+        Me.ColumnHeader3.Text = "Dirección"
+        Me.ColumnHeader3.Width = 167
         '
         'PantallaModerar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 461)
-        Me.Controls.Add(Me.ListCasos)
+        Me.Controls.Add(Me.ListaCasos)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.BtnDec)
         Me.Controls.Add(Me.BtnAcep)
@@ -158,9 +154,8 @@ Partial Class PantallaModerar
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents tsmlEliminar As ToolStripMenuItem
     Friend WithEvents tsmiListar As ToolStripMenuItem
-    Friend WithEvents ListCasos As ListView
-    Friend WithEvents idCaso As ColumnHeader
-    Friend WithEvents desc As ColumnHeader
-    Friend WithEvents idUsuario As ColumnHeader
-    Friend WithEvents fechaR As ColumnHeader
+    Friend WithEvents ListaCasos As ListView
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
 End Class
