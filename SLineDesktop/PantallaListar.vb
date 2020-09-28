@@ -10,7 +10,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub PantallaListar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub PantallaListar_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim logica As New logicaUsuario
         Dim lista As New List(Of usuario)
         lista = logica.listarPersona()

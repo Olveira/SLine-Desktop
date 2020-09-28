@@ -30,9 +30,11 @@ Partial Class PantallaModerar
         Me.tsmlEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiListar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListaCasos = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.IDCaso = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Desc = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.IDUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Veri = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.FechaReg = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -100,31 +102,37 @@ Partial Class PantallaModerar
         '
         'ListaCasos
         '
-        Me.ListaCasos.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
+        Me.ListaCasos.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.IDCaso, Me.Desc, Me.IDUsuario, Me.Veri, Me.FechaReg})
         Me.ListaCasos.FullRowSelect = True
         Me.ListaCasos.GridLines = True
         Me.ListaCasos.HideSelection = False
         Me.ListaCasos.Location = New System.Drawing.Point(118, 106)
         Me.ListaCasos.MultiSelect = False
         Me.ListaCasos.Name = "ListaCasos"
-        Me.ListaCasos.Size = New System.Drawing.Size(348, 192)
+        Me.ListaCasos.Size = New System.Drawing.Size(448, 192)
         Me.ListaCasos.TabIndex = 24
         Me.ListaCasos.UseCompatibleStateImageBehavior = False
         Me.ListaCasos.View = System.Windows.Forms.View.Details
         '
-        'ColumnHeader1
+        'IDCaso
         '
-        Me.ColumnHeader1.Text = "CI"
+        Me.IDCaso.Text = "ID Caso"
         '
-        'ColumnHeader2
+        'Desc
         '
-        Me.ColumnHeader2.Text = "Nombre"
-        Me.ColumnHeader2.Width = 114
+        Me.Desc.Text = "Descripción"
         '
-        'ColumnHeader3
+        'IDUsuario
         '
-        Me.ColumnHeader3.Text = "Dirección"
-        Me.ColumnHeader3.Width = 167
+        Me.IDUsuario.Text = "ID Usuario"
+        '
+        'Veri
+        '
+        Me.Veri.Text = "Verificado"
+        '
+        'FechaReg
+        '
+        Me.FechaReg.Text = "Fecha de registro"
         '
         'PantallaModerar
         '
@@ -155,7 +163,9 @@ Partial Class PantallaModerar
     Friend WithEvents tsmlEliminar As ToolStripMenuItem
     Friend WithEvents tsmiListar As ToolStripMenuItem
     Friend WithEvents ListaCasos As ListView
-    Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents IDCaso As ColumnHeader
+    Friend WithEvents Desc As ColumnHeader
+    Friend WithEvents IDUsuario As ColumnHeader
+    Friend WithEvents Veri As ColumnHeader
+    Friend WithEvents FechaReg As ColumnHeader
 End Class

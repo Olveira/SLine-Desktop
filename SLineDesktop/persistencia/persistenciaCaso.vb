@@ -1,7 +1,6 @@
 ﻿Public Class persistenciaCaso
     Dim conection = New Npgsql.NpgsqlConnection
 
-
     Public Function aceptarCasos(idCaso As Integer) As List(Of caso)
         Try
             Dim cadenadecomandosModificar = "UPDATE CASES SET verificado = TRUE WHERE idcaso = @idCaso;"
@@ -20,9 +19,8 @@
 
     End Function
 
-    Dim scaso As New List(Of caso)
+    Dim listcasos As New List(Of caso)
     Public Function listarCasos() As List(Of caso)
-        Dim xss As New List(Of caso)
         Try
             Dim Persona As New caso
             Dim ClaseSnl As New conexion
@@ -37,18 +35,20 @@
 
             While Lector.Read()
                 Dim newCaso As New caso
-                newCaso.IdCaso = Lector(0).ToString
-                newCaso.Descripcion = Lector(1).ToString
-                newCaso.IdUsuario = Lector(2).ToString
+                newCaso.IdCaso = Convert.ToInt32(Lector(0).ToString)
+                newCaso.Descripcion = Lector(2).ToString
+                newCaso.IdUsuario = Convert.ToInt32(Lector(3).ToString)
+                newCaso.Verificado = Convert.ToBoolean(Lector(4).ToString)
+                newCaso.Fecharegistro = Convert.ToDateTime(Lector(5).ToString)
 
-                xss.Add(newCaso)
+                listcasos.Add(newCaso)
             End While
         Catch ex As Exception
             Throw ex
         Finally
             conection.close
         End Try
-        Return xss
+        Return listcasos
     End Function
 
 End Class
