@@ -66,7 +66,7 @@ Partial Class PantallaModerar
         Me.BtnAcep.Name = "BtnAcep"
         Me.BtnAcep.Size = New System.Drawing.Size(75, 40)
         Me.BtnAcep.TabIndex = 10
-        Me.BtnAcep.Text = "Aceptar"
+        Me.BtnAcep.Text = "Verificar"
         Me.BtnAcep.UseVisualStyleBackColor = True
         '
         'BtnDec
@@ -109,7 +109,7 @@ Partial Class PantallaModerar
         Me.ListaCasos.Location = New System.Drawing.Point(118, 106)
         Me.ListaCasos.MultiSelect = False
         Me.ListaCasos.Name = "ListaCasos"
-        Me.ListaCasos.Size = New System.Drawing.Size(448, 192)
+        Me.ListaCasos.Size = New System.Drawing.Size(415, 192)
         Me.ListaCasos.TabIndex = 24
         Me.ListaCasos.UseCompatibleStateImageBehavior = False
         Me.ListaCasos.View = System.Windows.Forms.View.Details

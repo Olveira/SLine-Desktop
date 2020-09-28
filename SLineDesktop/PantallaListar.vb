@@ -86,7 +86,7 @@
         End While
     End Sub
 
-    Private Sub PantallaListar_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+    Private Sub PantallaListar_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         LVListadoUsuarios.Items.Clear()
         Dim logica As New logicaUsuario
         Dim lista As New List(Of usuario)
