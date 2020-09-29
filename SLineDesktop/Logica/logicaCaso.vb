@@ -5,4 +5,9 @@
 
     End Function
 
+    Public Sub eliminarCaso(idCaso As Integer)
+        Dim persistencia As New persistenciaCaso
+        persistencia.eliminarCaso(idCaso)
+    End Sub
+
 End Class
