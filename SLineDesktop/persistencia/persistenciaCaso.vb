@@ -11,6 +11,7 @@
 
             Dim verificado As Integer
             cmd.Parameters.Add("@idCaso", NpgsqlTypes.NpgsqlDbType.Integer).Value = idCaso
+            cmd.Parameters.Add("@verificado", NpgsqlTypes.NpgsqlDbType.Boolean).Value = verificado
             verificado = cmd.ExecuteNonQuery()
 
         Catch ex As Exception

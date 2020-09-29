@@ -1,6 +1,5 @@
 ﻿Public Class caso
     Private _idCaso As Integer
-    Private _coordenadas As String
     Private _descripcion As String
     Private _idUsuario
     Private _verificado As Boolean
@@ -15,14 +14,6 @@
         End Set
     End Property
 
-    Public Property Coordenadas As String
-        Get
-            Return _coordenadas
-        End Get
-        Set(value As String)
-            _coordenadas = value
-        End Set
-    End Property
     Public Property Descripcion As String
         Get
             Return _descripcion
@@ -37,7 +28,7 @@
             Return _idUsuario
         End Get
         Set(value As Integer)
-            _idCaso = value
+            _idUsuario = value
         End Set
     End Property
 
@@ -46,7 +37,7 @@
             Return _verificado
         End Get
         Set(value As Boolean)
-            _idCaso = value
+            _verificado = value
         End Set
     End Property
 
@@ -59,9 +50,8 @@
         End Set
     End Property
 
-    Public Sub New(idCaso As Integer, coordenadas As String, descripcion As String, idUsuario As Integer, verificado As Boolean, fechaRegistro As Date)
+    Public Sub New(idCaso As Integer, descripcion As String, idUsuario As Integer, verificado As Boolean, fechaRegistro As Date)
         _idCaso = idCaso
-        _coordenadas = coordenadas
         _descripcion = descripcion
         _idUsuario = idUsuario
         _verificado = verificado
