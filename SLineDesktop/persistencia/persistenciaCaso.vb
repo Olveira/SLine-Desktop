@@ -1,27 +1,29 @@
 ﻿Public Class persistenciaCaso
     Dim conection = New Npgsql.NpgsqlConnection
 
-    Public Function aceptarCasos(idCaso As Integer) As List(Of caso)
+    Public Function aceptarCasos(LCasos As caso) As List(Of caso)
+
         Try
-            Dim clasCnn = New conexion
-            Dim cadenaDeComandos As String
-            Dim AcepCaso As Integer
+            'Dim clasCnn = New conexion
+            ' Dim cadenaDeComandos As String
 
-            cadenaDeComandos = "UPDATE CASES SET verificado = @verificado WHERE idCaso = @idCaso"
+            ' Dim AcepCaso As Integer
 
-            conection = clasCnn.abrirConexion()
-            Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
+            'cadenaDeComandos = "UPDATE CASES SET verificado = @verificado WHERE idCaso = @idCaso"
 
-            cmd.Connection = conection
+            'conection = clasCnn.abrirConexion()
+            'Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
+            'cmd.Connection = conection
+            'cmd.Parameters.Add("@idCaso", NpgsqlTypes.NpgsqlDbType.Integer).Value = LCasos.IdCaso
+            'cmd.Parameters.Add("@descripcion", NpgsqlTypes.NpgsqlDbType.Varchar, 500).Value = LCasos.Descripcion
+            'cmd.Parameters.Add("@idUsuario", NpgsqlTypes.NpgsqlDbType.Integer).Value = LCasos.IdUsuario
+            'cmd.Parameters.Add("@verificado", NpgsqlTypes.NpgsqlDbType.Boolean, 10).Value = LCasos.Verificado
+            'cmd.Parameters.Add("@fechaRegistro", NpgsqlTypes.NpgsqlDbType.Date).Value = LCasos.Fecharegistro
 
-            cmd.Parameters.Add("@idCaso", NpgsqlTypes.NpgsqlDbType.Integer).Value = idCaso
-            cmd.Parameters.Add("@verificado", NpgsqlTypes.NpgsqlDbType.Boolean).Value = True
-            AcepCaso = cmd.ExecuteNonQuery()
-
+            'AcepCaso = cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw ex
         End Try
-
     End Function
 
     Dim listcasos As New List(Of caso)

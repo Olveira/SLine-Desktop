@@ -8,5 +8,9 @@
         Dim persistencia As New persistenciaCaso
         persistencia.eliminarCaso(idCaso)
     End Sub
+    Public Sub aceptarCasos(idCaso As Integer)
+        Dim persistencia As New persistenciaCaso
+        persistencia.aceptarCasos(idCaso)
+    End Sub
 
 End Class

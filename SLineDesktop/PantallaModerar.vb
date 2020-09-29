@@ -59,7 +59,15 @@
 
 
     Private Sub BtnAcep_Click(sender As Object, e As EventArgs) Handles BtnAcep.Click
+        CasoE.IdCaso = Convert.ToString(ListaCasos.FocusedItem.SubItems(0).Text)
+        CasoE.Descripcion = ListaCasos.FocusedItem.SubItems(1).Text
+        CasoE.IdUsuario = Convert.ToString(ListaCasos.FocusedItem.SubItems(2).Text)
+        CasoE.Verificado = Convert.ToBoolean(ListaCasos.FocusedItem.SubItems(3).Text)
+        CasoE.Fecharegistro = Convert.ToDateTime(ListaCasos.FocusedItem.SubItems(4).Text)
 
+        PantallaModerar.CasoE = CasoE
+        PantallaModerar.Show()
+        Me.Hide()
     End Sub
 
 
