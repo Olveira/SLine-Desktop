@@ -16,7 +16,6 @@
             cmd.Parameters.Add("@idCaso", NpgsqlTypes.NpgsqlDbType.Integer).Value = LCasos
             cmd.Parameters.Add("@verificado", NpgsqlTypes.NpgsqlDbType.Boolean, 10).Value = verificadoTrue
 
-
             cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw ex
@@ -46,6 +45,8 @@
                 newCaso.Fecharegistro = Convert.ToDateTime(Lector(5).ToString)
 
                 listcasos.Add(newCaso)
+
+
             End While
         Catch ex As Exception
             Throw ex

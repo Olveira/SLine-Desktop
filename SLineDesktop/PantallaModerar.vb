@@ -69,8 +69,33 @@
             CasoE.Fecharegistro = Convert.ToDateTime(ListaCasos.FocusedItem.SubItems(4).Text)
 
             Dim logicaAceptar As New logicaCaso
-            logicaAceptar.aceptarCasos(CasoE.IdCaso)
 
+            Dim listcasos As List(Of caso)
+
+            listcasos = logicaAceptar.aceptarCasos(CasoE.IdCaso)
+
+
+            ListaCasos.Items.Clear()
+
+            Dim x As Integer
+            x = listcasos.Count
+            Dim item As ListViewItem
+            Dim arra(5) As String
+            x = x - 1
+
+
+            While x <> -1
+                arra(0) = listcasos(x).IdCaso
+                arra(1) = listcasos(x).Descripcion
+                arra(2) = listcasos(x).IdUsuario
+                arra(3) = listcasos(x).Verificado
+                arra(4) = listcasos(x).Fecharegistro
+
+                item = New ListViewItem(arra)
+                ListaCasos.Items.Add(item)
+                x = x - 1
+
+            End While
         Catch ex As Exception
 
         End Try
