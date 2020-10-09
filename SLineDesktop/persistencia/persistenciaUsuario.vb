@@ -19,7 +19,7 @@
 
             cmd.Parameters.Add("@username", NpgsqlTypes.NpgsqlDbType.Varchar, 50).Value = users.Username
             cmd.Parameters.Add("@email", NpgsqlTypes.NpgsqlDbType.Varchar, 70).Value = users.Email
-            cmd.Parameters.Add("@password", NpgsqlTypes.NpgsqlDbType.Varchar, 50).Value = users.Password
+            cmd.Parameters.Add("@password", NpgsqlTypes.NpgsqlDbType.Varchar, 50).Value = BCrypt.Net.BCrypt.HashPassword(users.Password, workFactor:=10)
             cmd.Parameters.Add("@sexo", NpgsqlTypes.NpgsqlDbType.Varchar, 10).Value = users.Sexo
             cmd.Parameters.Add("@fechanac", NpgsqlTypes.NpgsqlDbType.Date).Value = users.FechaNac
             cmd.Parameters.Add("@rol", NpgsqlTypes.NpgsqlDbType.Varchar, 15).Value = users.Rol
@@ -41,7 +41,7 @@
 
             Dim reader
 
-            cadenaDeComandos = "select * from users where username=@username and password=@password and rol=@rol;"
+            cadenaDeComandos = "select * from users where username=@username and rol=@rol;"
 
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
@@ -50,14 +50,17 @@
             cmd.Connection = conection
 
             cmd.Parameters.AddWithValue("@username", user)
-            cmd.Parameters.AddWithValue("@password", pass)
             cmd.Parameters.AddWithValue("@rol", "admin")
 
             reader = cmd.ExecuteReader
             Dim variable As Boolean
             variable = reader.hasRows()
+            If reader.Read Then
+                Dim password As String
+                password = reader(2).ToString
+                Return BCrypt.Net.BCrypt.Verify(pass, password)
+            End If
 
-            Return variable
 
         Catch ex As Exception
             Throw ex

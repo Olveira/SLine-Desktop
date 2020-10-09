@@ -1,13 +1,12 @@
 ﻿Public Class InicioADM
     Private Sub BtnSiguiente_Click(sender As Object, e As EventArgs) Handles BtnSiguiente.Click
         Dim logicaUsuario As New logicaUsuario
-        Dim niceLogIn As Int16
+        Dim niceLogIn As Boolean
         niceLogIn = logicaUsuario.login(tbxUserLog.Text, tbxPasswordLog.Text)
 
         If niceLogIn Then
             PantallaListar.Show()
             Me.Hide()
-
         Else
 
             lblBadLog.Text = "creenciales incorrectas"

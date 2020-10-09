@@ -206,3 +206,5 @@ C:\Users\admin\Documents\GitHub\SLine-Desktop\SLineDesktop\obj\Debug\SLineDeskto
 C:\Users\admin\Documents\GitHub\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.xml
 C:\Users\admin\Documents\GitHub\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.pdb
 C:\Users\admin\Documents\GitHub\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.vbprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\bin\Debug\BCrypt.Net.dll
+C:\Users\Lucas\source\repos\SLine-Desktop\SLineDesktop\bin\Debug\BCrypt.Net.xml

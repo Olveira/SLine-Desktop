@@ -9,11 +9,10 @@
 
     End Function
     Public Function login(user As String, pass As String) As Boolean
-        Dim niceLog As Int16
+        Dim niceLog As Boolean
         Dim persistencia As New persistenciaUsuario
         niceLog = persistencia.persistenciaLog(user, pass)
         Return niceLog
-
     End Function
 
     Public Sub ModificarUsuario(user As usuario)
