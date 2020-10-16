@@ -1,11 +1,18 @@
 ﻿Public Class welcome
     Private Sub btnGoRegistrar_Click(sender As Object, e As EventArgs) Handles btnGoRegistrar.Click
-        PantallaRegistro.Show()
-
-        Me.Hide()
+        Try
+            PantallaRegistro.Show()
+            Me.Hide()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
     Private Sub btnGoLogin_Click(sender As Object, e As EventArgs) Handles btnGoLogin.Click
-        InicioADM.Show()
-        Me.Hide()
+        Try
+            InicioADM.Show()
+            Me.Hide()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

@@ -3,7 +3,6 @@
         Dim persistencia As New persistenciaCaso
         Return persistencia.listarCasos()
     End Function
-
     Public Sub eliminarCaso(idCaso As Integer)
         Dim persistencia As New persistenciaCaso
         persistencia.eliminarCaso(idCaso)
@@ -11,8 +10,6 @@
     Public Function aceptarCasos(idCaso As Integer) As List(Of caso)
         Dim persistencia As New persistenciaCaso
         persistencia.aceptarCasos(idCaso)
-
         Return persistencia.listarCasos()
     End Function
-
 End Class

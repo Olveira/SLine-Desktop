@@ -46,7 +46,7 @@ Partial Class PantallaEliminar
         '
         Me.lblModificarUsuario.AutoSize = True
         Me.lblModificarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!)
-        Me.lblModificarUsuario.Location = New System.Drawing.Point(107, 49)
+        Me.lblModificarUsuario.Location = New System.Drawing.Point(170, 48)
         Me.lblModificarUsuario.Name = "lblModificarUsuario"
         Me.lblModificarUsuario.Size = New System.Drawing.Size(379, 54)
         Me.lblModificarUsuario.TabIndex = 11

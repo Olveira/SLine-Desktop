@@ -72,6 +72,7 @@
         _fechaNac = fechaNac
         _rol = rol
     End Sub
+    'inicializacion vacia'
     Public Sub New()
 
     End Sub

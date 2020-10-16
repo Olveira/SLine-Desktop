@@ -1,10 +1,9 @@
 ﻿Public Class persistenciaCaso
     Dim conection = New Npgsql.NpgsqlConnection
-
-
+    Dim listcasos As New List(Of caso)
     Dim verificadoTrue As Boolean = True
-    Public Function aceptarCasos(LCasos As Integer)
 
+    Public Sub aceptarCasos(LCasos As Integer)
         Try
             Dim clasCnn = New conexion
             Dim cadenaDeComandos As String
@@ -19,10 +18,10 @@
             cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw ex
+        Finally
+            conection.close
         End Try
-    End Function
-
-    Dim listcasos As New List(Of caso)
+    End Sub
     Public Function listarCasos() As List(Of caso)
         Try
             Dim Persona As New caso
@@ -46,7 +45,6 @@
 
                 listcasos.Add(newCaso)
 
-
             End While
         Catch ex As Exception
             Throw ex
@@ -55,8 +53,6 @@
         End Try
         Return listcasos
     End Function
-
-
     Public Sub eliminarCaso(idCaso As Integer)
         Try
             Dim clasCnn = New conexion
@@ -69,7 +65,6 @@
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
             cmd.Connection = conection
 
-
             cmd.Parameters.Add("@idCaso", NpgsqlTypes.NpgsqlDbType.Integer).Value = idCaso
             eliminador = cmd.ExecuteNonQuery()
 
@@ -79,6 +74,4 @@
             conection.close
         End Try
     End Sub
-
-
 End Class

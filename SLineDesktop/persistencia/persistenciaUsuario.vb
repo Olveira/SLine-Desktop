@@ -13,9 +13,7 @@
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
 
-
             cmd.Connection = conection
-
 
             cmd.Parameters.Add("@username", NpgsqlTypes.NpgsqlDbType.Varchar, 50).Value = users.Username
             cmd.Parameters.Add("@email", NpgsqlTypes.NpgsqlDbType.Varchar, 70).Value = users.Email
@@ -32,36 +30,28 @@
         Finally
             conection.close
         End Try
-
     End Sub
     Public Function persistenciaLog(user As String, pass As String) As Boolean
         Try
             Dim clasCnn = New conexion
             Dim cadenaDeComandos As String
-
-
-            Dim reader
-
             cadenaDeComandos = "select * from users where username=@username and rol='admin';"
 
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
 
-
             cmd.Connection = conection
 
             cmd.Parameters.AddWithValue("@username", user)
 
-            reader = cmd.ExecuteReader
+            Dim reader = cmd.ExecuteReader
             Dim variable As Boolean
+            Dim password As String = ""
             variable = reader.hasRows()
             If reader.Read Then
-                Dim password As String
                 password = reader(2).ToString.Trim
-                Return BCrypt.Net.BCrypt.Verify(pass, password)
             End If
-
-
+            Return BCrypt.Net.BCrypt.Verify(pass, password)
         Catch ex As Exception
             Throw ex
         Finally
@@ -93,12 +83,14 @@
                 newPersona.Rol = Lector(7).ToString
 
                 xss.Add(newPersona)
+
             End While
         Catch ex As Exception
             Throw ex
         Finally
             conection.close
         End Try
+
         Return xss
     End Function
     Public Sub modificarPersona(user As usuario)
@@ -113,9 +105,7 @@
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
 
-
             cmd.Connection = conection
-
 
             cmd.Parameters.Add("@username", NpgsqlTypes.NpgsqlDbType.Varchar, 50).Value = user.Username
             cmd.Parameters.Add("@email", NpgsqlTypes.NpgsqlDbType.Varchar, 70).Value = user.Email
@@ -128,6 +118,8 @@
             resultado = cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw ex
+        Finally
+            conection.close
         End Try
     End Sub
     Public Sub eliminarUsuario(id As Integer)
@@ -142,14 +134,11 @@
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
 
-
             cmd.Connection = conection
-
 
             cmd.Parameters.Add("@id", NpgsqlTypes.NpgsqlDbType.Integer).Value = id
 
             resultado = cmd.ExecuteNonQuery()
-
         Catch ex As Exception
             Throw ex
         Finally

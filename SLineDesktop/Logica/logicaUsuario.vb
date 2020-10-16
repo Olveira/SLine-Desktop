@@ -6,7 +6,6 @@
     Public Function listarPersona() As List(Of usuario)
         Dim persistencia As New persistenciaUsuario
         Return persistencia.listarPersonas()
-
     End Function
     Public Function login(user As String, pass As String) As Boolean
         Dim niceLog As Boolean
@@ -14,7 +13,6 @@
         niceLog = persistencia.persistenciaLog(user, pass)
         Return niceLog
     End Function
-
     Public Sub ModificarUsuario(user As usuario)
         Dim persistencia As New persistenciaUsuario
         persistencia.modificarPersona(user)
@@ -23,5 +21,4 @@
         Dim persistencia As New persistenciaUsuario
         persistencia.eliminarUsuario(id)
     End Sub
-
 End Class
