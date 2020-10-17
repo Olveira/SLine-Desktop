@@ -7,7 +7,7 @@
         Try
             Dim clasCnn = New conexion
             Dim cadenaDeComandos As String
-            cadenaDeComandos = "UPDATE CASES SET verificado = @verificado WHERE idCaso = @idCaso"
+            cadenaDeComandos = "UPDATE _case SET verificado = @verificado WHERE idCaso = @idCaso"
 
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
@@ -30,7 +30,7 @@
             Dim cmd = New Npgsql.NpgsqlCommand
             cmd.Connection = conection
 
-            Dim cadenaDeComandos = "SELECT * FROM CASES"
+            Dim cadenaDeComandos = "SELECT * FROM _case"
 
             cmd.CommandText = cadenaDeComandos
             Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
@@ -59,7 +59,7 @@
             Dim cadenaDeComandos As String
             Dim eliminador As Integer
 
-            cadenaDeComandos = "DELETE FROM CASES WHERE idCaso = @idCaso"
+            cadenaDeComandos = "DELETE FROM _case WHERE idCaso = @idCaso"
 
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)

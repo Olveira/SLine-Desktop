@@ -8,7 +8,7 @@
 
             Dim resultado As Integer
 
-            cadenaDeComandos = "insert into users(username,email,password,sexo,fechanac,rol) values (@username,@email,@password,@sexo,@fechanac,@rol);"
+            cadenaDeComandos = "insert into _user(username,email,password,sexo,fecha_nacimiento,rol) values (@username,@email,@password,@sexo,@fechanac,@rol);"
 
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
@@ -35,7 +35,7 @@
         Try
             Dim clasCnn = New conexion
             Dim cadenaDeComandos As String
-            cadenaDeComandos = "select * from users where username=@username and rol='admin';"
+            cadenaDeComandos = "select * from _user where username=@username and rol='admin';"
 
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
@@ -67,7 +67,7 @@
             Dim cmd = New Npgsql.NpgsqlCommand
             cmd.Connection = conection
 
-            Dim cadenaDeComandos = "select * from users "
+            Dim cadenaDeComandos = "select * from _user"
 
             cmd.CommandText = cadenaDeComandos
             Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
@@ -100,7 +100,7 @@
 
             Dim resultado As Integer
 
-            cadenaDeComandos = "update users set username = @username, email = @email, password = @password, sexo = @sexo, fechanac = @fechanac, rol = @rol where id = @id"
+            cadenaDeComandos = "update _user set username = @username, email = @email, password = @password, sexo = @sexo, fecha_nacimiento = @fechanac, rol = @rol where id = @id"
 
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
@@ -129,7 +129,7 @@
 
             Dim resultado As Integer
 
-            cadenaDeComandos = "delete from users where id = @id"
+            cadenaDeComandos = "delete from _user where id = @id"
 
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)

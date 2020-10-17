@@ -8,7 +8,7 @@
 
             'Cambiar conexión dependiendo del puerto que tenga cada quien la DB'
 
-            cadenaDeConexion = "Server=localhost;Port=5433;User Id='postgres';Password='root';Database=sline"
+            cadenaDeConexion = "Server=localhost;Port=5432;User Id='postgres';Password='root';Database=sline"
 
             conexionPg.ConnectionString = cadenaDeConexion
 

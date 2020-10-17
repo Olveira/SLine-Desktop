@@ -11,31 +11,36 @@
     End Sub
 
     Private Sub PantallaListar_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Dim logica As New logicaUsuario
-        Dim lista = logica.listarPersona()
-        Dim i As Integer
-        i = logica.listarPersona.Count - 1
-        Dim item As ListViewItem
-        Dim arra(7) As String
+        ListarUsiarios()
+    End Sub
+    Private Sub ListarUsiarios()
+        Try
+            LVListadoUsuarios.Items.Clear()
+            Dim logica As New logicaUsuario
+            Dim lista = logica.listarPersona()
+            Dim i As Integer
+            i = logica.listarPersona.Count - 1
+            Dim item As ListViewItem
+            Dim arra(7) As String
 
-        While i <> -1
-            arra(0) = lista(i).Username
-            arra(1) = lista(i).Email
-            arra(2) = lista(i).Password
-            arra(3) = lista(i).Sexo
-            arra(4) = lista(i).FechaNac
-            arra(5) = lista(i).Rol
-            arra(6) = lista(i).Id.ToString
+            While i <> -1
+                arra(0) = lista(i).Username
+                arra(1) = lista(i).Email
+                arra(2) = lista(i).Password
+                arra(3) = lista(i).Sexo
+                arra(4) = lista(i).FechaNac
+                arra(5) = lista(i).Rol
+                arra(6) = lista(i).Id.ToString
 
-            item = New ListViewItem(arra)
-            LVListadoUsuarios.Items.Add(item)
-            i = i - 1
-
-
-        End While
+                item = New ListViewItem(arra)
+                LVListadoUsuarios.Items.Add(item)
+                i = i - 1
+            End While
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
     End Sub
-
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         user.Username = LVListadoUsuarios.FocusedItem.SubItems(0).Text
         user.Email = LVListadoUsuarios.FocusedItem.SubItems(1).Text
@@ -62,28 +67,7 @@
 
             Dim logica As New logicaUsuario
             logica.eliminarUsuario(user.Id)
-            LVListadoUsuarios.Items.Clear()
-            Dim lista As New List(Of usuario)
-            lista = logica.listarPersona()
-            Dim i As Integer
-            i = logica.listarPersona.Count - 1
-            Dim item As ListViewItem
-            Dim arra(7) As String
-
-            While i <> -1
-                arra(0) = lista(i).Username
-                arra(1) = lista(i).Email
-                arra(2) = lista(i).Password
-                arra(3) = lista(i).Sexo
-                arra(4) = lista(i).FechaNac
-                arra(5) = lista(i).Rol
-                arra(6) = lista(i).Id.ToString
-
-                item = New ListViewItem(arra)
-                LVListadoUsuarios.Items.Add(item)
-                i = i - 1
-
-            End While
+            ListarUsiarios()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -91,31 +75,9 @@
     End Sub
 
     Private Sub PantallaListar_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        Try
-            LVListadoUsuarios.Items.Clear()
-            Dim logica As New logicaUsuario
-            Dim lista As New List(Of usuario)
-            lista = logica.listarPersona()
-            Dim i As Integer
-            i = logica.listarPersona.Count - 1
-            Dim item As ListViewItem
-            Dim arra(7) As String
-
-            While i <> -1
-                arra(0) = lista(i).Username
-                arra(1) = lista(i).Email
-                arra(2) = lista(i).Password
-                arra(3) = lista(i).Sexo
-                arra(4) = lista(i).FechaNac
-                arra(5) = lista(i).Rol
-                arra(6) = lista(i).Id.ToString
-
-                item = New ListViewItem(arra)
-                LVListadoUsuarios.Items.Add(item)
-                i = i - 1
-            End While
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        ListarUsiarios()
+    End Sub
+    Public Sub CloseMe(sender As Object, e As EventArgs) Handles Me.Closed
+        welcome.Show()
     End Sub
 End Class
