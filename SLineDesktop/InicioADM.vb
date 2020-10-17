@@ -10,6 +10,7 @@
                 Me.Hide()
             End If
         Catch ex As Exception
+            tbxPasswordLog.Text = ""
             MessageBox.Show("Creenciales incorrectas")
         End Try
     End Sub
