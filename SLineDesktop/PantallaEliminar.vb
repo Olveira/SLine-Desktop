@@ -52,10 +52,8 @@
 
     Private Sub btnCancelarMod_Click(sender As Object, e As EventArgs) Handles btnCancelarMod.Click
         Try
-            PantallaListar.LVListadoUsuarios.Clear()
-            PantallaListar.Update()
+            PantallaListar.ListarUsuarios()
             PantallaListar.Show()
-
             Me.Hide()
         Catch ex As Exception
             MessageBox.Show(ex.Message)

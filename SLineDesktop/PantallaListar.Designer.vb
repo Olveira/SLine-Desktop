@@ -87,6 +87,7 @@ Partial Class PantallaListar
         '
         'LVListadoUsuarios
         '
+        Me.LVListadoUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LVListadoUsuarios.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Username, Me.Email, Me.Password, Me.sexo, Me.FechaNac, Me.rol, Me.id})
         Me.LVListadoUsuarios.FullRowSelect = True
         Me.LVListadoUsuarios.GridLines = True

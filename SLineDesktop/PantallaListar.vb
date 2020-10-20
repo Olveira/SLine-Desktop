@@ -1,5 +1,6 @@
 ﻿Public Class PantallaListar
     Dim user As New usuario
+
     Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiModerar.Click
         PantallaModerar.Show()
         Me.Hide()
@@ -11,9 +12,9 @@
     End Sub
 
     Private Sub PantallaListar_Load(sender As Object, e As EventArgs) Handles Me.Load
-        ListarUsiarios()
+        ListarUsuarios()
     End Sub
-    Private Sub ListarUsiarios()
+    Public Sub ListarUsuarios()
         Try
             LVListadoUsuarios.Items.Clear()
             Dim logica As New logicaUsuario
@@ -42,6 +43,37 @@
 
     End Sub
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
+        Try
+            Dim itemSelected = LVListadoUsuarios.SelectedItems.Count
+            If itemSelected = 0 Then
+                MessageBox.Show("Primero selecciona un usuario")
+            Else
+                tomarUsuarioLV()
+                PantallaEliminar.user = user
+                PantallaEliminar.Show()
+                Me.Hide()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Try
+            tomarUsuarioLV()
+            Dim logica As New logicaUsuario
+            logica.eliminarUsuario(user.Id)
+            ListarUsuarios()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Private Sub CloseMe(sender As Object, e As EventArgs) Handles Me.Closed
+        welcome.Show()
+    End Sub
+    Private Sub tomarUsuarioLV()
         user.Username = LVListadoUsuarios.FocusedItem.SubItems(0).Text
         user.Email = LVListadoUsuarios.FocusedItem.SubItems(1).Text
         user.Password = LVListadoUsuarios.FocusedItem.SubItems(2).Text
@@ -49,35 +81,5 @@
         user.FechaNac = Convert.ToDateTime(LVListadoUsuarios.FocusedItem.SubItems(4).Text)
         user.Rol = LVListadoUsuarios.FocusedItem.SubItems(5).Text
         user.Id = Convert.ToInt32(LVListadoUsuarios.FocusedItem.SubItems(6).Text)
-
-        PantallaEliminar.user = user
-        PantallaEliminar.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Try
-            user.Username = LVListadoUsuarios.FocusedItem.SubItems(0).Text
-            user.Email = LVListadoUsuarios.FocusedItem.SubItems(1).Text
-            user.Password = LVListadoUsuarios.FocusedItem.SubItems(2).Text
-            user.Sexo = LVListadoUsuarios.FocusedItem.SubItems(3).Text
-            user.FechaNac = Convert.ToDateTime(LVListadoUsuarios.FocusedItem.SubItems(4).Text)
-            user.Rol = LVListadoUsuarios.FocusedItem.SubItems(5).Text
-            user.Id = Convert.ToInt32(LVListadoUsuarios.FocusedItem.SubItems(6).Text)
-
-            Dim logica As New logicaUsuario
-            logica.eliminarUsuario(user.Id)
-            ListarUsiarios()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
-
-    Private Sub PantallaListar_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        ListarUsiarios()
-    End Sub
-    Public Sub CloseMe(sender As Object, e As EventArgs) Handles Me.Closed
-        welcome.Show()
     End Sub
 End Class
