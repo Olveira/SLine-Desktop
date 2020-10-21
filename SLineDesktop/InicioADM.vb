@@ -8,10 +8,11 @@
             If niceLogIn Then
                 PantallaListar.Show()
                 Me.Hide()
+            Else
+                tbxPasswordLog.Text = ""
+                MessageBox.Show("Creenciales incorrectas")
             End If
         Catch ex As Exception
-            tbxPasswordLog.Text = ""
-            MessageBox.Show("Creenciales incorrectas")
         End Try
     End Sub
     Private Sub InicioADM_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -1,6 +1,5 @@
 ﻿Public Class PantallaListar
     Dim user As New usuario
-
     Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiModerar.Click
         PantallaModerar.Show()
         Me.Hide()
@@ -62,10 +61,15 @@
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
-            tomarUsuarioLV()
-            Dim logica As New logicaUsuario
-            logica.eliminarUsuario(user.Id)
-            ListarUsuarios()
+            Dim itemSelected = LVListadoUsuarios.SelectedItems.Count
+            If itemSelected = 0 Then
+                MessageBox.Show("Primero selecciona un usuario")
+            Else
+                tomarUsuarioLV()
+                Dim logica As New logicaUsuario
+                logica.eliminarUsuario(user.Id)
+                ListarUsuarios()
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

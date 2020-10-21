@@ -85,7 +85,7 @@ Partial Class PantallaEliminar
         '
         Me.ModerarToolStripMenuItem.Name = "ModerarToolStripMenuItem"
         Me.ModerarToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
-        Me.ModerarToolStripMenuItem.Text = "moderar"
+        Me.ModerarToolStripMenuItem.Text = "Moderar"
         '
         'lblRolMod
         '

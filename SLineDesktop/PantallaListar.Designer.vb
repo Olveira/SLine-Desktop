@@ -83,7 +83,7 @@ Partial Class PantallaListar
         '
         Me.tsmiModerar.Name = "tsmiModerar"
         Me.tsmiModerar.Size = New System.Drawing.Size(64, 20)
-        Me.tsmiModerar.Text = "moderar"
+        Me.tsmiModerar.Text = "Moderar"
         '
         'LVListadoUsuarios
         '
