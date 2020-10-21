@@ -1,7 +1,7 @@
 ﻿Public Class persistenciaCaso
-    Dim conection = New Npgsql.NpgsqlConnection
-    Dim listcasos As New List(Of caso)
-    Dim verificadoTrue As Boolean = True
+    Private conection = New Npgsql.NpgsqlConnection
+    Private listcasos As New List(Of caso)
+    Private verificadoTrue As Boolean = True
 
     Public Sub aceptarCasos(LCasos As Integer)
         Try
@@ -36,15 +36,14 @@
             Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
 
             While Lector.Read()
-                Dim newCaso As New caso
-                newCaso.IdCaso = Convert.ToInt32(Lector(0).ToString)
-                newCaso.Descripcion = Lector(2).ToString
-                newCaso.IdUsuario = Convert.ToInt32(Lector(3).ToString)
-                newCaso.Verificado = Convert.ToBoolean(Lector(4).ToString)
-                newCaso.Fecharegistro = Convert.ToDateTime(Lector(5).ToString)
-
+                Dim newCaso As New caso With {
+                    .IdCaso = Convert.ToInt32(Lector(0).ToString),
+                    .Descripcion = Lector(2).ToString,
+                    .IdUsuario = Convert.ToInt32(Lector(3).ToString),
+                    .Verificado = Convert.ToBoolean(Lector(4).ToString),
+                    .Fecharegistro = Convert.ToDateTime(Lector(5).ToString)
+                }
                 listcasos.Add(newCaso)
-
             End While
         Catch ex As Exception
             Throw ex

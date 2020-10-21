@@ -1,6 +1,5 @@
 ﻿Public Class persistenciaUsuario
-    Dim conection = New Npgsql.NpgsqlConnection
-
+    Private conection = New Npgsql.NpgsqlConnection
     Public Sub AltaUsuario(users As usuario)
         Try
             Dim clasCnn = New conexion
@@ -11,7 +10,7 @@
             cadenaDeComandos = "insert into _user(username,email,password,sexo,fecha_nacimiento,rol) values (@username,@email,@password,@sexo,@fechanac,@rol);"
 
             conection = clasCnn.abrirConexion()
-            Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
+            Dim cmd = New Npgsql.NpgsqlCommand(cadenaDeComandos)
 
             cmd.Connection = conection
 
@@ -61,29 +60,25 @@
     Public Function listarPersonas() As List(Of usuario)
         Dim xss As New List(Of usuario)
         Try
-            Dim Persona As New usuario
             Dim ClaseSnl As New conexion
             conection = ClaseSnl.abrirConexion
-            Dim cmd = New Npgsql.NpgsqlCommand
+            Dim cadenaDeComandos = "select * from _user"
+            Dim cmd = New Npgsql.NpgsqlCommand(cadenaDeComandos)
             cmd.Connection = conection
 
-            Dim cadenaDeComandos = "select * from _user"
-
-            cmd.CommandText = cadenaDeComandos
             Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
 
             While Lector.Read()
-                Dim newPersona As New usuario
-                newPersona.Username = Lector(0).ToString
-                newPersona.Email = Lector(1).ToString
-                newPersona.Password = Lector(2).ToString
-                newPersona.Sexo = Lector(3).ToString
-                newPersona.FechaNac = Lector(5).ToString
-                newPersona.Id = Convert.ToInt32(Lector(6).ToString)
-                newPersona.Rol = Lector(7).ToString
-
+                Dim newPersona = New usuario With {
+                    .Username = Lector(0).ToString,
+                    .Email = Lector(1).ToString,
+                    .Password = Lector(2).ToString,
+                    .Sexo = Lector(3).ToString,
+                    .FechaNac = Lector(5).ToString,
+                    .Id = Convert.ToInt32(Lector(6).ToString),
+                    .Rol = Lector(7).ToString
+                }
                 xss.Add(newPersona)
-
             End While
         Catch ex As Exception
             Throw ex

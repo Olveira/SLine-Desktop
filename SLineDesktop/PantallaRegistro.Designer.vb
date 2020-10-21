@@ -85,70 +85,75 @@ Partial Class PantallaRegistro
         'lblUserReg
         '
         Me.lblUserReg.AutoSize = True
-        Me.lblUserReg.Location = New System.Drawing.Point(259, 146)
+        Me.lblUserReg.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUserReg.Location = New System.Drawing.Point(239, 139)
         Me.lblUserReg.Name = "lblUserReg"
         Me.lblUserReg.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblUserReg.Size = New System.Drawing.Size(55, 13)
+        Me.lblUserReg.Size = New System.Drawing.Size(102, 25)
         Me.lblUserReg.TabIndex = 11
         Me.lblUserReg.Text = "Username"
         '
         'lblEmailReg
         '
         Me.lblEmailReg.AutoSize = True
-        Me.lblEmailReg.Location = New System.Drawing.Point(283, 169)
+        Me.lblEmailReg.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmailReg.Location = New System.Drawing.Point(283, 164)
         Me.lblEmailReg.Name = "lblEmailReg"
         Me.lblEmailReg.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblEmailReg.Size = New System.Drawing.Size(31, 13)
+        Me.lblEmailReg.Size = New System.Drawing.Size(58, 25)
         Me.lblEmailReg.TabIndex = 12
         Me.lblEmailReg.Text = "email"
         '
         'lblPasswordReg1
         '
         Me.lblPasswordReg1.AutoSize = True
-        Me.lblPasswordReg1.Location = New System.Drawing.Point(253, 193)
+        Me.lblPasswordReg1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPasswordReg1.Location = New System.Drawing.Point(227, 189)
         Me.lblPasswordReg1.Name = "lblPasswordReg1"
         Me.lblPasswordReg1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblPasswordReg1.Size = New System.Drawing.Size(61, 13)
+        Me.lblPasswordReg1.Size = New System.Drawing.Size(114, 25)
         Me.lblPasswordReg1.TabIndex = 13
         Me.lblPasswordReg1.Text = "Contraseña"
         '
         'lblSexo
         '
         Me.lblSexo.AutoSize = True
-        Me.lblSexo.Location = New System.Drawing.Point(283, 216)
+        Me.lblSexo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSexo.Location = New System.Drawing.Point(283, 214)
         Me.lblSexo.Name = "lblSexo"
         Me.lblSexo.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblSexo.Size = New System.Drawing.Size(31, 13)
+        Me.lblSexo.Size = New System.Drawing.Size(58, 25)
         Me.lblSexo.TabIndex = 15
         Me.lblSexo.Text = "Sexo"
         '
         'lblFechaNacReg
         '
         Me.lblFechaNacReg.AutoSize = True
-        Me.lblFechaNacReg.Location = New System.Drawing.Point(208, 262)
+        Me.lblFechaNacReg.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFechaNacReg.Location = New System.Drawing.Point(148, 264)
         Me.lblFechaNacReg.Name = "lblFechaNacReg"
         Me.lblFechaNacReg.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblFechaNacReg.Size = New System.Drawing.Size(106, 13)
+        Me.lblFechaNacReg.Size = New System.Drawing.Size(193, 25)
         Me.lblFechaNacReg.TabIndex = 16
         Me.lblFechaNacReg.Text = "Fecha de nacimiento"
         '
         'tbxUserReg
         '
-        Me.tbxUserReg.Location = New System.Drawing.Point(320, 143)
+        Me.tbxUserReg.Location = New System.Drawing.Point(347, 144)
         Me.tbxUserReg.Name = "tbxUserReg"
         Me.tbxUserReg.Size = New System.Drawing.Size(100, 20)
         Me.tbxUserReg.TabIndex = 17
         '
         'tbxEmailReg
         '
-        Me.tbxEmailReg.Location = New System.Drawing.Point(320, 166)
+        Me.tbxEmailReg.Location = New System.Drawing.Point(347, 170)
         Me.tbxEmailReg.Name = "tbxEmailReg"
         Me.tbxEmailReg.Size = New System.Drawing.Size(100, 20)
         Me.tbxEmailReg.TabIndex = 18
         '
         'tbxContraseñaReg1
         '
-        Me.tbxContraseñaReg1.Location = New System.Drawing.Point(320, 190)
+        Me.tbxContraseñaReg1.Location = New System.Drawing.Point(347, 195)
         Me.tbxContraseñaReg1.Name = "tbxContraseñaReg1"
         Me.tbxContraseñaReg1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbxContraseñaReg1.Size = New System.Drawing.Size(100, 20)
@@ -157,14 +162,14 @@ Partial Class PantallaRegistro
         'cbxSexo
         '
         Me.cbxSexo.FormattingEnabled = True
-        Me.cbxSexo.Location = New System.Drawing.Point(320, 213)
+        Me.cbxSexo.Location = New System.Drawing.Point(347, 218)
         Me.cbxSexo.Name = "cbxSexo"
         Me.cbxSexo.Size = New System.Drawing.Size(121, 21)
         Me.cbxSexo.TabIndex = 21
         '
         'DTPFechaNac
         '
-        Me.DTPFechaNac.Location = New System.Drawing.Point(320, 259)
+        Me.DTPFechaNac.Location = New System.Drawing.Point(347, 267)
         Me.DTPFechaNac.Name = "DTPFechaNac"
         Me.DTPFechaNac.Size = New System.Drawing.Size(200, 20)
         Me.DTPFechaNac.TabIndex = 22
@@ -182,7 +187,7 @@ Partial Class PantallaRegistro
         'cbxRol
         '
         Me.cbxRol.FormattingEnabled = True
-        Me.cbxRol.Location = New System.Drawing.Point(320, 236)
+        Me.cbxRol.Location = New System.Drawing.Point(347, 241)
         Me.cbxRol.Name = "cbxRol"
         Me.cbxRol.Size = New System.Drawing.Size(121, 21)
         Me.cbxRol.TabIndex = 24
@@ -190,10 +195,11 @@ Partial Class PantallaRegistro
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(290, 239)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(308, 239)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label1.Size = New System.Drawing.Size(18, 13)
+        Me.Label1.Size = New System.Drawing.Size(33, 25)
         Me.Label1.TabIndex = 25
         Me.Label1.Text = "rol"
         '

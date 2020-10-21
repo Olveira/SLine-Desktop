@@ -55,7 +55,7 @@ Partial Class PantallaEliminar
         'BtnAceptarMod
         '
         Me.BtnAceptarMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnAceptarMod.Location = New System.Drawing.Point(492, 389)
+        Me.BtnAceptarMod.Location = New System.Drawing.Point(492, 355)
         Me.BtnAceptarMod.Name = "BtnAceptarMod"
         Me.BtnAceptarMod.Size = New System.Drawing.Size(85, 40)
         Me.BtnAceptarMod.TabIndex = 17
@@ -65,7 +65,7 @@ Partial Class PantallaEliminar
         'btnCancelarMod
         '
         Me.btnCancelarMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.btnCancelarMod.Location = New System.Drawing.Point(116, 389)
+        Me.btnCancelarMod.Location = New System.Drawing.Point(111, 355)
         Me.btnCancelarMod.Name = "btnCancelarMod"
         Me.btnCancelarMod.Size = New System.Drawing.Size(85, 40)
         Me.btnCancelarMod.TabIndex = 18
@@ -90,24 +90,25 @@ Partial Class PantallaEliminar
         'lblRolMod
         '
         Me.lblRolMod.AutoSize = True
-        Me.lblRolMod.Location = New System.Drawing.Point(293, 258)
+        Me.lblRolMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRolMod.Location = New System.Drawing.Point(281, 238)
         Me.lblRolMod.Name = "lblRolMod"
         Me.lblRolMod.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblRolMod.Size = New System.Drawing.Size(18, 13)
+        Me.lblRolMod.Size = New System.Drawing.Size(33, 25)
         Me.lblRolMod.TabIndex = 37
         Me.lblRolMod.Text = "rol"
         '
         'cbxRolMod
         '
         Me.cbxRolMod.FormattingEnabled = True
-        Me.cbxRolMod.Location = New System.Drawing.Point(323, 255)
+        Me.cbxRolMod.Location = New System.Drawing.Point(320, 242)
         Me.cbxRolMod.Name = "cbxRolMod"
         Me.cbxRolMod.Size = New System.Drawing.Size(121, 21)
         Me.cbxRolMod.TabIndex = 36
         '
         'DTPFechaNacMod
         '
-        Me.DTPFechaNacMod.Location = New System.Drawing.Point(323, 278)
+        Me.DTPFechaNacMod.Location = New System.Drawing.Point(320, 268)
         Me.DTPFechaNacMod.Name = "DTPFechaNacMod"
         Me.DTPFechaNacMod.Size = New System.Drawing.Size(200, 20)
         Me.DTPFechaNacMod.TabIndex = 35
@@ -115,14 +116,14 @@ Partial Class PantallaEliminar
         'cbxSexoMod
         '
         Me.cbxSexoMod.FormattingEnabled = True
-        Me.cbxSexoMod.Location = New System.Drawing.Point(323, 232)
+        Me.cbxSexoMod.Location = New System.Drawing.Point(320, 217)
         Me.cbxSexoMod.Name = "cbxSexoMod"
         Me.cbxSexoMod.Size = New System.Drawing.Size(121, 21)
         Me.cbxSexoMod.TabIndex = 34
         '
         'tbxContraseñaMod
         '
-        Me.tbxContraseñaMod.Location = New System.Drawing.Point(323, 209)
+        Me.tbxContraseñaMod.Location = New System.Drawing.Point(320, 193)
         Me.tbxContraseñaMod.Name = "tbxContraseñaMod"
         Me.tbxContraseñaMod.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbxContraseñaMod.Size = New System.Drawing.Size(100, 20)
@@ -130,14 +131,14 @@ Partial Class PantallaEliminar
         '
         'tbxEmailMod
         '
-        Me.tbxEmailMod.Location = New System.Drawing.Point(323, 185)
+        Me.tbxEmailMod.Location = New System.Drawing.Point(320, 168)
         Me.tbxEmailMod.Name = "tbxEmailMod"
         Me.tbxEmailMod.Size = New System.Drawing.Size(100, 20)
         Me.tbxEmailMod.TabIndex = 32
         '
         'tbxUserMod
         '
-        Me.tbxUserMod.Location = New System.Drawing.Point(323, 162)
+        Me.tbxUserMod.Location = New System.Drawing.Point(320, 143)
         Me.tbxUserMod.Name = "tbxUserMod"
         Me.tbxUserMod.Size = New System.Drawing.Size(100, 20)
         Me.tbxUserMod.TabIndex = 31
@@ -145,50 +146,55 @@ Partial Class PantallaEliminar
         'lblFechaNacRegMod
         '
         Me.lblFechaNacRegMod.AutoSize = True
-        Me.lblFechaNacRegMod.Location = New System.Drawing.Point(211, 281)
+        Me.lblFechaNacRegMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFechaNacRegMod.Location = New System.Drawing.Point(121, 263)
         Me.lblFechaNacRegMod.Name = "lblFechaNacRegMod"
         Me.lblFechaNacRegMod.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblFechaNacRegMod.Size = New System.Drawing.Size(106, 13)
+        Me.lblFechaNacRegMod.Size = New System.Drawing.Size(193, 25)
         Me.lblFechaNacRegMod.TabIndex = 30
         Me.lblFechaNacRegMod.Text = "Fecha de nacimiento"
         '
         'lblSexoMod
         '
         Me.lblSexoMod.AutoSize = True
-        Me.lblSexoMod.Location = New System.Drawing.Point(286, 235)
+        Me.lblSexoMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSexoMod.Location = New System.Drawing.Point(256, 213)
         Me.lblSexoMod.Name = "lblSexoMod"
         Me.lblSexoMod.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblSexoMod.Size = New System.Drawing.Size(31, 13)
+        Me.lblSexoMod.Size = New System.Drawing.Size(58, 25)
         Me.lblSexoMod.TabIndex = 29
         Me.lblSexoMod.Text = "Sexo"
         '
         'lblPasswordMod
         '
         Me.lblPasswordMod.AutoSize = True
-        Me.lblPasswordMod.Location = New System.Drawing.Point(256, 212)
+        Me.lblPasswordMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPasswordMod.Location = New System.Drawing.Point(200, 188)
         Me.lblPasswordMod.Name = "lblPasswordMod"
         Me.lblPasswordMod.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblPasswordMod.Size = New System.Drawing.Size(61, 13)
+        Me.lblPasswordMod.Size = New System.Drawing.Size(114, 25)
         Me.lblPasswordMod.TabIndex = 28
         Me.lblPasswordMod.Text = "Contraseña"
         '
         'lblEmailMod
         '
         Me.lblEmailMod.AutoSize = True
-        Me.lblEmailMod.Location = New System.Drawing.Point(286, 188)
+        Me.lblEmailMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmailMod.Location = New System.Drawing.Point(256, 163)
         Me.lblEmailMod.Name = "lblEmailMod"
         Me.lblEmailMod.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblEmailMod.Size = New System.Drawing.Size(31, 13)
+        Me.lblEmailMod.Size = New System.Drawing.Size(58, 25)
         Me.lblEmailMod.TabIndex = 27
         Me.lblEmailMod.Text = "email"
         '
         'lblUserMod
         '
         Me.lblUserMod.AutoSize = True
-        Me.lblUserMod.Location = New System.Drawing.Point(262, 165)
+        Me.lblUserMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUserMod.Location = New System.Drawing.Point(212, 138)
         Me.lblUserMod.Name = "lblUserMod"
         Me.lblUserMod.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblUserMod.Size = New System.Drawing.Size(55, 13)
+        Me.lblUserMod.Size = New System.Drawing.Size(102, 25)
         Me.lblUserMod.TabIndex = 26
         Me.lblUserMod.Text = "Username"
         '
@@ -196,7 +202,7 @@ Partial Class PantallaEliminar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(734, 461)
+        Me.ClientSize = New System.Drawing.Size(734, 424)
         Me.Controls.Add(Me.lblRolMod)
         Me.Controls.Add(Me.cbxRolMod)
         Me.Controls.Add(Me.DTPFechaNacMod)

@@ -1,5 +1,6 @@
 ﻿Public Class PantallaListar
-    Dim user As New usuario
+    Public user As New usuario
+
     Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiModerar.Click
         PantallaModerar.Show()
         Me.Hide()
@@ -19,8 +20,7 @@
             Dim logica As New logicaUsuario
             Dim lista = logica.listarPersona()
             Dim i As Integer
-            i = logica.listarPersona.Count - 1
-            Dim item As ListViewItem
+            i = lista.Count - 1
             Dim arra(7) As String
 
             While i <> -1
@@ -32,9 +32,9 @@
                 arra(5) = lista(i).Rol
                 arra(6) = lista(i).Id.ToString
 
-                item = New ListViewItem(arra)
+                Dim item = New ListViewItem(arra)
                 LVListadoUsuarios.Items.Add(item)
-                i = i - 1
+                i -= 1
             End While
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -55,8 +55,6 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-
-
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
