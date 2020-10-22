@@ -27,7 +27,7 @@ Partial Class PantallaModerar
         Me.BtnAcep = New System.Windows.Forms.Button()
         Me.BtnDec = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.tsmlEliminar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnModificar = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiListar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListaCasos = New System.Windows.Forms.ListView()
         Me.IDCaso = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -81,18 +81,18 @@ Partial Class PantallaModerar
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmlEliminar, Me.tsmiListar})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnModificar, Me.tsmiListar})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(734, 24)
         Me.MenuStrip1.TabIndex = 22
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'tsmlEliminar
+        'BtnModificar
         '
-        Me.tsmlEliminar.Name = "tsmlEliminar"
-        Me.tsmlEliminar.Size = New System.Drawing.Size(70, 20)
-        Me.tsmlEliminar.Text = "Modificar"
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(70, 20)
+        Me.BtnModificar.Text = "Modificar"
         '
         'tsmiListar
         '
@@ -160,7 +160,7 @@ Partial Class PantallaModerar
     Friend WithEvents BtnAcep As Button
     Friend WithEvents BtnDec As Button
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents tsmlEliminar As ToolStripMenuItem
+    Friend WithEvents BtnModificar As ToolStripMenuItem
     Friend WithEvents tsmiListar As ToolStripMenuItem
     Friend WithEvents ListaCasos As ListView
     Friend WithEvents IDCaso As ColumnHeader

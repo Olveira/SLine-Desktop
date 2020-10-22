@@ -46,11 +46,11 @@
         End Set
     End Property
     Public Sub New(idCaso As Integer, descripcion As String, idUsuario As Integer, verificado As Boolean, fechaRegistro As Date)
-        _idCaso = idCaso
-        _descripcion = descripcion
-        _idUsuario = idUsuario
-        _verificado = verificado
-        _fecharegistro = fechaRegistro
+        Me._idCaso = idCaso
+        Me._descripcion = descripcion
+        Me._idUsuario = idUsuario
+        Me._verificado = verificado
+        Me._fecharegistro = fechaRegistro
     End Sub
     'inicializacion vacia'
     Public Sub New()

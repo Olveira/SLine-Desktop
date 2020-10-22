@@ -40,9 +40,6 @@
     Private Sub MeLoad(sender As Object, e As EventArgs) Handles Me.Load
         ListarCasos()
     End Sub
-    Private Sub MeActivated(sender As Object, e As EventArgs) Handles Me.Activated
-        ListarCasos()
-    End Sub
     Private Sub BtnVerif_Click(sender As Object, e As EventArgs) Handles BtnAcep.Click
         Try
             CasoSelected()
@@ -55,10 +52,9 @@
     End Sub
     Private Sub BtnDec_Click(sender As Object, e As EventArgs) Handles BtnDec.Click
         Try
-            Dim indexSeleccionado As Integer
-            indexSeleccionado = ListaCasos.FocusedItem.Index
             CasoSelected()
-            'eliminar caso'
+            Dim logicaEliminar As New logicaCaso
+            logicaEliminar.eliminarCaso(CasoS.IdCaso)
             ListarCasos()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -79,6 +75,10 @@
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+    Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
 
     End Sub
 End Class

@@ -38,10 +38,10 @@
             While Lector.Read()
                 Dim newCaso As New caso With {
                     .IdCaso = Convert.ToInt32(Lector(0).ToString),
-                    .Descripcion = Lector(3).ToString,
-                    .IdUsuario = Convert.ToInt32(Lector(4).ToString),
-                    .Verificado = Convert.ToBoolean(Lector(5).ToString),
-                    .Fecharegistro = Convert.ToDateTime(Lector(6).ToString)
+                    .Descripcion = Lector(4).ToString,
+                    .IdUsuario = Convert.ToInt32(Lector(5).ToString),
+                    .Verificado = Convert.ToBoolean(Lector(6).ToString),
+                    .Fecharegistro = Convert.ToDateTime(Lector(7).ToString)
                 }
                 listcasos.Add(newCaso)
             End While
@@ -58,7 +58,7 @@
             Dim cadenaDeComandos As String
             Dim eliminador As Integer
 
-            cadenaDeComandos = "DELETE FROM _case WHERE idCaso = @idCaso"
+            cadenaDeComandos = "DELETE FROM _case WHERE id_caso = @idCaso"
 
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
