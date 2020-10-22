@@ -1,7 +1,5 @@
 ﻿Public Class persistenciaCaso
     Private conection = New Npgsql.NpgsqlConnection
-    Private listcasos As New List(Of caso)
-    Private verificadoTrue As Boolean = True
 
     Public Sub aceptarCasos(LCasos As Integer)
         Try
@@ -13,7 +11,7 @@
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
             cmd.Connection = conection
             cmd.Parameters.Add("@idCaso", NpgsqlTypes.NpgsqlDbType.Integer).Value = LCasos
-            cmd.Parameters.Add("@verificado", NpgsqlTypes.NpgsqlDbType.Boolean, 10).Value = verificadoTrue
+            cmd.Parameters.Add("@verificado", NpgsqlTypes.NpgsqlDbType.Boolean, 10).Value = True
 
             cmd.ExecuteNonQuery()
         Catch ex As Exception
@@ -23,6 +21,7 @@
         End Try
     End Sub
     Public Function listarCasos() As List(Of caso)
+        Dim listcasos As New List(Of caso)
         Try
             Dim Persona As New caso
             Dim ClaseSnl As New conexion
@@ -34,7 +33,6 @@
 
             cmd.CommandText = cadenaDeComandos
             Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
-
             While Lector.Read()
                 Dim newCaso As New caso With {
                     .IdCaso = Convert.ToInt32(Lector(0).ToString),

@@ -11,15 +11,6 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-    Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModerarToolStripMenuItem.Click
-        Try
-            PantallaModerar.Show()
-            Me.Hide()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
-
     Private Sub PantallaEliminar_Load(sender As Object, e As EventArgs) Handles Me.Load
         Try
             tbxContraseñaMod.Text = user.Password
@@ -31,9 +22,18 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-
     End Sub
-
+    Private Sub MeLoad(sender As Object, e As EventArgs) Handles Me.Closed
+        PantallaListar.Show()
+    End Sub
+    Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModerarToolStripMenuItem.Click
+        Try
+            PantallaModerar.Show()
+            Me.Hide()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
     Private Sub BtnAceptarMod_Click(sender As Object, e As EventArgs) Handles BtnAceptarMod.Click
         Try
             user.Email = tbxEmailMod.Text
@@ -47,9 +47,7 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-
     End Sub
-
     Private Sub btnCancelarMod_Click(sender As Object, e As EventArgs) Handles btnCancelarMod.Click
         Try
             PantallaListar.ListarUsuarios()
@@ -58,6 +56,5 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-
     End Sub
 End Class

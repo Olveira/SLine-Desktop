@@ -1,16 +1,13 @@
 ﻿Public Class PantallaListar
     Public user As New usuario
-
     Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiModerar.Click
         PantallaModerar.Show()
         Me.Hide()
     End Sub
-
     Private Sub tsmiEliminar_Click(sender As Object, e As EventArgs)
         PantallaEliminar.Show()
         Me.Hide()
     End Sub
-
     Private Sub PantallaListar_Load(sender As Object, e As EventArgs) Handles Me.Load
         ListarUsuarios()
     End Sub
@@ -21,7 +18,6 @@
             Dim lista = logica.listarPersona()
             Dim i = lista.Count - 1
             Dim arra(7) As String
-
             While i <> -1
                 arra(0) = lista(i).Username
                 arra(1) = lista(i).Email
@@ -44,7 +40,6 @@
         PantallaEliminar.Show()
         Me.Hide()
     End Sub
-
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         tomarUsuarioLV()
         Dim logica As New logicaUsuario
