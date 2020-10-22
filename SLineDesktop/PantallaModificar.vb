@@ -1,4 +1,4 @@
-﻿Public Class PantallaEliminar
+﻿Public Class PantallaModificar
     Public user As usuario
     Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Try

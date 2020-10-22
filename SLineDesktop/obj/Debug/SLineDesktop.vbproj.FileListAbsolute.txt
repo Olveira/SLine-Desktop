@@ -238,7 +238,6 @@ C:\Proyecto\SLine-Desktop\SLineDesktop\bin\Debug\System.Text.Json.xml
 C:\Proyecto\SLine-Desktop\SLineDesktop\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Proyecto\SLine-Desktop\SLineDesktop\bin\Debug\System.ValueTuple.xml
 C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.vbprojAssemblyReference.cache
-C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaEliminar.resources
 C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaListar.resources
 C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.InicioADM.resources
 C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Resources.resources
@@ -292,3 +291,4 @@ C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.vbproj.Copy
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.exe
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.xml
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.pdb
+C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaModificar.resources

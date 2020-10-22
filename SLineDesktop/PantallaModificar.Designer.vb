@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class PantallaEliminar
+Partial Class PantallaModificar
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -198,7 +198,7 @@ Partial Class PantallaEliminar
         Me.lblUserMod.TabIndex = 26
         Me.lblUserMod.Text = "Username"
         '
-        'PantallaEliminar
+        'PantallaModificar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -220,8 +220,8 @@ Partial Class PantallaEliminar
         Me.Controls.Add(Me.lblModificarUsuario)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "PantallaEliminar"
-        Me.Text = "Administrador SLine! - Eliminar"
+        Me.Name = "PantallaModificar"
+        Me.Text = "Administrador SLine! - Modificar"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)

@@ -8,10 +8,8 @@
         Return persistencia.listarPersonas()
     End Function
     Public Function login(user As String, pass As String) As Boolean
-        Dim niceLog As Boolean
         Dim persistencia As New persistenciaUsuario
-        niceLog = persistencia.persistenciaLog(user, pass)
-        Return niceLog
+        Return persistencia.persistenciaLog(user, pass)
     End Function
     Public Sub ModificarUsuario(user As usuario)
         Dim persistencia As New persistenciaUsuario

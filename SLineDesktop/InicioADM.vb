@@ -13,6 +13,7 @@
                 MessageBox.Show("Creenciales incorrectas")
             End If
         Catch ex As Exception
+            MessageBox.Show("Fallo interno")
         End Try
     End Sub
     Private Sub InicioADM_Load(sender As Object, e As EventArgs) Handles MyBase.Load

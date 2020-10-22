@@ -123,10 +123,10 @@
     <Compile Include="PantallaModerar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallaEliminar.Designer.vb">
-      <DependentUpon>PantallaEliminar.vb</DependentUpon>
+    <Compile Include="PantallaModificar.Designer.vb">
+      <DependentUpon>PantallaModificar.vb</DependentUpon>
     </Compile>
-    <Compile Include="PantallaEliminar.vb">
+    <Compile Include="PantallaModificar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PantallaListar.Designer.vb">
@@ -168,8 +168,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PantallaEliminar.resx">
-      <DependentUpon>PantallaEliminar.vb</DependentUpon>
+    <EmbeddedResource Include="PantallaModificar.resx">
+      <DependentUpon>PantallaModificar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaListar.resx">
       <DependentUpon>PantallaListar.vb</DependentUpon>

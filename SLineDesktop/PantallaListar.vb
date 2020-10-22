@@ -5,7 +5,7 @@
         Me.Hide()
     End Sub
     Private Sub tsmiEliminar_Click(sender As Object, e As EventArgs)
-        PantallaEliminar.Show()
+        PantallaModificar.Show()
         Me.Hide()
     End Sub
     Private Sub PantallaListar_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -36,8 +36,8 @@
     End Sub
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         tomarUsuarioLV()
-        PantallaEliminar.user = user
-        PantallaEliminar.Show()
+        PantallaModificar.user = user
+        PantallaModificar.Show()
         Me.Hide()
     End Sub
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
