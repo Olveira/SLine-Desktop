@@ -42,46 +42,37 @@
 
     End Sub
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
-        Try
-            Dim itemSelected = LVListadoUsuarios.SelectedItems.Count
-            If itemSelected = 0 Then
-                MessageBox.Show("Primero selecciona un usuario")
-            Else
-                tomarUsuarioLV()
-                PantallaEliminar.user = user
-                PantallaEliminar.Show()
-                Me.Hide()
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        tomarUsuarioLV()
+        PantallaEliminar.user = user
+        PantallaEliminar.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Try
-            Dim itemSelected = LVListadoUsuarios.SelectedItems.Count
-            If itemSelected = 0 Then
-                MessageBox.Show("Primero selecciona un usuario")
-            Else
-                tomarUsuarioLV()
-                Dim logica As New logicaUsuario
-                logica.eliminarUsuario(user.Id)
-                ListarUsuarios()
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        tomarUsuarioLV()
+        Dim logica As New logicaUsuario
+        logica.eliminarUsuario(user.Id)
+        ListarUsuarios()
     End Sub
     Private Sub CloseMe(sender As Object, e As EventArgs) Handles Me.Closed
         welcome.Show()
     End Sub
     Private Sub tomarUsuarioLV()
-        user.Username = LVListadoUsuarios.FocusedItem.SubItems(0).Text
-        user.Email = LVListadoUsuarios.FocusedItem.SubItems(1).Text
-        user.Password = LVListadoUsuarios.FocusedItem.SubItems(2).Text
-        user.Sexo = LVListadoUsuarios.FocusedItem.SubItems(3).Text
-        user.FechaNac = Convert.ToDateTime(LVListadoUsuarios.FocusedItem.SubItems(4).Text)
-        user.Rol = LVListadoUsuarios.FocusedItem.SubItems(5).Text
-        user.Id = Convert.ToInt32(LVListadoUsuarios.FocusedItem.SubItems(6).Text)
+        Try
+            Dim itemSelected = LVListadoUsuarios.SelectedItems.Count
+            If itemSelected = 0 Then
+                MessageBox.Show("Primero selecciona un usuario")
+            Else
+                user.Username = LVListadoUsuarios.FocusedItem.SubItems(0).Text
+                user.Email = LVListadoUsuarios.FocusedItem.SubItems(1).Text
+                user.Password = LVListadoUsuarios.FocusedItem.SubItems(2).Text
+                user.Sexo = LVListadoUsuarios.FocusedItem.SubItems(3).Text
+                user.FechaNac = Convert.ToDateTime(LVListadoUsuarios.FocusedItem.SubItems(4).Text)
+                user.Rol = LVListadoUsuarios.FocusedItem.SubItems(5).Text
+                user.Id = Convert.ToInt32(LVListadoUsuarios.FocusedItem.SubItems(6).Text)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("error interno")
+        End Try
     End Sub
 End Class
