@@ -19,8 +19,7 @@
             LVListadoUsuarios.Items.Clear()
             Dim logica As New logicaUsuario
             Dim lista = logica.listarPersona()
-            Dim i As Integer
-            i = lista.Count - 1
+            Dim i = lista.Count - 1
             Dim arra(7) As String
 
             While i <> -1
@@ -31,7 +30,6 @@
                 arra(4) = lista(i).FechaNac
                 arra(5) = lista(i).Rol
                 arra(6) = lista(i).Id.ToString
-
                 Dim item = New ListViewItem(arra)
                 LVListadoUsuarios.Items.Add(item)
                 i -= 1
@@ -39,7 +37,6 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-
     End Sub
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         tomarUsuarioLV()

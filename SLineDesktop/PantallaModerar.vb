@@ -58,16 +58,27 @@
             Dim indexSeleccionado As Integer
             indexSeleccionado = ListaCasos.FocusedItem.Index
             CasoSelected()
+            'eliminar caso'
             ListarCasos()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
     Private Sub CasoSelected()
-        CasoS.IdCaso = Convert.ToString(ListaCasos.FocusedItem.SubItems(0).Text)
-        CasoS.Descripcion = ListaCasos.FocusedItem.SubItems(1).Text
-        CasoS.IdUsuario = Convert.ToString(ListaCasos.FocusedItem.SubItems(2).Text)
-        CasoS.Verificado = Convert.ToBoolean(ListaCasos.FocusedItem.SubItems(3).Text)
-        CasoS.Fecharegistro = Convert.ToDateTime(ListaCasos.FocusedItem.SubItems(4).Text)
+        Try
+            Dim itemSelected = ListaCasos.SelectedItems.Count
+            If itemSelected = 0 Then
+                MessageBox.Show("Ninguno seleccionado")
+            Else
+                CasoS.IdCaso = Convert.ToString(ListaCasos.FocusedItem.SubItems(0).Text)
+                CasoS.Descripcion = ListaCasos.FocusedItem.SubItems(1).Text
+                CasoS.IdUsuario = Convert.ToString(ListaCasos.FocusedItem.SubItems(2).Text)
+                CasoS.Verificado = Convert.ToBoolean(ListaCasos.FocusedItem.SubItems(3).Text)
+                CasoS.Fecharegistro = Convert.ToDateTime(ListaCasos.FocusedItem.SubItems(4).Text)
+            End If
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 End Class

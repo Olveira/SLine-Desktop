@@ -7,7 +7,7 @@
         Try
             Dim clasCnn = New conexion
             Dim cadenaDeComandos As String
-            cadenaDeComandos = "UPDATE _case SET verificado = @verificado WHERE idCaso = @idCaso"
+            cadenaDeComandos = "UPDATE _case SET verificado = @verificado WHERE id_caso = @idCaso"
 
             conection = clasCnn.abrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
@@ -38,10 +38,10 @@
             While Lector.Read()
                 Dim newCaso As New caso With {
                     .IdCaso = Convert.ToInt32(Lector(0).ToString),
-                    .Descripcion = Lector(2).ToString,
-                    .IdUsuario = Convert.ToInt32(Lector(3).ToString),
-                    .Verificado = Convert.ToBoolean(Lector(4).ToString),
-                    .Fecharegistro = Convert.ToDateTime(Lector(5).ToString)
+                    .Descripcion = Lector(3).ToString,
+                    .IdUsuario = Convert.ToInt32(Lector(4).ToString),
+                    .Verificado = Convert.ToBoolean(Lector(5).ToString),
+                    .Fecharegistro = Convert.ToDateTime(Lector(6).ToString)
                 }
                 listcasos.Add(newCaso)
             End While
