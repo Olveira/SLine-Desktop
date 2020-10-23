@@ -41,7 +41,7 @@
             cmd.Parameters.AddWithValue("@username", user)
 
             Dim reader = cmd.ExecuteReader
-            Dim password As String = ""
+            Dim password As String = "lll"
             If reader.Read Then
                 password = reader(2).ToString.Trim
             End If
@@ -57,8 +57,7 @@
         Try
             Dim ClaseSnl As New conexion
             conection = ClaseSnl.abrirConexion
-            Dim cadenaDeComandos = "select * from _user"
-            Dim cmd = New Npgsql.NpgsqlCommand(cadenaDeComandos)
+            Dim cmd = New Npgsql.NpgsqlCommand( "select * from _user")
             cmd.Connection = conection
 
             Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader

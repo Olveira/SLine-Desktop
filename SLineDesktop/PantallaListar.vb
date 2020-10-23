@@ -36,7 +36,6 @@
     End Sub
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         tomarUsuarioLV()
-        PantallaModificar.user = user
         PantallaModificar.Show()
         Me.Hide()
     End Sub

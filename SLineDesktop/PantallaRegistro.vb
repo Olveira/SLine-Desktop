@@ -27,7 +27,9 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
+    Private Sub MeClose(sender As Object, e As EventArgs) Handles Me.Closed
+        welcome.Show()
+    End Sub
     Private Sub PantallaRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             cbxSexo.Items.Add("Masculino")
@@ -57,5 +59,20 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub tbxUserReg_TextChanged(sender As Object, e As EventArgs) Handles tbxUserReg.TextChanged
+
+    End Sub
+    Private Sub tbxUserChange(sender As Object, e As KeyPressEventArgs) Handles tbxUserReg.KeyPress
+        Dim key = Convert.ToChar(Keys.Delete)
+        If e.KeyChar = key And tbxUserReg.Text = "Nombre de Usuario" Then
+            tbxUserReg.Text = ""
+            tbxUserReg.ForeColor = Color.Black
+        End If
+        If e.KeyChar = key And tbxUserReg.Text = "" Then
+            tbxUserReg.Text = "Nombre de Usuario"
+            tbxUserReg.ForeColor = Color.Gray
+        End If
     End Sub
 End Class
