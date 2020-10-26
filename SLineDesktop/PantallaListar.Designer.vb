@@ -44,7 +44,7 @@ Partial Class PantallaListar
         '
         Me.LabelBienvenido.AutoSize = True
         Me.LabelBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!)
-        Me.LabelBienvenido.Location = New System.Drawing.Point(12, 24)
+        Me.LabelBienvenido.Location = New System.Drawing.Point(12, 28)
         Me.LabelBienvenido.Name = "LabelBienvenido"
         Me.LabelBienvenido.Size = New System.Drawing.Size(436, 54)
         Me.LabelBienvenido.TabIndex = 10
@@ -52,8 +52,8 @@ Partial Class PantallaListar
         '
         'BtnEditar
         '
-        Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnEditar.Location = New System.Drawing.Point(0, 320)
+        Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEditar.Location = New System.Drawing.Point(12, 320)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(118, 40)
         Me.BtnEditar.TabIndex = 12
@@ -63,9 +63,9 @@ Partial Class PantallaListar
         'PBLogo
         '
         Me.PBLogo.Image = Global.SLineDesktop.My.Resources.Resources.Logo
-        Me.PBLogo.Location = New System.Drawing.Point(687, 24)
+        Me.PBLogo.Location = New System.Drawing.Point(667, 27)
         Me.PBLogo.Name = "PBLogo"
-        Me.PBLogo.Size = New System.Drawing.Size(47, 45)
+        Me.PBLogo.Size = New System.Drawing.Size(55, 55)
         Me.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PBLogo.TabIndex = 11
         Me.PBLogo.TabStop = False
@@ -92,10 +92,10 @@ Partial Class PantallaListar
         Me.LVListadoUsuarios.FullRowSelect = True
         Me.LVListadoUsuarios.GridLines = True
         Me.LVListadoUsuarios.HideSelection = False
-        Me.LVListadoUsuarios.Location = New System.Drawing.Point(0, 81)
+        Me.LVListadoUsuarios.Location = New System.Drawing.Point(0, 88)
         Me.LVListadoUsuarios.MultiSelect = False
         Me.LVListadoUsuarios.Name = "LVListadoUsuarios"
-        Me.LVListadoUsuarios.Size = New System.Drawing.Size(734, 233)
+        Me.LVListadoUsuarios.Size = New System.Drawing.Size(734, 226)
         Me.LVListadoUsuarios.TabIndex = 22
         Me.LVListadoUsuarios.UseCompatibleStateImageBehavior = False
         Me.LVListadoUsuarios.View = System.Windows.Forms.View.Details
@@ -103,12 +103,12 @@ Partial Class PantallaListar
         'Username
         '
         Me.Username.Text = "Username"
-        Me.Username.Width = 68
+        Me.Username.Width = 100
         '
         'Email
         '
         Me.Email.Text = "Email"
-        Me.Email.Width = 125
+        Me.Email.Width = 190
         '
         'Password
         '
@@ -118,7 +118,7 @@ Partial Class PantallaListar
         'sexo
         '
         Me.sexo.Text = "Sexo"
-        Me.sexo.Width = 78
+        Me.sexo.Width = 93
         '
         'FechaNac
         '
@@ -135,7 +135,8 @@ Partial Class PantallaListar
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(616, 320)
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.Location = New System.Drawing.Point(609, 320)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(118, 40)
         Me.btnEliminar.TabIndex = 23

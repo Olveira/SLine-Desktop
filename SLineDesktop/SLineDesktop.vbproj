@@ -117,6 +117,12 @@
     </Compile>
     <Compile Include="Logica\logicaUsuario.vb" />
     <Compile Include="Logica\logicaCaso.vb" />
+    <Compile Include="ModerarUsuarios.Designer.vb">
+      <DependentUpon>ModerarUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModerarUsuarios.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="PantallaModerar.Designer.vb">
       <DependentUpon>PantallaModerar.vb</DependentUpon>
     </Compile>
@@ -168,6 +174,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ModerarUsuarios.resx">
+      <DependentUpon>ModerarUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallaModificar.resx">
       <DependentUpon>PantallaModificar.vb</DependentUpon>
     </EmbeddedResource>

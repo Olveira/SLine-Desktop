@@ -69,12 +69,12 @@ Partial Class PantallaRegistro
         '
         'btnSiguienteReg
         '
-        Me.btnSiguienteReg.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.btnSiguienteReg.Location = New System.Drawing.Point(538, 380)
+        Me.btnSiguienteReg.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSiguienteReg.Location = New System.Drawing.Point(538, 335)
         Me.btnSiguienteReg.Name = "btnSiguienteReg"
-        Me.btnSiguienteReg.Size = New System.Drawing.Size(184, 42)
+        Me.btnSiguienteReg.Size = New System.Drawing.Size(180, 40)
         Me.btnSiguienteReg.TabIndex = 9
-        Me.btnSiguienteReg.Text = "registrar"
+        Me.btnSiguienteReg.Text = "Registrar"
         Me.btnSiguienteReg.UseVisualStyleBackColor = True
         '
         'tbxUserReg
@@ -108,6 +108,7 @@ Partial Class PantallaRegistro
         Me.tbxContraseñaReg1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbxContraseñaReg1.Size = New System.Drawing.Size(278, 26)
         Me.tbxContraseñaReg1.TabIndex = 19
+        Me.tbxContraseñaReg1.Text = "Password"
         '
         'cbxSexo
         '
@@ -117,6 +118,7 @@ Partial Class PantallaRegistro
         Me.cbxSexo.Name = "cbxSexo"
         Me.cbxSexo.Size = New System.Drawing.Size(278, 28)
         Me.cbxSexo.TabIndex = 21
+        Me.cbxSexo.Text = "Sexo"
         '
         'DTPFechaNac
         '
@@ -126,13 +128,14 @@ Partial Class PantallaRegistro
         Me.DTPFechaNac.Name = "DTPFechaNac"
         Me.DTPFechaNac.Size = New System.Drawing.Size(278, 26)
         Me.DTPFechaNac.TabIndex = 22
+        Me.DTPFechaNac.Value = New Date(2020, 10, 26, 8, 26, 29, 0)
         '
         'btnback
         '
-        Me.btnback.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.btnback.Location = New System.Drawing.Point(12, 380)
+        Me.btnback.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnback.Location = New System.Drawing.Point(12, 335)
         Me.btnback.Name = "btnback"
-        Me.btnback.Size = New System.Drawing.Size(184, 42)
+        Me.btnback.Size = New System.Drawing.Size(180, 40)
         Me.btnback.TabIndex = 23
         Me.btnback.Text = "Atras"
         Me.btnback.UseVisualStyleBackColor = True
@@ -145,6 +148,7 @@ Partial Class PantallaRegistro
         Me.cbxRol.Name = "cbxRol"
         Me.cbxRol.Size = New System.Drawing.Size(278, 28)
         Me.cbxRol.TabIndex = 24
+        Me.cbxRol.Text = "Rol"
         '
         'Label1
         '

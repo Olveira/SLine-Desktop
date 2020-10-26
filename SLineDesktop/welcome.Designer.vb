@@ -32,6 +32,7 @@ Partial Class welcome
         '
         'btnGoRegistrar
         '
+        Me.btnGoRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGoRegistrar.Location = New System.Drawing.Point(669, 411)
         Me.btnGoRegistrar.Name = "btnGoRegistrar"
         Me.btnGoRegistrar.Size = New System.Drawing.Size(112, 27)
@@ -41,6 +42,7 @@ Partial Class welcome
         '
         'btnGoLogin
         '
+        Me.btnGoLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGoLogin.Location = New System.Drawing.Point(43, 411)
         Me.btnGoLogin.Name = "btnGoLogin"
         Me.btnGoLogin.Size = New System.Drawing.Size(123, 27)

@@ -292,3 +292,4 @@ C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.exe
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.xml
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.pdb
 C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaModificar.resources
+C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.ModerarUsuarios.resources

@@ -27,7 +27,6 @@ Partial Class PantallaModerar
         Me.BtnAcep = New System.Windows.Forms.Button()
         Me.BtnDec = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.BtnModificar = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiListar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListaCasos = New System.Windows.Forms.ListView()
         Me.IDCaso = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -42,9 +41,9 @@ Partial Class PantallaModerar
         'PBLogo
         '
         Me.PBLogo.Image = Global.SLineDesktop.My.Resources.Resources.Logo
-        Me.PBLogo.Location = New System.Drawing.Point(680, 24)
+        Me.PBLogo.Location = New System.Drawing.Point(667, 27)
         Me.PBLogo.Name = "PBLogo"
-        Me.PBLogo.Size = New System.Drawing.Size(54, 54)
+        Me.PBLogo.Size = New System.Drawing.Size(55, 55)
         Me.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PBLogo.TabIndex = 6
         Me.PBLogo.TabStop = False
@@ -61,44 +60,38 @@ Partial Class PantallaModerar
         '
         'BtnAcep
         '
-        Me.BtnAcep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnAcep.Location = New System.Drawing.Point(423, 304)
+        Me.BtnAcep.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAcep.Location = New System.Drawing.Point(542, 311)
         Me.BtnAcep.Name = "BtnAcep"
-        Me.BtnAcep.Size = New System.Drawing.Size(311, 40)
+        Me.BtnAcep.Size = New System.Drawing.Size(180, 40)
         Me.BtnAcep.TabIndex = 10
         Me.BtnAcep.Text = "Verificar"
         Me.BtnAcep.UseVisualStyleBackColor = True
         '
         'BtnDec
         '
-        Me.BtnDec.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnDec.Location = New System.Drawing.Point(0, 304)
+        Me.BtnDec.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDec.Location = New System.Drawing.Point(12, 311)
         Me.BtnDec.Name = "BtnDec"
-        Me.BtnDec.Size = New System.Drawing.Size(321, 40)
+        Me.BtnDec.Size = New System.Drawing.Size(180, 40)
         Me.BtnDec.TabIndex = 11
         Me.BtnDec.Text = "Declinar"
         Me.BtnDec.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnModificar, Me.tsmiListar})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiListar})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(734, 24)
         Me.MenuStrip1.TabIndex = 22
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'BtnModificar
-        '
-        Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(70, 20)
-        Me.BtnModificar.Text = "Modificar"
-        '
         'tsmiListar
         '
         Me.tsmiListar.Name = "tsmiListar"
-        Me.tsmiListar.Size = New System.Drawing.Size(47, 20)
-        Me.tsmiListar.Text = "Listar"
+        Me.tsmiListar.Size = New System.Drawing.Size(81, 20)
+        Me.tsmiListar.Text = "Listar Casos"
         '
         'ListaCasos
         '
@@ -106,7 +99,7 @@ Partial Class PantallaModerar
         Me.ListaCasos.FullRowSelect = True
         Me.ListaCasos.GridLines = True
         Me.ListaCasos.HideSelection = False
-        Me.ListaCasos.Location = New System.Drawing.Point(0, 81)
+        Me.ListaCasos.Location = New System.Drawing.Point(0, 88)
         Me.ListaCasos.MultiSelect = False
         Me.ListaCasos.Name = "ListaCasos"
         Me.ListaCasos.Size = New System.Drawing.Size(734, 217)
@@ -117,6 +110,7 @@ Partial Class PantallaModerar
         'IDCaso
         '
         Me.IDCaso.Text = "ID Caso"
+        Me.IDCaso.Width = 73
         '
         'Desc
         '
@@ -126,23 +120,24 @@ Partial Class PantallaModerar
         'IDUsuario
         '
         Me.IDUsuario.Text = "ID Usuario"
-        Me.IDUsuario.Width = 94
+        Me.IDUsuario.Width = 98
         '
         'Veri
         '
         Me.Veri.Text = "Verificado"
+        Me.Veri.Width = 78
         '
         'FechaReg
         '
         Me.FechaReg.Text = "Fecha de registro"
-        Me.FechaReg.Width = 111
+        Me.FechaReg.Width = 116
         '
         'PantallaModerar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Plum
-        Me.ClientSize = New System.Drawing.Size(734, 350)
+        Me.ClientSize = New System.Drawing.Size(734, 362)
         Me.Controls.Add(Me.ListaCasos)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.BtnDec)
@@ -164,7 +159,6 @@ Partial Class PantallaModerar
     Friend WithEvents BtnAcep As Button
     Friend WithEvents BtnDec As Button
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents BtnModificar As ToolStripMenuItem
     Friend WithEvents tsmiListar As ToolStripMenuItem
     Friend WithEvents ListaCasos As ListView
     Friend WithEvents IDCaso As ColumnHeader

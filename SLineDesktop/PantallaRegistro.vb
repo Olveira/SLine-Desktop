@@ -14,11 +14,8 @@
             sexo = CStr(cbxSexo.SelectedItem)
             rol = CStr(cbxRol.SelectedItem)
             fechaNac = DTPFechaNac.Value
-
             Dim user As usuario
             user = New usuario(username, email, password, sexo, fechaNac, rol)
-
-
             Dim logicaUsuario As New logicaUsuario
             logicaUsuario.AltaUser(user)
             InicioADM.Show()
@@ -35,23 +32,23 @@
             cbxSexo.Items.Add("Masculino")
             cbxSexo.Items.Add("Femenino")
             cbxSexo.Items.Add("Otro")
-            cbxRol.Items.Add("admin")
-            cbxRol.Items.Add("user")
+            cbxRol.Items.Add("Admin")
+            cbxRol.Items.Add("User")
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-
     End Sub
-
-    Private Sub CerrarRegistro(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+    Private Sub MeClosed(sender As Object, e As EventArgs) Handles Me.Closed
         Try
+            tbxContraseñaReg1.Text = ""
+            tbxEmailReg.Text = ""
+            tbxUserReg.Text = ""
             cbxSexo.Items.Clear()
             cbxRol.Items.Clear()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnback.Click
         Try
             welcome.Show()
@@ -61,18 +58,15 @@
         End Try
     End Sub
 
-    Private Sub tbxUserReg_TextChanged(sender As Object, e As EventArgs) Handles tbxUserReg.TextChanged
-
+    Private Sub tbxUserReg_TextChanged(sender As Object, e As EventArgs) Handles tbxUserReg.Click
+        tbxUserReg.Text = ""
     End Sub
-    Private Sub tbxUserChange(sender As Object, e As KeyPressEventArgs) Handles tbxUserReg.KeyPress
-        Dim key = Convert.ToChar(Keys.Delete)
-        If e.KeyChar = key And tbxUserReg.Text = "Nombre de Usuario" Then
-            tbxUserReg.Text = ""
-            tbxUserReg.ForeColor = Color.Black
-        End If
-        If e.KeyChar = key And tbxUserReg.Text = "" Then
-            tbxUserReg.Text = "Nombre de Usuario"
-            tbxUserReg.ForeColor = Color.Gray
-        End If
+
+    Private Sub tbxEmailReg_TextChanged(sender As Object, e As EventArgs) Handles tbxEmailReg.Click
+        tbxEmailReg.Text = ""
+    End Sub
+
+    Private Sub tbxContraseñaReg1_TextChanged(sender As Object, e As EventArgs) Handles tbxContraseñaReg1.Click
+        tbxContraseñaReg1.Text = ""
     End Sub
 End Class

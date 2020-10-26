@@ -73,12 +73,9 @@
                 CasoS.Fecharegistro = Convert.ToDateTime(ListaCasos.FocusedItem.SubItems(4).Text)
             End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message)
         End Try
 
     End Sub
 
-    Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
-
-    End Sub
 End Class
