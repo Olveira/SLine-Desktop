@@ -172,6 +172,18 @@
     <Compile Include="welcome.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Welcome2.Designer.vb">
+      <DependentUpon>Welcome2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Welcome3.Designer.vb">
+      <DependentUpon>Welcome3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome3.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ModerarUsuarios.resx">
@@ -200,6 +212,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="welcome.resx">
       <DependentUpon>welcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome2.resx">
+      <DependentUpon>Welcome2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome3.resx">
+      <DependentUpon>Welcome3.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

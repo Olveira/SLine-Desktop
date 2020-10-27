@@ -45,17 +45,17 @@ Partial Class PantallaModificar
         'lblModificarUsuario
         '
         Me.lblModificarUsuario.AutoSize = True
-        Me.lblModificarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!)
-        Me.lblModificarUsuario.Location = New System.Drawing.Point(170, 48)
+        Me.lblModificarUsuario.Font = New System.Drawing.Font("Century Gothic", 35.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblModificarUsuario.Location = New System.Drawing.Point(81, 53)
         Me.lblModificarUsuario.Name = "lblModificarUsuario"
-        Me.lblModificarUsuario.Size = New System.Drawing.Size(379, 54)
+        Me.lblModificarUsuario.Size = New System.Drawing.Size(415, 57)
         Me.lblModificarUsuario.TabIndex = 11
         Me.lblModificarUsuario.Text = "Modificar usuario"
         '
         'BtnAceptarMod
         '
         Me.BtnAceptarMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnAceptarMod.Location = New System.Drawing.Point(492, 355)
+        Me.BtnAceptarMod.Location = New System.Drawing.Point(321, 361)
         Me.BtnAceptarMod.Name = "BtnAceptarMod"
         Me.BtnAceptarMod.Size = New System.Drawing.Size(85, 40)
         Me.BtnAceptarMod.TabIndex = 17
@@ -65,7 +65,7 @@ Partial Class PantallaModificar
         'btnCancelarMod
         '
         Me.btnCancelarMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.btnCancelarMod.Location = New System.Drawing.Point(111, 355)
+        Me.btnCancelarMod.Location = New System.Drawing.Point(61, 361)
         Me.btnCancelarMod.Name = "btnCancelarMod"
         Me.btnCancelarMod.Size = New System.Drawing.Size(85, 40)
         Me.btnCancelarMod.TabIndex = 18
@@ -77,7 +77,7 @@ Partial Class PantallaModificar
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModerarToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(734, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(568, 24)
         Me.MenuStrip1.TabIndex = 20
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -91,7 +91,7 @@ Partial Class PantallaModificar
         '
         Me.lblRolMod.AutoSize = True
         Me.lblRolMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRolMod.Location = New System.Drawing.Point(281, 238)
+        Me.lblRolMod.Location = New System.Drawing.Point(231, 244)
         Me.lblRolMod.Name = "lblRolMod"
         Me.lblRolMod.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lblRolMod.Size = New System.Drawing.Size(33, 25)
@@ -101,14 +101,14 @@ Partial Class PantallaModificar
         'cbxRolMod
         '
         Me.cbxRolMod.FormattingEnabled = True
-        Me.cbxRolMod.Location = New System.Drawing.Point(320, 242)
+        Me.cbxRolMod.Location = New System.Drawing.Point(270, 248)
         Me.cbxRolMod.Name = "cbxRolMod"
         Me.cbxRolMod.Size = New System.Drawing.Size(121, 21)
         Me.cbxRolMod.TabIndex = 36
         '
         'DTPFechaNacMod
         '
-        Me.DTPFechaNacMod.Location = New System.Drawing.Point(320, 268)
+        Me.DTPFechaNacMod.Location = New System.Drawing.Point(270, 274)
         Me.DTPFechaNacMod.Name = "DTPFechaNacMod"
         Me.DTPFechaNacMod.Size = New System.Drawing.Size(200, 20)
         Me.DTPFechaNacMod.TabIndex = 35
@@ -116,14 +116,14 @@ Partial Class PantallaModificar
         'cbxSexoMod
         '
         Me.cbxSexoMod.FormattingEnabled = True
-        Me.cbxSexoMod.Location = New System.Drawing.Point(320, 217)
+        Me.cbxSexoMod.Location = New System.Drawing.Point(270, 223)
         Me.cbxSexoMod.Name = "cbxSexoMod"
         Me.cbxSexoMod.Size = New System.Drawing.Size(121, 21)
         Me.cbxSexoMod.TabIndex = 34
         '
         'tbxContraseñaMod
         '
-        Me.tbxContraseñaMod.Location = New System.Drawing.Point(320, 193)
+        Me.tbxContraseñaMod.Location = New System.Drawing.Point(270, 199)
         Me.tbxContraseñaMod.Name = "tbxContraseñaMod"
         Me.tbxContraseñaMod.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbxContraseñaMod.Size = New System.Drawing.Size(100, 20)
@@ -131,14 +131,14 @@ Partial Class PantallaModificar
         '
         'tbxEmailMod
         '
-        Me.tbxEmailMod.Location = New System.Drawing.Point(320, 168)
+        Me.tbxEmailMod.Location = New System.Drawing.Point(270, 174)
         Me.tbxEmailMod.Name = "tbxEmailMod"
         Me.tbxEmailMod.Size = New System.Drawing.Size(100, 20)
         Me.tbxEmailMod.TabIndex = 32
         '
         'tbxUserMod
         '
-        Me.tbxUserMod.Location = New System.Drawing.Point(320, 143)
+        Me.tbxUserMod.Location = New System.Drawing.Point(270, 149)
         Me.tbxUserMod.Name = "tbxUserMod"
         Me.tbxUserMod.Size = New System.Drawing.Size(100, 20)
         Me.tbxUserMod.TabIndex = 31
@@ -147,7 +147,7 @@ Partial Class PantallaModificar
         '
         Me.lblFechaNacRegMod.AutoSize = True
         Me.lblFechaNacRegMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFechaNacRegMod.Location = New System.Drawing.Point(121, 263)
+        Me.lblFechaNacRegMod.Location = New System.Drawing.Point(71, 269)
         Me.lblFechaNacRegMod.Name = "lblFechaNacRegMod"
         Me.lblFechaNacRegMod.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lblFechaNacRegMod.Size = New System.Drawing.Size(193, 25)
@@ -158,7 +158,7 @@ Partial Class PantallaModificar
         '
         Me.lblSexoMod.AutoSize = True
         Me.lblSexoMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSexoMod.Location = New System.Drawing.Point(256, 213)
+        Me.lblSexoMod.Location = New System.Drawing.Point(206, 219)
         Me.lblSexoMod.Name = "lblSexoMod"
         Me.lblSexoMod.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lblSexoMod.Size = New System.Drawing.Size(58, 25)
@@ -169,7 +169,7 @@ Partial Class PantallaModificar
         '
         Me.lblPasswordMod.AutoSize = True
         Me.lblPasswordMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPasswordMod.Location = New System.Drawing.Point(200, 188)
+        Me.lblPasswordMod.Location = New System.Drawing.Point(150, 194)
         Me.lblPasswordMod.Name = "lblPasswordMod"
         Me.lblPasswordMod.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lblPasswordMod.Size = New System.Drawing.Size(114, 25)
@@ -180,7 +180,7 @@ Partial Class PantallaModificar
         '
         Me.lblEmailMod.AutoSize = True
         Me.lblEmailMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmailMod.Location = New System.Drawing.Point(256, 163)
+        Me.lblEmailMod.Location = New System.Drawing.Point(206, 169)
         Me.lblEmailMod.Name = "lblEmailMod"
         Me.lblEmailMod.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lblEmailMod.Size = New System.Drawing.Size(58, 25)
@@ -191,7 +191,7 @@ Partial Class PantallaModificar
         '
         Me.lblUserMod.AutoSize = True
         Me.lblUserMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUserMod.Location = New System.Drawing.Point(212, 138)
+        Me.lblUserMod.Location = New System.Drawing.Point(162, 144)
         Me.lblUserMod.Name = "lblUserMod"
         Me.lblUserMod.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lblUserMod.Size = New System.Drawing.Size(102, 25)
@@ -202,7 +202,7 @@ Partial Class PantallaModificar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(734, 424)
+        Me.ClientSize = New System.Drawing.Size(568, 424)
         Me.Controls.Add(Me.lblRolMod)
         Me.Controls.Add(Me.cbxRolMod)
         Me.Controls.Add(Me.DTPFechaNacMod)
