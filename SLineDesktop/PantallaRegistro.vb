@@ -25,7 +25,7 @@
         End Try
     End Sub
     Private Sub MeClose(sender As Object, e As EventArgs) Handles Me.Closed
-        welcome.Show()
+        Welcome.Show()
     End Sub
     Private Sub PantallaRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try

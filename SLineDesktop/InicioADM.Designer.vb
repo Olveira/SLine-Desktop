@@ -22,96 +22,133 @@ Partial Class InicioADM
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PBLogo = New System.Windows.Forms.PictureBox()
-        Me.lblBienvenido = New System.Windows.Forms.Label()
-        Me.tbxPasswordLog = New System.Windows.Forms.TextBox()
-        Me.tbxUserLog = New System.Windows.Forms.TextBox()
-        Me.BtnAtras = New System.Windows.Forms.Button()
-        Me.BtnSiguiente = New System.Windows.Forms.Button()
-        CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InicioADM))
+        Me.BtnAceptar = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TbxUserLog = New System.Windows.Forms.TextBox()
+        Me.TbxPasswordLog = New System.Windows.Forms.TextBox()
+        Me.BtnMinimizeLogin = New System.Windows.Forms.Button()
+        Me.BtnExitLogin = New System.Windows.Forms.Button()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'PBLogo
+        'BtnAceptar
         '
-        Me.PBLogo.Image = Global.SLineDesktop.My.Resources.Resources.Logo
-        Me.PBLogo.Location = New System.Drawing.Point(657, 12)
-        Me.PBLogo.Name = "PBLogo"
-        Me.PBLogo.Size = New System.Drawing.Size(55, 55)
-        Me.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PBLogo.TabIndex = 5
-        Me.PBLogo.TabStop = False
+        Me.BtnAceptar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnAceptar.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BtnAceptar.FlatAppearance.BorderSize = 0
+        Me.BtnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush
+        Me.BtnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAceptar.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAceptar.Location = New System.Drawing.Point(0, 291)
+        Me.BtnAceptar.Name = "BtnAceptar"
+        Me.BtnAceptar.Size = New System.Drawing.Size(438, 90)
+        Me.BtnAceptar.TabIndex = 2
+        Me.BtnAceptar.Text = "Aceptar"
+        Me.BtnAceptar.UseVisualStyleBackColor = False
         '
-        'lblBienvenido
+        'Panel1
         '
-        Me.lblBienvenido.AutoSize = True
-        Me.lblBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!)
-        Me.lblBienvenido.Location = New System.Drawing.Point(12, 9)
-        Me.lblBienvenido.Name = "lblBienvenido"
-        Me.lblBienvenido.Size = New System.Drawing.Size(307, 54)
-        Me.lblBienvenido.TabIndex = 6
-        Me.lblBienvenido.Text = "Ingrese datos"
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.BtnMinimizeLogin)
+        Me.Panel1.Controls.Add(Me.BtnExitLogin)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel1.Location = New System.Drawing.Point(438, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(282, 381)
+        Me.Panel1.TabIndex = 8
         '
-        'tbxPasswordLog
+        'Button1
         '
-        Me.tbxPasswordLog.Location = New System.Drawing.Point(225, 157)
-        Me.tbxPasswordLog.Name = "tbxPasswordLog"
-        Me.tbxPasswordLog.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tbxPasswordLog.Size = New System.Drawing.Size(309, 20)
-        Me.tbxPasswordLog.TabIndex = 1
-        Me.tbxPasswordLog.Text = "password"
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(438, 85)
+        Me.Button1.TabIndex = 13
+        Me.Button1.Text = "Login"
+        Me.Button1.UseVisualStyleBackColor = False
         '
-        'tbxUserLog
+        'TbxUserLog
         '
-        Me.tbxUserLog.Location = New System.Drawing.Point(225, 110)
-        Me.tbxUserLog.Name = "tbxUserLog"
-        Me.tbxUserLog.Size = New System.Drawing.Size(309, 20)
-        Me.tbxUserLog.TabIndex = 0
-        Me.tbxUserLog.Text = "username"
+        Me.TbxUserLog.BackColor = System.Drawing.Color.LavenderBlush
+        Me.TbxUserLog.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TbxUserLog.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbxUserLog.Location = New System.Drawing.Point(12, 130)
+        Me.TbxUserLog.Name = "TbxUserLog"
+        Me.TbxUserLog.Size = New System.Drawing.Size(420, 24)
+        Me.TbxUserLog.TabIndex = 14
+        Me.TbxUserLog.Text = "Username"
         '
-        'BtnAtras
+        'TbxPasswordLog
         '
-        Me.BtnAtras.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAtras.Location = New System.Drawing.Point(225, 251)
-        Me.BtnAtras.Name = "BtnAtras"
-        Me.BtnAtras.Size = New System.Drawing.Size(75, 30)
-        Me.BtnAtras.TabIndex = 3
-        Me.BtnAtras.Text = "Atras"
-        Me.BtnAtras.UseVisualStyleBackColor = True
+        Me.TbxPasswordLog.BackColor = System.Drawing.Color.LavenderBlush
+        Me.TbxPasswordLog.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TbxPasswordLog.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbxPasswordLog.Location = New System.Drawing.Point(12, 185)
+        Me.TbxPasswordLog.Name = "TbxPasswordLog"
+        Me.TbxPasswordLog.Size = New System.Drawing.Size(420, 24)
+        Me.TbxPasswordLog.TabIndex = 15
+        Me.TbxPasswordLog.Text = "Password"
         '
-        'BtnSiguiente
+        'BtnMinimizeLogin
         '
-        Me.BtnSiguiente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSiguiente.Location = New System.Drawing.Point(353, 251)
-        Me.BtnSiguiente.Name = "BtnSiguiente"
-        Me.BtnSiguiente.Size = New System.Drawing.Size(75, 30)
-        Me.BtnSiguiente.TabIndex = 2
-        Me.BtnSiguiente.Text = "Siguiente"
-        Me.BtnSiguiente.UseVisualStyleBackColor = True
+        Me.BtnMinimizeLogin.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMinimizeLogin.BackgroundImage = CType(resources.GetObject("BtnMinimizeLogin.BackgroundImage"), System.Drawing.Image)
+        Me.BtnMinimizeLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizeLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.BtnMinimizeLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMinimizeLogin.Location = New System.Drawing.Point(216, 12)
+        Me.BtnMinimizeLogin.Name = "BtnMinimizeLogin"
+        Me.BtnMinimizeLogin.Size = New System.Drawing.Size(24, 24)
+        Me.BtnMinimizeLogin.TabIndex = 14
+        Me.BtnMinimizeLogin.UseVisualStyleBackColor = False
+        '
+        'BtnExitLogin
+        '
+        Me.BtnExitLogin.BackColor = System.Drawing.Color.Transparent
+        Me.BtnExitLogin.BackgroundImage = CType(resources.GetObject("BtnExitLogin.BackgroundImage"), System.Drawing.Image)
+        Me.BtnExitLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExitLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.BtnExitLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnExitLogin.Location = New System.Drawing.Point(246, 12)
+        Me.BtnExitLogin.Name = "BtnExitLogin"
+        Me.BtnExitLogin.Size = New System.Drawing.Size(24, 24)
+        Me.BtnExitLogin.TabIndex = 13
+        Me.BtnExitLogin.UseVisualStyleBackColor = False
         '
         'InicioADM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Plum
-        Me.ClientSize = New System.Drawing.Size(724, 382)
-        Me.Controls.Add(Me.BtnSiguiente)
-        Me.Controls.Add(Me.BtnAtras)
-        Me.Controls.Add(Me.tbxUserLog)
-        Me.Controls.Add(Me.tbxPasswordLog)
-        Me.Controls.Add(Me.lblBienvenido)
-        Me.Controls.Add(Me.PBLogo)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(720, 381)
+        Me.Controls.Add(Me.TbxPasswordLog)
+        Me.Controls.Add(Me.TbxUserLog)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnAceptar)
+        Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "InicioADM"
         Me.Text = "Administrador SLine! - Log in"
-        CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents PBLogo As PictureBox
-    Friend WithEvents lblBienvenido As Label
-    Friend WithEvents tbxPasswordLog As TextBox
-    Friend WithEvents tbxUserLog As TextBox
-    Friend WithEvents BtnAtras As Button
-    Friend WithEvents BtnSiguiente As Button
+    Friend WithEvents BtnAceptar As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TbxUserLog As TextBox
+    Friend WithEvents TbxPasswordLog As TextBox
+    Friend WithEvents BtnMinimizeLogin As Button
+    Friend WithEvents BtnExitLogin As Button
 End Class

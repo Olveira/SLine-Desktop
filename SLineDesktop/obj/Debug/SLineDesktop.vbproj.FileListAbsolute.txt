@@ -278,7 +278,6 @@ C:\Proyectos\sline\SLine-Desktop\SLineDesktop\bin\Debug\System.Text.Json.xml
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\bin\Debug\System.ValueTuple.xml
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.vbprojAssemblyReference.cache
-C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaEliminar.resources
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaListar.resources
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.InicioADM.resources
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Resources.resources
@@ -293,3 +292,6 @@ C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.xml
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.pdb
 C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaModificar.resources
 C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.ModerarUsuarios.resources
+C:\Proyectos\sline\SLine-Desktop\SLineDesktop\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Proyectos\sline\SLine-Desktop\SLineDesktop\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaModificar.resources
