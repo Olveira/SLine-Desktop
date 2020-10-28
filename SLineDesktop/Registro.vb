@@ -1,4 +1,4 @@
-﻿Public Class PantallaRegistro
+﻿Public Class Registro
     Dim username As String
     Dim email As String
     Dim password As String
@@ -18,7 +18,7 @@
             user = New usuario(username, email, password, sexo, fechaNac, rol)
             Dim logicaUsuario As New logicaUsuario
             logicaUsuario.AltaUser(user)
-            InicioADM.Show()
+            Login.Show()
             Me.Hide()
         Catch ex As Exception
             MessageBox.Show(ex.Message)

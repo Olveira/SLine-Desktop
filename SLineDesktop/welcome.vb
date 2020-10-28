@@ -7,7 +7,7 @@
     End Sub
     Private Sub btnGoRegistrar_Click(sender As Object, e As EventArgs) Handles btnGoRegistrar.Click
         Try
-            PantallaRegistro.Show()
+            Registro.Show()
             Me.Hide()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -15,7 +15,7 @@
     End Sub
     Private Sub btnGoLogin_Click(sender As Object, e As EventArgs) Handles btnGoLogin.Click
         Try
-            InicioADM.Show()
+            Login.Show()
             Me.Hide()
         Catch ex As Exception
             MessageBox.Show(ex.Message)

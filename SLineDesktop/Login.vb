@@ -1,4 +1,4 @@
-﻿Public Class InicioADM
+﻿Public Class Login
     'botones'
     Private Sub BtnExitLogin_Click(sender As Object, e As EventArgs) Handles BtnExitLogin.Click
         Welcome.Show()
