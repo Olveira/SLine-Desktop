@@ -77,5 +77,7 @@
         End Try
 
     End Sub
-
+    Private Sub MeClosed(sender As Object, e As EventArgs) Handles Me.Closed
+        PantallaListar.Show()
+    End Sub
 End Class

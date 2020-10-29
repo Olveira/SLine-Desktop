@@ -34,18 +34,20 @@
         Try
             Dim clasCnn = New conexion
             conection = clasCnn.abrirConexion()
-            Dim cmd As New Npgsql.NpgsqlCommand("select * from _user where username=@username and rol='admin';")
+            Dim cmd As New Npgsql.NpgsqlCommand("select * from _user where username=@username and rol='Admin';")
 
             cmd.Connection = conection
 
             cmd.Parameters.AddWithValue("@username", user)
 
             Dim reader = cmd.ExecuteReader
-            Dim password As String = "lll"
+            Dim password As String
             If reader.Read Then
                 password = reader(2).ToString.Trim
+                Return BCrypt.Net.BCrypt.Verify(pass, password)
+            Else
+                Return False
             End If
-            Return BCrypt.Net.BCrypt.Verify(pass, password)
         Catch ex As Exception
             Throw ex
         Finally

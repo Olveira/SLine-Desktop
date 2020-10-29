@@ -22,179 +22,264 @@ Partial Class Registro
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.PBLogo = New System.Windows.Forms.PictureBox()
-        Me.LabelEsquina = New System.Windows.Forms.Label()
-        Me.lblReg = New System.Windows.Forms.Label()
-        Me.btnSiguienteReg = New System.Windows.Forms.Button()
-        Me.tbxUserReg = New System.Windows.Forms.TextBox()
-        Me.tbxEmailReg = New System.Windows.Forms.TextBox()
-        Me.tbxContraseñaReg1 = New System.Windows.Forms.TextBox()
-        Me.cbxSexo = New System.Windows.Forms.ComboBox()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Registro))
+        Me.btnAceptarReg = New System.Windows.Forms.Button()
+        Me.TbxUserReg = New System.Windows.Forms.TextBox()
+        Me.TbxEmailReg = New System.Windows.Forms.TextBox()
+        Me.TbxContraseñaReg = New System.Windows.Forms.TextBox()
+        Me.CbxSexo = New System.Windows.Forms.ComboBox()
         Me.DTPFechaNac = New System.Windows.Forms.DateTimePicker()
         Me.btnback = New System.Windows.Forms.Button()
-        Me.cbxRol = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CbxRol = New System.Windows.Forms.ComboBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnMinimizeRegistro = New System.Windows.Forms.Button()
+        Me.BtnExitRegistro = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'PBLogo
+        'btnAceptarReg
         '
-        Me.PBLogo.Image = Global.SLineDesktop.My.Resources.Resources.Logo
-        Me.PBLogo.Location = New System.Drawing.Point(12, 12)
-        Me.PBLogo.Name = "PBLogo"
-        Me.PBLogo.Size = New System.Drawing.Size(47, 45)
-        Me.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PBLogo.TabIndex = 4
-        Me.PBLogo.TabStop = False
+        Me.btnAceptarReg.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnAceptarReg.FlatAppearance.BorderSize = 0
+        Me.btnAceptarReg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.btnAceptarReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAceptarReg.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAceptarReg.ForeColor = System.Drawing.Color.Snow
+        Me.btnAceptarReg.Location = New System.Drawing.Point(0, 0)
+        Me.btnAceptarReg.Name = "btnAceptarReg"
+        Me.btnAceptarReg.Size = New System.Drawing.Size(217, 88)
+        Me.btnAceptarReg.TabIndex = 7
+        Me.btnAceptarReg.Text = "Aceptar"
+        Me.btnAceptarReg.UseVisualStyleBackColor = True
         '
-        'LabelEsquina
+        'TbxUserReg
         '
-        Me.LabelEsquina.AutoSize = True
-        Me.LabelEsquina.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.LabelEsquina.Location = New System.Drawing.Point(65, 12)
-        Me.LabelEsquina.Name = "LabelEsquina"
-        Me.LabelEsquina.Size = New System.Drawing.Size(69, 25)
-        Me.LabelEsquina.TabIndex = 5
-        Me.LabelEsquina.Text = "SLine!"
+        Me.TbxUserReg.BackColor = System.Drawing.Color.LavenderBlush
+        Me.TbxUserReg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TbxUserReg.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbxUserReg.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.TbxUserReg.Location = New System.Drawing.Point(14, 98)
+        Me.TbxUserReg.Margin = New System.Windows.Forms.Padding(5)
+        Me.TbxUserReg.Name = "TbxUserReg"
+        Me.TbxUserReg.Size = New System.Drawing.Size(400, 31)
+        Me.TbxUserReg.TabIndex = 1
+        Me.TbxUserReg.Tag = ""
+        Me.TbxUserReg.Text = "Nombre de Usuario"
         '
-        'lblReg
+        'TbxEmailReg
         '
-        Me.lblReg.AutoSize = True
-        Me.lblReg.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!)
-        Me.lblReg.Location = New System.Drawing.Point(286, 31)
-        Me.lblReg.Name = "lblReg"
-        Me.lblReg.Size = New System.Drawing.Size(214, 54)
-        Me.lblReg.TabIndex = 6
-        Me.lblReg.Text = "Registrar"
+        Me.TbxEmailReg.BackColor = System.Drawing.Color.LavenderBlush
+        Me.TbxEmailReg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TbxEmailReg.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbxEmailReg.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.TbxEmailReg.Location = New System.Drawing.Point(14, 137)
+        Me.TbxEmailReg.Name = "TbxEmailReg"
+        Me.TbxEmailReg.Size = New System.Drawing.Size(400, 31)
+        Me.TbxEmailReg.TabIndex = 2
+        Me.TbxEmailReg.Text = "Email"
         '
-        'btnSiguienteReg
+        'TbxContraseñaReg
         '
-        Me.btnSiguienteReg.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSiguienteReg.Location = New System.Drawing.Point(538, 335)
-        Me.btnSiguienteReg.Name = "btnSiguienteReg"
-        Me.btnSiguienteReg.Size = New System.Drawing.Size(180, 40)
-        Me.btnSiguienteReg.TabIndex = 9
-        Me.btnSiguienteReg.Text = "Registrar"
-        Me.btnSiguienteReg.UseVisualStyleBackColor = True
+        Me.TbxContraseñaReg.BackColor = System.Drawing.Color.LavenderBlush
+        Me.TbxContraseñaReg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TbxContraseñaReg.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbxContraseñaReg.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.TbxContraseñaReg.Location = New System.Drawing.Point(14, 174)
+        Me.TbxContraseñaReg.Name = "TbxContraseñaReg"
+        Me.TbxContraseñaReg.Size = New System.Drawing.Size(400, 31)
+        Me.TbxContraseñaReg.TabIndex = 3
+        Me.TbxContraseñaReg.Text = "Contraseña"
         '
-        'tbxUserReg
+        'CbxSexo
         '
-        Me.tbxUserReg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbxUserReg.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbxUserReg.Location = New System.Drawing.Point(222, 107)
-        Me.tbxUserReg.Margin = New System.Windows.Forms.Padding(5)
-        Me.tbxUserReg.Name = "tbxUserReg"
-        Me.tbxUserReg.Size = New System.Drawing.Size(278, 26)
-        Me.tbxUserReg.TabIndex = 17
-        Me.tbxUserReg.Tag = ""
-        Me.tbxUserReg.Text = "Nombre de Usuario"
-        '
-        'tbxEmailReg
-        '
-        Me.tbxEmailReg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbxEmailReg.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbxEmailReg.Location = New System.Drawing.Point(222, 139)
-        Me.tbxEmailReg.Name = "tbxEmailReg"
-        Me.tbxEmailReg.Size = New System.Drawing.Size(278, 26)
-        Me.tbxEmailReg.TabIndex = 18
-        Me.tbxEmailReg.Text = "Email"
-        '
-        'tbxContraseñaReg1
-        '
-        Me.tbxContraseñaReg1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbxContraseñaReg1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbxContraseñaReg1.Location = New System.Drawing.Point(222, 171)
-        Me.tbxContraseñaReg1.Name = "tbxContraseñaReg1"
-        Me.tbxContraseñaReg1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tbxContraseñaReg1.Size = New System.Drawing.Size(278, 26)
-        Me.tbxContraseñaReg1.TabIndex = 19
-        Me.tbxContraseñaReg1.Text = "Password"
-        '
-        'cbxSexo
-        '
-        Me.cbxSexo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbxSexo.FormattingEnabled = True
-        Me.cbxSexo.Location = New System.Drawing.Point(222, 203)
-        Me.cbxSexo.Name = "cbxSexo"
-        Me.cbxSexo.Size = New System.Drawing.Size(278, 28)
-        Me.cbxSexo.TabIndex = 21
-        Me.cbxSexo.Text = "Sexo"
+        Me.CbxSexo.BackColor = System.Drawing.Color.LavenderBlush
+        Me.CbxSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CbxSexo.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CbxSexo.FormattingEnabled = True
+        Me.CbxSexo.Location = New System.Drawing.Point(14, 211)
+        Me.CbxSexo.Name = "CbxSexo"
+        Me.CbxSexo.Size = New System.Drawing.Size(400, 30)
+        Me.CbxSexo.TabIndex = 4
+        Me.CbxSexo.Text = "Sexo"
         '
         'DTPFechaNac
         '
-        Me.DTPFechaNac.CalendarTrailingForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DTPFechaNac.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DTPFechaNac.Location = New System.Drawing.Point(222, 271)
+        Me.DTPFechaNac.CalendarMonthBackground = System.Drawing.Color.Violet
+        Me.DTPFechaNac.CalendarTitleBackColor = System.Drawing.Color.Lavender
+        Me.DTPFechaNac.CalendarTrailingForeColor = System.Drawing.Color.LavenderBlush
+        Me.DTPFechaNac.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DTPFechaNac.Location = New System.Drawing.Point(14, 283)
         Me.DTPFechaNac.Name = "DTPFechaNac"
-        Me.DTPFechaNac.Size = New System.Drawing.Size(278, 26)
-        Me.DTPFechaNac.TabIndex = 22
-        Me.DTPFechaNac.Value = New Date(2020, 10, 26, 8, 26, 29, 0)
+        Me.DTPFechaNac.Size = New System.Drawing.Size(400, 31)
+        Me.DTPFechaNac.TabIndex = 6
+        Me.DTPFechaNac.Value = New Date(2020, 10, 29, 10, 13, 7, 0)
         '
         'btnback
         '
-        Me.btnback.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnback.Location = New System.Drawing.Point(12, 335)
+        Me.btnback.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnback.FlatAppearance.BorderSize = 0
+        Me.btnback.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnback.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnback.ForeColor = System.Drawing.Color.Snow
+        Me.btnback.Location = New System.Drawing.Point(220, 0)
         Me.btnback.Name = "btnback"
-        Me.btnback.Size = New System.Drawing.Size(180, 40)
-        Me.btnback.TabIndex = 23
-        Me.btnback.Text = "Atras"
+        Me.btnback.Size = New System.Drawing.Size(218, 88)
+        Me.btnback.TabIndex = 8
+        Me.btnback.Text = "Iniciar Sesion"
         Me.btnback.UseVisualStyleBackColor = True
         '
-        'cbxRol
+        'CbxRol
         '
-        Me.cbxRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbxRol.FormattingEnabled = True
-        Me.cbxRol.Location = New System.Drawing.Point(222, 237)
-        Me.cbxRol.Name = "cbxRol"
-        Me.cbxRol.Size = New System.Drawing.Size(278, 28)
-        Me.cbxRol.TabIndex = 24
-        Me.cbxRol.Text = "Rol"
+        Me.CbxRol.BackColor = System.Drawing.Color.LavenderBlush
+        Me.CbxRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CbxRol.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CbxRol.FormattingEnabled = True
+        Me.CbxRol.Location = New System.Drawing.Point(14, 247)
+        Me.CbxRol.Name = "CbxRol"
+        Me.CbxRol.Size = New System.Drawing.Size(400, 30)
+        Me.CbxRol.TabIndex = 5
+        Me.CbxRol.Text = "Rol"
         '
-        'Label1
+        'Panel1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 25
-        Me.Label1.Text = "Label1"
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.BtnMinimizeRegistro)
+        Me.Panel1.Controls.Add(Me.BtnExitRegistro)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel1.Location = New System.Drawing.Point(438, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(282, 420)
+        Me.Panel1.TabIndex = 25
         '
-        'PantallaRegistro
+        'BtnMinimizeRegistro
+        '
+        Me.BtnMinimizeRegistro.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMinimizeRegistro.BackgroundImage = CType(resources.GetObject("BtnMinimizeRegistro.BackgroundImage"), System.Drawing.Image)
+        Me.BtnMinimizeRegistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizeRegistro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.BtnMinimizeRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMinimizeRegistro.Location = New System.Drawing.Point(216, 12)
+        Me.BtnMinimizeRegistro.Name = "BtnMinimizeRegistro"
+        Me.BtnMinimizeRegistro.Size = New System.Drawing.Size(24, 24)
+        Me.BtnMinimizeRegistro.TabIndex = 9
+        Me.BtnMinimizeRegistro.UseVisualStyleBackColor = False
+        '
+        'BtnExitRegistro
+        '
+        Me.BtnExitRegistro.BackColor = System.Drawing.Color.Transparent
+        Me.BtnExitRegistro.BackgroundImage = CType(resources.GetObject("BtnExitRegistro.BackgroundImage"), System.Drawing.Image)
+        Me.BtnExitRegistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExitRegistro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.BtnExitRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnExitRegistro.Location = New System.Drawing.Point(246, 12)
+        Me.BtnExitRegistro.Name = "BtnExitRegistro"
+        Me.BtnExitRegistro.Size = New System.Drawing.Size(24, 24)
+        Me.BtnExitRegistro.TabIndex = 10
+        Me.BtnExitRegistro.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Snow
+        Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(438, 85)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Registro"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Panel2.Controls.Add(Me.btnAceptarReg)
+        Me.Panel2.Controls.Add(Me.btnback)
+        Me.Panel2.Controls.Add(Me.ShapeContainer1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 332)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(438, 88)
+        Me.Panel2.TabIndex = 27
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(438, 88)
+        Me.ShapeContainer1.TabIndex = 24
+        Me.ShapeContainer1.TabStop = False
+        '
+        'LineShape2
+        '
+        Me.LineShape2.BorderColor = System.Drawing.Color.Snow
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 218
+        Me.LineShape2.X2 = 218
+        Me.LineShape2.Y1 = 0
+        Me.LineShape2.Y2 = 88
+        '
+        'LineShape1
+        '
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 0
+        Me.LineShape1.X2 = 75
+        Me.LineShape1.Y1 = 0
+        Me.LineShape1.Y2 = 23
+        '
+        'Registro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(734, 461)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.cbxRol)
-        Me.Controls.Add(Me.btnback)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(720, 420)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.CbxRol)
         Me.Controls.Add(Me.DTPFechaNac)
-        Me.Controls.Add(Me.cbxSexo)
-        Me.Controls.Add(Me.tbxContraseñaReg1)
-        Me.Controls.Add(Me.tbxEmailReg)
-        Me.Controls.Add(Me.tbxUserReg)
-        Me.Controls.Add(Me.btnSiguienteReg)
-        Me.Controls.Add(Me.lblReg)
-        Me.Controls.Add(Me.LabelEsquina)
-        Me.Controls.Add(Me.PBLogo)
-        Me.Name = "PantallaRegistro"
+        Me.Controls.Add(Me.CbxSexo)
+        Me.Controls.Add(Me.TbxContraseñaReg)
+        Me.Controls.Add(Me.TbxEmailReg)
+        Me.Controls.Add(Me.TbxUserReg)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "Registro"
         Me.Text = "Administrador SLine! - Registrar"
-        CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents PBLogo As PictureBox
-    Friend WithEvents LabelEsquina As Label
-    Friend WithEvents lblReg As Label
-    Friend WithEvents btnSiguienteReg As Button
-    Friend WithEvents tbxUserReg As TextBox
-    Friend WithEvents tbxEmailReg As TextBox
-    Friend WithEvents tbxContraseñaReg1 As TextBox
-    Friend WithEvents cbxSexo As ComboBox
+    Friend WithEvents btnAceptarReg As Button
+    Friend WithEvents TbxUserReg As TextBox
+    Friend WithEvents TbxEmailReg As TextBox
+    Friend WithEvents TbxContraseñaReg As TextBox
+    Friend WithEvents CbxSexo As ComboBox
     Friend WithEvents DTPFechaNac As DateTimePicker
     Friend WithEvents btnback As Button
-    Friend WithEvents cbxRol As ComboBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents CbxRol As ComboBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Friend WithEvents LineShape2 As PowerPacks.LineShape
+    Friend WithEvents LineShape1 As PowerPacks.LineShape
+    Friend WithEvents BtnMinimizeRegistro As Button
+    Friend WithEvents BtnExitRegistro As Button
 End Class
