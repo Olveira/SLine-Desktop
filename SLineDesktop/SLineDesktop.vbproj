@@ -135,8 +135,8 @@
     <Compile Include="Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Logica\logicaUsuario.vb" />
-    <Compile Include="Logica\logicaCaso.vb" />
+    <Compile Include="Logica\LogicaUsuario.vb" />
+    <Compile Include="Logica\LogicaCaso.vb" />
     <Compile Include="PantallaModerar.Designer.vb">
       <DependentUpon>PantallaModerar.vb</DependentUpon>
     </Compile>
@@ -177,9 +177,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="persistencia\conexion.vb" />
-    <Compile Include="persistencia\persistenciaCaso.vb" />
-    <Compile Include="persistencia\persistenciaUsuario.vb" />
+    <Compile Include="persistencia\Conexion.vb" />
+    <Compile Include="persistencia\PersistenciaCaso.vb" />
+    <Compile Include="persistencia\PersistenciaUsuario.vb" />
     <Compile Include="Welcome.Designer.vb">
       <DependentUpon>Welcome.vb</DependentUpon>
     </Compile>

@@ -1,6 +1,6 @@
 ﻿Public Class PantallaListar
     Public user As New usuario
-    Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiModerar.Click
+    Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs)
         PantallaModerar.Show()
         Me.Hide()
     End Sub
@@ -14,7 +14,7 @@
     Public Sub ListarUsuarios()
         Try
             LVListadoUsuarios.Items.Clear()
-            Dim logica As New logicaUsuario
+            Dim logica As New LogicaUsuario
             Dim lista = logica.listarPersona()
             Dim i = lista.Count - 1
             Dim arra(7) As String
@@ -34,15 +34,15 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-    Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
+    Private Sub BtnEditar_Click(sender As Object, e As EventArgs)
         tomarUsuarioLV()
         PantallaModificar.Show()
         Me.Hide()
     End Sub
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs)
         tomarUsuarioLV()
-        Dim logica As New logicaUsuario
-        logica.eliminarUsuario(user.Id)
+        Dim logica As New LogicaUsuario
+        logica.EliminarUsuario(user.Id)
         ListarUsuarios()
     End Sub
     Private Sub CloseMe(sender As Object, e As EventArgs) Handles Me.Closed
@@ -65,5 +65,35 @@
         Catch ex As Exception
             MessageBox.Show("error interno")
         End Try
+    End Sub
+
+    Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs)
+        Welcome.Show()
+        Me.Hide()
+    End Sub
+    Private Sub BtnMinimizeListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnMinimizeListarPersonas.Click
+        WindowState = FormWindowState.Minimized
+    End Sub
+    'move'
+    Public MoveForm As Boolean
+    Public MoveForm_MousePosition As Point
+    Public Sub MoveForm_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
+        If e.Button = MouseButtons.Left Then
+            MoveForm = True
+            Me.Cursor = Cursors.NoMove2D
+            MoveForm_MousePosition = e.Location
+        End If
+    End Sub
+    Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
+        If MoveForm Then
+            Me.Location = Me.Location + (e.Location - MoveForm_MousePosition)
+        End If
+    End Sub
+
+    Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
+        If e.Button = MouseButtons.Left Then
+            MoveForm = False
+            Me.Cursor = Cursors.Default
+        End If
     End Sub
 End Class

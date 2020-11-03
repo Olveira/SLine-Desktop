@@ -140,7 +140,7 @@ Partial Class Welcome
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Welcome"
-        Me.Text = "Welcome3"
+        Me.Text = "Welcome"
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 

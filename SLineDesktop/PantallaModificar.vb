@@ -43,7 +43,7 @@
             user.Rol = cbxRolMod.Text
             user.Password = tbxContraseñaMod.Text
             user.Username = tbxUserMod.Text
-            Dim logica As New logicaUsuario
+            Dim logica As New LogicaUsuario
             logica.ModificarUsuario(user)
         Catch ex As Exception
             MessageBox.Show(ex.Message)

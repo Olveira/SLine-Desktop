@@ -1,4 +1,4 @@
-﻿Public Class persistenciaUsuario
+﻿Public Class PersistenciaUsuario
     Private conection = New Npgsql.NpgsqlConnection
     Public Sub AltaUsuario(user As usuario)
         Try
@@ -30,7 +30,7 @@
             conection.close
         End Try
     End Sub
-    Public Function persistenciaLog(user As String, pass As String) As Boolean
+    Public Function PersistenciaLog(user As String, pass As String) As Boolean
         Try
             Dim clasCnn = New conexion
             conection = clasCnn.abrirConexion()
@@ -54,12 +54,12 @@
             conection.close
         End Try
     End Function
-    Public Function listarPersonas() As List(Of usuario)
+    Public Function ListarPersonas() As List(Of usuario)
         Dim xss As New List(Of usuario)
         Try
             Dim ClaseSnl As New conexion
             conection = ClaseSnl.abrirConexion
-            Dim cmd = New Npgsql.NpgsqlCommand( "select * from _user")
+            Dim cmd = New Npgsql.NpgsqlCommand("select * from _user")
             cmd.Connection = conection
 
             Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
@@ -84,7 +84,7 @@
 
         Return xss
     End Function
-    Public Sub modificarPersona(user As usuario)
+    Public Sub ModificarPersona(user As usuario)
         Try
             Dim clasCnn = New conexion
             Dim cadenaDeComandos As String
@@ -114,7 +114,7 @@
             conection.close
         End Try
     End Sub
-    Public Sub eliminarUsuario(id As Integer)
+    Public Sub EliminarUsuario(id As Integer)
         Try
             Dim clasCnn = New conexion
             Dim cadenaDeComandos As String
@@ -137,4 +137,29 @@
             conection.close
         End Try
     End Sub
+    Function BuscarPorID(ci As Integer)
+        Try
+            Dim Conn = New conexion
+            Dim cmd = New Npgsql.NpgsqlCommand
+            conection = Conn.abrirConexion()
+            cmd.Connection = conection
+
+            Dim cadenadecomandos = "select * from persona where ci = @ci"
+
+            cmd.CommandText = cadenadecomandos
+            cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value = ci
+            Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
+
+            Dim Usuario As New usuario
+            If Lector.Read() Then
+                Usuario.Id = Convert.ToInt32(Lector(0).ToString)
+                Usuario.Username = Lector(1).ToString
+            End If
+            Return Usuario
+        Catch ex As Exception
+            Throw ex
+        Finally
+            conection.close
+        End Try
+    End Function
 End Class
