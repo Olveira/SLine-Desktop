@@ -24,10 +24,6 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.BtnAceptar = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.BtnExitLogin = New System.Windows.Forms.Button()
-        Me.BtnMinimizeLogin = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.TbxUserLog = New System.Windows.Forms.TextBox()
         Me.TbxPasswordLog = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -36,7 +32,9 @@ Partial Class Login
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.Panel1.SuspendLayout()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.BtnMinimizeLogin = New System.Windows.Forms.Button()
+        Me.BtnExitLogin = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,60 +54,6 @@ Partial Class Login
         Me.BtnAceptar.TabIndex = 3
         Me.BtnAceptar.Text = "Aceptar"
         Me.BtnAceptar.UseVisualStyleBackColor = False
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.Controls.Add(Me.BtnExitLogin)
-        Me.Panel1.Controls.Add(Me.BtnMinimizeLogin)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel1.Location = New System.Drawing.Point(438, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(282, 380)
-        Me.Panel1.TabIndex = 8
-        '
-        'BtnExitLogin
-        '
-        Me.BtnExitLogin.BackgroundImage = CType(resources.GetObject("BtnExitLogin.BackgroundImage"), System.Drawing.Image)
-        Me.BtnExitLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnExitLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnExitLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.BtnExitLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnExitLogin.Location = New System.Drawing.Point(246, 12)
-        Me.BtnExitLogin.Name = "BtnExitLogin"
-        Me.BtnExitLogin.Size = New System.Drawing.Size(24, 24)
-        Me.BtnExitLogin.TabIndex = 6
-        Me.BtnExitLogin.UseVisualStyleBackColor = True
-        '
-        'BtnMinimizeLogin
-        '
-        Me.BtnMinimizeLogin.BackgroundImage = CType(resources.GetObject("BtnMinimizeLogin.BackgroundImage"), System.Drawing.Image)
-        Me.BtnMinimizeLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnMinimizeLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnMinimizeLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.BtnMinimizeLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMinimizeLogin.Location = New System.Drawing.Point(216, 12)
-        Me.BtnMinimizeLogin.Name = "BtnMinimizeLogin"
-        Me.BtnMinimizeLogin.Size = New System.Drawing.Size(24, 24)
-        Me.BtnMinimizeLogin.TabIndex = 5
-        Me.BtnMinimizeLogin.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Snow
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(438, 85)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Inicio"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'TbxUserLog
         '
@@ -141,7 +85,6 @@ Partial Class Login
         Me.Panel2.Controls.Add(Me.BtnAceptar)
         Me.Panel2.Controls.Add(Me.Registrar)
         Me.Panel2.Controls.Add(Me.ShapeContainer1)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 292)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(438, 88)
@@ -203,6 +146,42 @@ Partial Class Login
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "¿Has olvidado tu contraseña?"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Snow
+        Me.Label1.Location = New System.Drawing.Point(147, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(145, 58)
+        Me.Label1.TabIndex = 18
+        Me.Label1.Text = "Inicio"
+        '
+        'BtnMinimizeLogin
+        '
+        Me.BtnMinimizeLogin.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMinimizeLogin.BackgroundImage = CType(resources.GetObject("BtnMinimizeLogin.BackgroundImage"), System.Drawing.Image)
+        Me.BtnMinimizeLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizeLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMinimizeLogin.Location = New System.Drawing.Point(654, 12)
+        Me.BtnMinimizeLogin.Name = "BtnMinimizeLogin"
+        Me.BtnMinimizeLogin.Size = New System.Drawing.Size(24, 24)
+        Me.BtnMinimizeLogin.TabIndex = 19
+        Me.BtnMinimizeLogin.UseVisualStyleBackColor = False
+        '
+        'BtnExitLogin
+        '
+        Me.BtnExitLogin.BackColor = System.Drawing.Color.Transparent
+        Me.BtnExitLogin.BackgroundImage = CType(resources.GetObject("BtnExitLogin.BackgroundImage"), System.Drawing.Image)
+        Me.BtnExitLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExitLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnExitLogin.Location = New System.Drawing.Point(684, 12)
+        Me.BtnExitLogin.Name = "BtnExitLogin"
+        Me.BtnExitLogin.Size = New System.Drawing.Size(24, 24)
+        Me.BtnExitLogin.TabIndex = 20
+        Me.BtnExitLogin.UseVisualStyleBackColor = False
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -211,24 +190,22 @@ Partial Class Login
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(720, 380)
-        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.BtnExitLogin)
+        Me.Controls.Add(Me.BtnMinimizeLogin)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.TbxPasswordLog)
         Me.Controls.Add(Me.TbxUserLog)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Inicio"
         Me.Text = "Administrador SLine! - Log in"
-        Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents BtnAceptar As Button
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
     Friend WithEvents TbxUserLog As TextBox
     Friend WithEvents TbxPasswordLog As TextBox
     Friend WithEvents Panel2 As Panel
@@ -237,6 +214,7 @@ Partial Class Login
     Friend WithEvents LineShape2 As PowerPacks.LineShape
     Friend WithEvents LineShape1 As PowerPacks.LineShape
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents Label1 As Label
     Friend WithEvents BtnMinimizeLogin As Button
     Friend WithEvents BtnExitLogin As Button
 End Class

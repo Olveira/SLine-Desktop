@@ -31,15 +31,13 @@ Partial Class Registro
         Me.DTPFechaNac = New System.Windows.Forms.DateTimePicker()
         Me.btnback = New System.Windows.Forms.Button()
         Me.CbxRol = New System.Windows.Forms.ComboBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.BtnMinimizeRegistro = New System.Windows.Forms.Button()
-        Me.BtnExitRegistro = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Panel1.SuspendLayout()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.BtnMinimizeRegistro = New System.Windows.Forms.Button()
+        Me.BtnExitRegistro = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,7 +51,7 @@ Partial Class Registro
         Me.btnAceptarReg.ForeColor = System.Drawing.Color.Snow
         Me.btnAceptarReg.Location = New System.Drawing.Point(0, 0)
         Me.btnAceptarReg.Name = "btnAceptarReg"
-        Me.btnAceptarReg.Size = New System.Drawing.Size(217, 88)
+        Me.btnAceptarReg.Size = New System.Drawing.Size(218, 88)
         Me.btnAceptarReg.TabIndex = 7
         Me.btnAceptarReg.Text = "Aceptar"
         Me.btnAceptarReg.UseVisualStyleBackColor = True
@@ -127,9 +125,9 @@ Partial Class Registro
         Me.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnback.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnback.ForeColor = System.Drawing.Color.Snow
-        Me.btnback.Location = New System.Drawing.Point(220, 0)
+        Me.btnback.Location = New System.Drawing.Point(219, 0)
         Me.btnback.Name = "btnback"
-        Me.btnback.Size = New System.Drawing.Size(218, 88)
+        Me.btnback.Size = New System.Drawing.Size(219, 88)
         Me.btnback.TabIndex = 8
         Me.btnback.Text = "Iniciar Sesion"
         Me.btnback.UseVisualStyleBackColor = True
@@ -146,68 +144,12 @@ Partial Class Registro
         Me.CbxRol.TabIndex = 5
         Me.CbxRol.Text = "Rol"
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.Controls.Add(Me.BtnMinimizeRegistro)
-        Me.Panel1.Controls.Add(Me.BtnExitRegistro)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel1.Location = New System.Drawing.Point(438, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(282, 420)
-        Me.Panel1.TabIndex = 25
-        '
-        'BtnMinimizeRegistro
-        '
-        Me.BtnMinimizeRegistro.BackColor = System.Drawing.Color.Transparent
-        Me.BtnMinimizeRegistro.BackgroundImage = CType(resources.GetObject("BtnMinimizeRegistro.BackgroundImage"), System.Drawing.Image)
-        Me.BtnMinimizeRegistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnMinimizeRegistro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.BtnMinimizeRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMinimizeRegistro.Location = New System.Drawing.Point(216, 12)
-        Me.BtnMinimizeRegistro.Name = "BtnMinimizeRegistro"
-        Me.BtnMinimizeRegistro.Size = New System.Drawing.Size(24, 24)
-        Me.BtnMinimizeRegistro.TabIndex = 9
-        Me.BtnMinimizeRegistro.UseVisualStyleBackColor = False
-        '
-        'BtnExitRegistro
-        '
-        Me.BtnExitRegistro.BackColor = System.Drawing.Color.Transparent
-        Me.BtnExitRegistro.BackgroundImage = CType(resources.GetObject("BtnExitRegistro.BackgroundImage"), System.Drawing.Image)
-        Me.BtnExitRegistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnExitRegistro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.BtnExitRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnExitRegistro.Location = New System.Drawing.Point(246, 12)
-        Me.BtnExitRegistro.Name = "BtnExitRegistro"
-        Me.BtnExitRegistro.Size = New System.Drawing.Size(24, 24)
-        Me.BtnExitRegistro.TabIndex = 10
-        Me.BtnExitRegistro.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Snow
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(438, 85)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Registro"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.Controls.Add(Me.btnAceptarReg)
         Me.Panel2.Controls.Add(Me.btnback)
         Me.Panel2.Controls.Add(Me.ShapeContainer1)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 332)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(438, 88)
@@ -240,6 +182,43 @@ Partial Class Registro
         Me.LineShape1.Y1 = 0
         Me.LineShape1.Y2 = 23
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Snow
+        Me.Label1.Location = New System.Drawing.Point(123, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(205, 58)
+        Me.Label1.TabIndex = 25
+        Me.Label1.Text = "Registro"
+        '
+        'BtnMinimizeRegistro
+        '
+        Me.BtnMinimizeRegistro.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMinimizeRegistro.BackgroundImage = CType(resources.GetObject("BtnMinimizeRegistro.BackgroundImage"), System.Drawing.Image)
+        Me.BtnMinimizeRegistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizeRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMinimizeRegistro.Location = New System.Drawing.Point(654, 12)
+        Me.BtnMinimizeRegistro.Name = "BtnMinimizeRegistro"
+        Me.BtnMinimizeRegistro.Size = New System.Drawing.Size(24, 24)
+        Me.BtnMinimizeRegistro.TabIndex = 28
+        Me.BtnMinimizeRegistro.UseVisualStyleBackColor = False
+        '
+        'BtnExitRegistro
+        '
+        Me.BtnExitRegistro.BackColor = System.Drawing.Color.Transparent
+        Me.BtnExitRegistro.BackgroundImage = CType(resources.GetObject("BtnExitRegistro.BackgroundImage"), System.Drawing.Image)
+        Me.BtnExitRegistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExitRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnExitRegistro.Location = New System.Drawing.Point(684, 12)
+        Me.BtnExitRegistro.Name = "BtnExitRegistro"
+        Me.BtnExitRegistro.Size = New System.Drawing.Size(24, 24)
+        Me.BtnExitRegistro.TabIndex = 29
+        Me.BtnExitRegistro.UseVisualStyleBackColor = False
+        '
         'Registro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -247,19 +226,19 @@ Partial Class Registro
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(720, 420)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.BtnExitRegistro)
+        Me.Controls.Add(Me.BtnMinimizeRegistro)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CbxRol)
         Me.Controls.Add(Me.DTPFechaNac)
         Me.Controls.Add(Me.CbxSexo)
         Me.Controls.Add(Me.TbxContraseñaReg)
         Me.Controls.Add(Me.TbxEmailReg)
         Me.Controls.Add(Me.TbxUserReg)
+        Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Registro"
         Me.Text = "Administrador SLine! - Registrar"
-        Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -273,12 +252,11 @@ Partial Class Registro
     Friend WithEvents DTPFechaNac As DateTimePicker
     Friend WithEvents btnback As Button
     Friend WithEvents CbxRol As ComboBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents LineShape2 As PowerPacks.LineShape
     Friend WithEvents LineShape1 As PowerPacks.LineShape
+    Friend WithEvents Label1 As Label
     Friend WithEvents BtnMinimizeRegistro As Button
     Friend WithEvents BtnExitRegistro As Button
 End Class

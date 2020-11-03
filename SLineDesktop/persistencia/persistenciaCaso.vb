@@ -1,13 +1,13 @@
-﻿Public Class persistenciaCaso
+﻿Public Class PersistenciaCaso
     Private conection = New Npgsql.NpgsqlConnection
 
-    Public Sub aceptarCasos(LCasos As Integer)
+    Public Sub AceptarCasos(LCasos As Integer)
         Try
-            Dim clasCnn = New conexion
+            Dim clasCnn = New Conexion
             Dim cadenaDeComandos As String
             cadenaDeComandos = "UPDATE _case SET verificado = @verificado WHERE id_caso = @idCaso"
 
-            conection = clasCnn.abrirConexion()
+            conection = clasCnn.AbrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
             cmd.Connection = conection
             cmd.Parameters.Add("@idCaso", NpgsqlTypes.NpgsqlDbType.Integer).Value = LCasos
@@ -20,12 +20,12 @@
             conection.close
         End Try
     End Sub
-    Public Function listarCasos() As List(Of caso)
+    Public Function ListarCasos() As List(Of caso)
         Dim listcasos As New List(Of caso)
         Try
             Dim Persona As New caso
-            Dim ClaseSnl As New conexion
-            conection = ClaseSnl.abrirConexion
+            Dim ClaseSnl As New Conexion
+            conection = ClaseSnl.AbrirConexion
             Dim cmd = New Npgsql.NpgsqlCommand
             cmd.Connection = conection
 
@@ -50,15 +50,15 @@
         End Try
         Return listcasos
     End Function
-    Public Sub eliminarCaso(idCaso As Integer)
+    Public Sub EliminarCaso(idCaso As Integer)
         Try
-            Dim clasCnn = New conexion
+            Dim clasCnn = New Conexion
             Dim cadenaDeComandos As String
             Dim eliminador As Integer
 
             cadenaDeComandos = "DELETE FROM _case WHERE id_caso = @idCaso"
 
-            conection = clasCnn.abrirConexion()
+            conection = clasCnn.AbrirConexion()
             Dim cmd As New Npgsql.NpgsqlCommand(cadenaDeComandos)
             cmd.Connection = conection
 

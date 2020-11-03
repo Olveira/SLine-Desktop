@@ -14,7 +14,7 @@
         Try
             ListaCasos.Items.Clear()
 
-            Dim logica As New logicaCaso
+            Dim logica As New LogicaCaso
             list = logica.listarCaso()
             Dim x As Integer
             x = list.Count - 1
@@ -43,7 +43,7 @@
     Private Sub BtnVerif_Click(sender As Object, e As EventArgs) Handles BtnAcep.Click
         Try
             CasoSelected()
-            Dim logicaAceptar As New logicaCaso
+            Dim logicaAceptar As New LogicaCaso
             logicaAceptar.aceptarCasos(CasoS.IdCaso)
             ListarCasos()
         Catch ex As Exception
@@ -53,7 +53,7 @@
     Private Sub BtnDec_Click(sender As Object, e As EventArgs) Handles BtnDec.Click
         Try
             CasoSelected()
-            Dim logicaEliminar As New logicaCaso
+            Dim logicaEliminar As New LogicaCaso
             logicaEliminar.eliminarCaso(CasoS.IdCaso)
             ListarCasos()
         Catch ex As Exception

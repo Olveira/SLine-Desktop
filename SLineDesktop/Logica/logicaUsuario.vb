@@ -1,22 +1,22 @@
-﻿Public Class logicaUsuario
+﻿Public Class LogicaUsuario
     Public Sub AltaUser(users As usuario)
-        Dim persistencia As New persistenciaUsuario
+        Dim persistencia As New PersistenciaUsuario
         persistencia.AltaUsuario(users)
     End Sub
-    Public Function listarPersona() As List(Of usuario)
-        Dim persistencia As New persistenciaUsuario
-        Return persistencia.listarPersonas()
+    Public Function ListarPersona() As List(Of usuario)
+        Dim persistencia As New PersistenciaUsuario
+        Return persistencia.ListarPersonas()
     End Function
-    Public Function login(user As String, pass As String) As Boolean
-        Dim persistencia As New persistenciaUsuario
-        Return persistencia.persistenciaLog(user, pass)
+    Public Function Login(user As String, pass As String) As Boolean
+        Dim persistencia As New PersistenciaUsuario
+        Return persistencia.PersistenciaLog(user, pass)
     End Function
     Public Sub ModificarUsuario(user As usuario)
-        Dim persistencia As New persistenciaUsuario
-        persistencia.modificarPersona(user)
+        Dim persistencia As New PersistenciaUsuario
+        persistencia.ModificarPersona(user)
     End Sub
-    Public Sub eliminarUsuario(id As Integer)
-        Dim persistencia As New persistenciaUsuario
-        persistencia.eliminarUsuario(id)
+    Public Sub EliminarUsuario(id As Integer)
+        Dim persistencia As New PersistenciaUsuario
+        persistencia.EliminarUsuario(id)
     End Sub
 End Class
