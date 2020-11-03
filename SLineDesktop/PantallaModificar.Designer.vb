@@ -22,22 +22,29 @@ Partial Class PantallaModificar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PantallaModificar))
         Me.lblModificarUsuario = New System.Windows.Forms.Label()
         Me.BtnAceptarMod = New System.Windows.Forms.Button()
-        Me.btnCancelarMod = New System.Windows.Forms.Button()
         Me.TbxUserMod = New System.Windows.Forms.TextBox()
         Me.TbxEmailMod = New System.Windows.Forms.TextBox()
         Me.TbxContraseñaMod = New System.Windows.Forms.TextBox()
         Me.CbxSexoMod = New System.Windows.Forms.ComboBox()
         Me.DTPFechaNacMod = New System.Windows.Forms.DateTimePicker()
         Me.CbxRolMod = New System.Windows.Forms.ComboBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnExitMod = New System.Windows.Forms.Button()
+        Me.BtnMinimizeMod = New System.Windows.Forms.Button()
+        Me.BtnBuscarMod = New System.Windows.Forms.Button()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblModificarUsuario
         '
         Me.lblModificarUsuario.AutoSize = True
+        Me.lblModificarUsuario.BackColor = System.Drawing.Color.Transparent
         Me.lblModificarUsuario.Font = New System.Drawing.Font("Century Gothic", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblModificarUsuario.Location = New System.Drawing.Point(12, 38)
+        Me.lblModificarUsuario.ForeColor = System.Drawing.Color.Snow
+        Me.lblModificarUsuario.Location = New System.Drawing.Point(30, 20)
         Me.lblModificarUsuario.Name = "lblModificarUsuario"
         Me.lblModificarUsuario.Size = New System.Drawing.Size(383, 52)
         Me.lblModificarUsuario.TabIndex = 11
@@ -45,33 +52,24 @@ Partial Class PantallaModificar
         '
         'BtnAceptarMod
         '
+        Me.BtnAceptarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAceptarMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnAceptarMod.Location = New System.Drawing.Point(300, 361)
+        Me.BtnAceptarMod.Location = New System.Drawing.Point(69, 16)
         Me.BtnAceptarMod.Name = "BtnAceptarMod"
         Me.BtnAceptarMod.Size = New System.Drawing.Size(85, 40)
         Me.BtnAceptarMod.TabIndex = 17
-        Me.BtnAceptarMod.Text = "Aceptar"
+        Me.BtnAceptarMod.Text = "Modificar"
         Me.BtnAceptarMod.UseVisualStyleBackColor = True
-        '
-        'btnCancelarMod
-        '
-        Me.btnCancelarMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.btnCancelarMod.Location = New System.Drawing.Point(61, 361)
-        Me.btnCancelarMod.Name = "btnCancelarMod"
-        Me.btnCancelarMod.Size = New System.Drawing.Size(85, 40)
-        Me.btnCancelarMod.TabIndex = 18
-        Me.btnCancelarMod.Text = "Cancelar"
-        Me.btnCancelarMod.UseVisualStyleBackColor = True
         '
         'TbxUserMod
         '
         Me.TbxUserMod.BackColor = System.Drawing.Color.LavenderBlush
-        Me.TbxUserMod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TbxUserMod.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TbxUserMod.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TbxUserMod.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.TbxUserMod.Location = New System.Drawing.Point(12, 98)
+        Me.TbxUserMod.Location = New System.Drawing.Point(12, 100)
         Me.TbxUserMod.Name = "TbxUserMod"
-        Me.TbxUserMod.Size = New System.Drawing.Size(400, 31)
+        Me.TbxUserMod.Size = New System.Drawing.Size(420, 24)
         Me.TbxUserMod.TabIndex = 22
         Me.TbxUserMod.Tag = ""
         Me.TbxUserMod.Text = "Nombre de Usuario"
@@ -79,24 +77,24 @@ Partial Class PantallaModificar
         'TbxEmailMod
         '
         Me.TbxEmailMod.BackColor = System.Drawing.Color.LavenderBlush
-        Me.TbxEmailMod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TbxEmailMod.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TbxEmailMod.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TbxEmailMod.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.TbxEmailMod.Location = New System.Drawing.Point(12, 135)
+        Me.TbxEmailMod.Location = New System.Drawing.Point(12, 137)
         Me.TbxEmailMod.Name = "TbxEmailMod"
-        Me.TbxEmailMod.Size = New System.Drawing.Size(400, 31)
+        Me.TbxEmailMod.Size = New System.Drawing.Size(420, 24)
         Me.TbxEmailMod.TabIndex = 23
         Me.TbxEmailMod.Text = "Email"
         '
         'TbxContraseñaMod
         '
         Me.TbxContraseñaMod.BackColor = System.Drawing.Color.LavenderBlush
-        Me.TbxContraseñaMod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TbxContraseñaMod.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TbxContraseñaMod.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TbxContraseñaMod.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.TbxContraseñaMod.Location = New System.Drawing.Point(12, 172)
+        Me.TbxContraseñaMod.Location = New System.Drawing.Point(12, 174)
         Me.TbxContraseñaMod.Name = "TbxContraseñaMod"
-        Me.TbxContraseñaMod.Size = New System.Drawing.Size(400, 31)
+        Me.TbxContraseñaMod.Size = New System.Drawing.Size(420, 24)
         Me.TbxContraseñaMod.TabIndex = 24
         Me.TbxContraseñaMod.Text = "Contraseña"
         '
@@ -106,9 +104,9 @@ Partial Class PantallaModificar
         Me.CbxSexoMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CbxSexoMod.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbxSexoMod.FormattingEnabled = True
-        Me.CbxSexoMod.Location = New System.Drawing.Point(12, 209)
+        Me.CbxSexoMod.Location = New System.Drawing.Point(12, 211)
         Me.CbxSexoMod.Name = "CbxSexoMod"
-        Me.CbxSexoMod.Size = New System.Drawing.Size(400, 30)
+        Me.CbxSexoMod.Size = New System.Drawing.Size(420, 30)
         Me.CbxSexoMod.TabIndex = 25
         Me.CbxSexoMod.Text = "Sexo"
         '
@@ -118,9 +116,9 @@ Partial Class PantallaModificar
         Me.DTPFechaNacMod.CalendarTitleBackColor = System.Drawing.Color.LavenderBlush
         Me.DTPFechaNacMod.CalendarTrailingForeColor = System.Drawing.Color.LavenderBlush
         Me.DTPFechaNacMod.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DTPFechaNacMod.Location = New System.Drawing.Point(12, 281)
+        Me.DTPFechaNacMod.Location = New System.Drawing.Point(12, 283)
         Me.DTPFechaNacMod.Name = "DTPFechaNacMod"
-        Me.DTPFechaNacMod.Size = New System.Drawing.Size(400, 31)
+        Me.DTPFechaNacMod.Size = New System.Drawing.Size(420, 31)
         Me.DTPFechaNacMod.TabIndex = 27
         Me.DTPFechaNacMod.Value = New Date(2020, 10, 29, 10, 13, 7, 0)
         '
@@ -130,40 +128,92 @@ Partial Class PantallaModificar
         Me.CbxRolMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CbxRolMod.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbxRolMod.FormattingEnabled = True
-        Me.CbxRolMod.Location = New System.Drawing.Point(12, 245)
+        Me.CbxRolMod.Location = New System.Drawing.Point(12, 247)
         Me.CbxRolMod.Name = "CbxRolMod"
-        Me.CbxRolMod.Size = New System.Drawing.Size(400, 30)
+        Me.CbxRolMod.Size = New System.Drawing.Size(420, 30)
         Me.CbxRolMod.TabIndex = 26
         Me.CbxRolMod.Text = "Rol"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.BtnBuscarMod)
+        Me.Panel1.Controls.Add(Me.BtnAceptarMod)
+        Me.Panel1.Location = New System.Drawing.Point(0, 330)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(291, 100)
+        Me.Panel1.TabIndex = 28
+        '
+        'BtnExitMod
+        '
+        Me.BtnExitMod.BackColor = System.Drawing.Color.Transparent
+        Me.BtnExitMod.BackgroundImage = CType(resources.GetObject("BtnExitMod.BackgroundImage"), System.Drawing.Image)
+        Me.BtnExitMod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExitMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnExitMod.Location = New System.Drawing.Point(684, 12)
+        Me.BtnExitMod.Name = "BtnExitMod"
+        Me.BtnExitMod.Size = New System.Drawing.Size(24, 24)
+        Me.BtnExitMod.TabIndex = 35
+        Me.BtnExitMod.UseVisualStyleBackColor = False
+        '
+        'BtnMinimizeMod
+        '
+        Me.BtnMinimizeMod.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMinimizeMod.BackgroundImage = CType(resources.GetObject("BtnMinimizeMod.BackgroundImage"), System.Drawing.Image)
+        Me.BtnMinimizeMod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizeMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMinimizeMod.Location = New System.Drawing.Point(654, 12)
+        Me.BtnMinimizeMod.Name = "BtnMinimizeMod"
+        Me.BtnMinimizeMod.Size = New System.Drawing.Size(24, 24)
+        Me.BtnMinimizeMod.TabIndex = 34
+        Me.BtnMinimizeMod.UseVisualStyleBackColor = False
+        '
+        'BtnBuscarMod
+        '
+        Me.BtnBuscarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnBuscarMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.BtnBuscarMod.Location = New System.Drawing.Point(160, 16)
+        Me.BtnBuscarMod.Name = "BtnBuscarMod"
+        Me.BtnBuscarMod.Size = New System.Drawing.Size(85, 40)
+        Me.BtnBuscarMod.TabIndex = 18
+        Me.BtnBuscarMod.Text = "Buscar(CI)"
+        Me.BtnBuscarMod.UseVisualStyleBackColor = True
         '
         'PantallaModificar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(704, 424)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(720, 424)
+        Me.Controls.Add(Me.BtnExitMod)
+        Me.Controls.Add(Me.BtnMinimizeMod)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.CbxRolMod)
         Me.Controls.Add(Me.DTPFechaNacMod)
         Me.Controls.Add(Me.CbxSexoMod)
         Me.Controls.Add(Me.TbxContraseñaMod)
         Me.Controls.Add(Me.TbxEmailMod)
         Me.Controls.Add(Me.TbxUserMod)
-        Me.Controls.Add(Me.btnCancelarMod)
-        Me.Controls.Add(Me.BtnAceptarMod)
         Me.Controls.Add(Me.lblModificarUsuario)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "PantallaModificar"
         Me.Text = "Administrador SLine! - Modificar"
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents lblModificarUsuario As Label
     Friend WithEvents BtnAceptarMod As Button
-    Friend WithEvents btnCancelarMod As Button
     Friend WithEvents TbxUserMod As TextBox
     Friend WithEvents TbxEmailMod As TextBox
     Friend WithEvents TbxContraseñaMod As TextBox
     Friend WithEvents CbxSexoMod As ComboBox
     Friend WithEvents DTPFechaNacMod As DateTimePicker
     Friend WithEvents CbxRolMod As ComboBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents BtnExitMod As Button
+    Friend WithEvents BtnMinimizeMod As Button
+    Friend WithEvents BtnBuscarMod As Button
 End Class

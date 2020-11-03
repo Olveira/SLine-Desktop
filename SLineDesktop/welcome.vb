@@ -6,28 +6,15 @@
         WindowState = FormWindowState.Minimized
     End Sub
     Private Sub btnGoRegistrar_Click(sender As Object, e As EventArgs) Handles btnGoRegistrar.Click
-        Dim pantalla = Screen.PrimaryScreen
-        Dim width = pantalla.Bounds.Width / 2 - 360
         Try
-            With Registro
-                .Location = New Point(width, 100)
-                .StartPosition = FormStartPosition.Manual
-            End With
             Registro.Show()
             Me.Hide()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-    Private Sub btnGoLogin_Click(sender As Object, e As EventArgs) Handles btnGoLogin.Click
-        Dim pantalla = Screen.PrimaryScreen
-        Dim height = (pantalla.Bounds.Height / 2) - 190
-        Dim width = (pantalla.Bounds.Width / 2) - 360
+    Private Sub BtnGoLogin_Click(sender As Object, e As EventArgs) Handles btnGoLogin.Click
         Try
-            With Login
-                .Location = New Point(width, height)
-                .StartPosition = FormStartPosition.Manual
-            End With
             Login.Show()
             Me.Hide()
         Catch ex As Exception

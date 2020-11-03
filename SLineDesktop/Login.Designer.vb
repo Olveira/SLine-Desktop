@@ -182,7 +182,7 @@ Partial Class Login
         Me.BtnExitLogin.TabIndex = 20
         Me.BtnExitLogin.UseVisualStyleBackColor = False
         '
-        'Inicio
+        'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -198,7 +198,7 @@ Partial Class Login
         Me.Controls.Add(Me.TbxPasswordLog)
         Me.Controls.Add(Me.TbxUserLog)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Inicio"
+        Me.Name = "Login"
         Me.Text = "Administrador SLine! - Log in"
         Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)

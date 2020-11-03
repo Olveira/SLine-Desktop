@@ -23,6 +23,9 @@
         WindowState = FormWindowState.Minimized
     End Sub
     Private Sub PantallaListar_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Dim pantalla = Screen.PrimaryScreen
+        Dim width = (pantalla.Bounds.Width / 2) - 370
+        Location = New Point(width, 100)
         ListarUsuarios()
     End Sub
     Public Sub ListarUsuarios()

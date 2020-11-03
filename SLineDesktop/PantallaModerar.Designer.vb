@@ -22,37 +22,29 @@ Partial Class PantallaModerar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PBLogo = New System.Windows.Forms.PictureBox()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PantallaModerar))
         Me.LabelBienvenido = New System.Windows.Forms.Label()
         Me.BtnAcep = New System.Windows.Forms.Button()
         Me.BtnDec = New System.Windows.Forms.Button()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.tsmiListar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListaCasos = New System.Windows.Forms.ListView()
         Me.IDCaso = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Desc = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.IDUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Veri = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.FechaReg = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnExitModerarCasos = New System.Windows.Forms.Button()
+        Me.BtnMinimizeModerarCasos = New System.Windows.Forms.Button()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'PBLogo
-        '
-        Me.PBLogo.Image = Global.SLineDesktop.My.Resources.Resources.Logo
-        Me.PBLogo.Location = New System.Drawing.Point(667, 27)
-        Me.PBLogo.Name = "PBLogo"
-        Me.PBLogo.Size = New System.Drawing.Size(55, 55)
-        Me.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PBLogo.TabIndex = 6
-        Me.PBLogo.TabStop = False
         '
         'LabelBienvenido
         '
         Me.LabelBienvenido.AutoSize = True
+        Me.LabelBienvenido.BackColor = System.Drawing.Color.Transparent
         Me.LabelBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!)
-        Me.LabelBienvenido.Location = New System.Drawing.Point(12, 24)
+        Me.LabelBienvenido.ForeColor = System.Drawing.Color.Snow
+        Me.LabelBienvenido.Location = New System.Drawing.Point(118, 22)
         Me.LabelBienvenido.Name = "LabelBienvenido"
         Me.LabelBienvenido.Size = New System.Drawing.Size(198, 54)
         Me.LabelBienvenido.TabIndex = 7
@@ -60,8 +52,9 @@ Partial Class PantallaModerar
         '
         'BtnAcep
         '
+        Me.BtnAcep.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAcep.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAcep.Location = New System.Drawing.Point(542, 311)
+        Me.BtnAcep.Location = New System.Drawing.Point(216, 26)
         Me.BtnAcep.Name = "BtnAcep"
         Me.BtnAcep.Size = New System.Drawing.Size(180, 40)
         Me.BtnAcep.TabIndex = 10
@@ -70,28 +63,14 @@ Partial Class PantallaModerar
         '
         'BtnDec
         '
+        Me.BtnDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnDec.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDec.Location = New System.Drawing.Point(12, 311)
+        Me.BtnDec.Location = New System.Drawing.Point(3, 15)
         Me.BtnDec.Name = "BtnDec"
         Me.BtnDec.Size = New System.Drawing.Size(180, 40)
         Me.BtnDec.TabIndex = 11
         Me.BtnDec.Text = "Declinar"
         Me.BtnDec.UseVisualStyleBackColor = True
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiListar})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(734, 24)
-        Me.MenuStrip1.TabIndex = 22
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'tsmiListar
-        '
-        Me.tsmiListar.Name = "tsmiListar"
-        Me.tsmiListar.Size = New System.Drawing.Size(81, 20)
-        Me.tsmiListar.Text = "Listar Casos"
         '
         'ListaCasos
         '
@@ -132,38 +111,71 @@ Partial Class PantallaModerar
         Me.FechaReg.Text = "Fecha de registro"
         Me.FechaReg.Width = 116
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.BtnDec)
+        Me.Panel1.Controls.Add(Me.BtnAcep)
+        Me.Panel1.Location = New System.Drawing.Point(0, 329)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(399, 100)
+        Me.Panel1.TabIndex = 25
+        '
+        'BtnExitModerarCasos
+        '
+        Me.BtnExitModerarCasos.BackColor = System.Drawing.Color.Transparent
+        Me.BtnExitModerarCasos.BackgroundImage = CType(resources.GetObject("BtnExitModerarCasos.BackgroundImage"), System.Drawing.Image)
+        Me.BtnExitModerarCasos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExitModerarCasos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnExitModerarCasos.Location = New System.Drawing.Point(698, 12)
+        Me.BtnExitModerarCasos.Name = "BtnExitModerarCasos"
+        Me.BtnExitModerarCasos.Size = New System.Drawing.Size(24, 24)
+        Me.BtnExitModerarCasos.TabIndex = 33
+        Me.BtnExitModerarCasos.UseVisualStyleBackColor = False
+        '
+        'BtnMinimizeModerarCasos
+        '
+        Me.BtnMinimizeModerarCasos.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMinimizeModerarCasos.BackgroundImage = CType(resources.GetObject("BtnMinimizeModerarCasos.BackgroundImage"), System.Drawing.Image)
+        Me.BtnMinimizeModerarCasos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizeModerarCasos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMinimizeModerarCasos.Location = New System.Drawing.Point(668, 12)
+        Me.BtnMinimizeModerarCasos.Name = "BtnMinimizeModerarCasos"
+        Me.BtnMinimizeModerarCasos.Size = New System.Drawing.Size(24, 24)
+        Me.BtnMinimizeModerarCasos.TabIndex = 32
+        Me.BtnMinimizeModerarCasos.UseVisualStyleBackColor = False
+        '
         'PantallaModerar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Plum
-        Me.ClientSize = New System.Drawing.Size(734, 362)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(734, 407)
+        Me.Controls.Add(Me.BtnExitModerarCasos)
+        Me.Controls.Add(Me.BtnMinimizeModerarCasos)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ListaCasos)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.BtnDec)
-        Me.Controls.Add(Me.BtnAcep)
         Me.Controls.Add(Me.LabelBienvenido)
-        Me.Controls.Add(Me.PBLogo)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "PantallaModerar"
         Me.Text = "Administrador SLine! - Moderar"
-        CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents PBLogo As PictureBox
     Friend WithEvents LabelBienvenido As Label
     Friend WithEvents BtnAcep As Button
     Friend WithEvents BtnDec As Button
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents tsmiListar As ToolStripMenuItem
     Friend WithEvents ListaCasos As ListView
     Friend WithEvents IDCaso As ColumnHeader
     Friend WithEvents Desc As ColumnHeader
     Friend WithEvents IDUsuario As ColumnHeader
     Friend WithEvents Veri As ColumnHeader
     Friend WithEvents FechaReg As ColumnHeader
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents BtnExitModerarCasos As Button
+    Friend WithEvents BtnMinimizeModerarCasos As Button
 End Class

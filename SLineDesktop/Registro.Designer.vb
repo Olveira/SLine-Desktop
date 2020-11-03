@@ -125,9 +125,9 @@ Partial Class Registro
         Me.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnback.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnback.ForeColor = System.Drawing.Color.Snow
-        Me.btnback.Location = New System.Drawing.Point(219, 0)
+        Me.btnback.Location = New System.Drawing.Point(250, 0)
         Me.btnback.Name = "btnback"
-        Me.btnback.Size = New System.Drawing.Size(219, 88)
+        Me.btnback.Size = New System.Drawing.Size(188, 88)
         Me.btnback.TabIndex = 8
         Me.btnback.Text = "Iniciar Sesion"
         Me.btnback.UseVisualStyleBackColor = True

@@ -49,7 +49,7 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-    Private Sub btnCancelarMod_Click(sender As Object, e As EventArgs) Handles btnCancelarMod.Click
+    Private Sub btnCancelarMod_Click(sender As Object, e As EventArgs)
         Try
             Me.Close()
         Catch ex As Exception
@@ -63,5 +63,27 @@
 
     Private Sub TbxEmailMod_TextChanged(sender As Object, e As EventArgs) Handles TbxEmailMod.TextChanged
 
+    End Sub
+    'move'
+    Public MoveForm As Boolean
+    Public MoveForm_MousePosition As Point
+    Public Sub MoveForm_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
+        If e.Button = MouseButtons.Left Then
+            MoveForm = True
+            Me.Cursor = Cursors.NoMove2D
+            MoveForm_MousePosition = e.Location
+        End If
+    End Sub
+    Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
+        If MoveForm Then
+            Me.Location = Me.Location + (e.Location - MoveForm_MousePosition)
+        End If
+    End Sub
+
+    Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
+        If e.Button = MouseButtons.Left Then
+            MoveForm = False
+            Me.Cursor = Cursors.Default
+        End If
     End Sub
 End Class
