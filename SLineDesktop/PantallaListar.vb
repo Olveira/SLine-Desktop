@@ -1,12 +1,26 @@
 ﻿Public Class PantallaListar
     Public user As New usuario
-    Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        PantallaModerar.Show()
-        Me.Hide()
-    End Sub
-    Private Sub tsmiEliminar_Click(sender As Object, e As EventArgs)
+    Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
+        tomarUsuarioLV()
         PantallaModificar.Show()
         Me.Hide()
+    End Sub
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        tomarUsuarioLV()
+        Dim logica As New LogicaUsuario
+        logica.EliminarUsuario(user.Id)
+        ListarUsuarios()
+    End Sub
+    Private Sub BtnModerar_Click(sender As Object, e As EventArgs) Handles BtnModerar.Click
+        PantallaModerar.Show()
+        Hide()
+    End Sub
+    Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnExitListarPersonas.Click
+        Welcome.Show()
+        Me.Hide()
+    End Sub
+    Private Sub BtnMinimizeListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnMinimizeListarPersonas.Click
+        WindowState = FormWindowState.Minimized
     End Sub
     Private Sub PantallaListar_Load(sender As Object, e As EventArgs) Handles Me.Load
         ListarUsuarios()
@@ -34,17 +48,6 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-    Private Sub BtnEditar_Click(sender As Object, e As EventArgs)
-        tomarUsuarioLV()
-        PantallaModificar.Show()
-        Me.Hide()
-    End Sub
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs)
-        tomarUsuarioLV()
-        Dim logica As New LogicaUsuario
-        logica.EliminarUsuario(user.Id)
-        ListarUsuarios()
-    End Sub
     Private Sub CloseMe(sender As Object, e As EventArgs) Handles Me.Closed
         welcome.Show()
     End Sub
@@ -65,14 +68,6 @@
         Catch ex As Exception
             MessageBox.Show("error interno")
         End Try
-    End Sub
-
-    Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs)
-        Welcome.Show()
-        Me.Hide()
-    End Sub
-    Private Sub BtnMinimizeListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnMinimizeListarPersonas.Click
-        WindowState = FormWindowState.Minimized
     End Sub
     'move'
     Public MoveForm As Boolean

@@ -152,7 +152,7 @@ Partial Class Inicio
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Snow
-        Me.Label1.Location = New System.Drawing.Point(147, 18)
+        Me.Label1.Location = New System.Drawing.Point(147, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(145, 58)
         Me.Label1.TabIndex = 18
@@ -190,11 +190,11 @@ Partial Class Inicio
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(720, 380)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.BtnExitLogin)
         Me.Controls.Add(Me.BtnMinimizeLogin)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LinkLabel1)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TbxPasswordLog)
         Me.Controls.Add(Me.TbxUserLog)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

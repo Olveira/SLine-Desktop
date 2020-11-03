@@ -31,22 +31,16 @@ Partial Class PantallaListar
         Me.FechaNac = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.rol = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.id = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.BtnExitListarPersonas = New System.Windows.Forms.Button()
+        Me.BtnMinimizeListarPersonas = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.BtnMinimizeListarPersonas = New System.Windows.Forms.Button()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel2.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BtnEditar = New System.Windows.Forms.Button()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.BtnModerar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,10 +51,10 @@ Partial Class PantallaListar
         Me.LVListadoUsuarios.FullRowSelect = True
         Me.LVListadoUsuarios.GridLines = True
         Me.LVListadoUsuarios.HideSelection = False
-        Me.LVListadoUsuarios.Location = New System.Drawing.Point(12, 91)
+        Me.LVListadoUsuarios.Location = New System.Drawing.Point(12, 98)
         Me.LVListadoUsuarios.MultiSelect = False
         Me.LVListadoUsuarios.Name = "LVListadoUsuarios"
-        Me.LVListadoUsuarios.Size = New System.Drawing.Size(716, 281)
+        Me.LVListadoUsuarios.Size = New System.Drawing.Size(716, 263)
         Me.LVListadoUsuarios.TabIndex = 22
         Me.LVListadoUsuarios.UseCompatibleStateImageBehavior = False
         Me.LVListadoUsuarios.View = System.Windows.Forms.View.Details
@@ -99,141 +93,112 @@ Partial Class PantallaListar
         '
         Me.id.Text = "id"
         '
-        'Panel2
+        'Label1
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Panel2.Controls.Add(Me.Panel5)
-        Me.Panel2.Controls.Add(Me.Panel4)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 372)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(740, 88)
-        Me.Panel2.TabIndex = 27
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Snow
+        Me.Label1.Location = New System.Drawing.Point(68, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(354, 58)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "Listar Personas"
         '
-        'Panel5
+        'BtnExitListarPersonas
         '
-        Me.Panel5.Controls.Add(Me.Button3)
-        Me.Panel5.Controls.Add(Me.Button2)
-        Me.Panel5.Controls.Add(Me.ShapeContainer1)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel5.Location = New System.Drawing.Point(0, 0)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(458, 88)
-        Me.Panel5.TabIndex = 25
+        Me.BtnExitListarPersonas.BackColor = System.Drawing.Color.Transparent
+        Me.BtnExitListarPersonas.BackgroundImage = CType(resources.GetObject("BtnExitListarPersonas.BackgroundImage"), System.Drawing.Image)
+        Me.BtnExitListarPersonas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExitListarPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnExitListarPersonas.Location = New System.Drawing.Point(704, 9)
+        Me.BtnExitListarPersonas.Name = "BtnExitListarPersonas"
+        Me.BtnExitListarPersonas.Size = New System.Drawing.Size(24, 24)
+        Me.BtnExitListarPersonas.TabIndex = 31
+        Me.BtnExitListarPersonas.UseVisualStyleBackColor = False
         '
-        'Button3
+        'BtnMinimizeListarPersonas
         '
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(383, 0)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 88)
-        Me.Button3.TabIndex = 1
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BtnMinimizeListarPersonas.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMinimizeListarPersonas.BackgroundImage = CType(resources.GetObject("BtnMinimizeListarPersonas.BackgroundImage"), System.Drawing.Image)
+        Me.BtnMinimizeListarPersonas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizeListarPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMinimizeListarPersonas.Location = New System.Drawing.Point(674, 9)
+        Me.BtnMinimizeListarPersonas.Name = "BtnMinimizeListarPersonas"
+        Me.BtnMinimizeListarPersonas.Size = New System.Drawing.Size(24, 24)
+        Me.BtnMinimizeListarPersonas.TabIndex = 30
+        Me.BtnMinimizeListarPersonas.UseVisualStyleBackColor = False
         '
-        'Button2
+        'Panel1
         '
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(0, 0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 88)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.BtnModerar)
+        Me.Panel1.Controls.Add(Me.BtnEliminar)
+        Me.Panel1.Controls.Add(Me.BtnEditar)
+        Me.Panel1.Controls.Add(Me.ShapeContainer1)
+        Me.Panel1.Location = New System.Drawing.Point(0, 377)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(600, 88)
+        Me.Panel1.TabIndex = 32
         '
         'ShapeContainer1
         '
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(458, 88)
-        Me.ShapeContainer1.TabIndex = 2
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(600, 88)
+        Me.ShapeContainer1.TabIndex = 0
         Me.ShapeContainer1.TabStop = False
         '
         'LineShape1
         '
         Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 234
-        Me.LineShape1.X2 = 235
-        Me.LineShape1.Y1 = 10
-        Me.LineShape1.Y2 = 68
+        Me.LineShape1.X1 = 200
+        Me.LineShape1.X2 = 200
+        Me.LineShape1.Y1 = 0
+        Me.LineShape1.Y2 = 88
         '
-        'Panel4
+        'BtnEditar
         '
-        Me.Panel4.Controls.Add(Me.PictureBox1)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel4.Location = New System.Drawing.Point(458, 0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(282, 88)
-        Me.Panel4.TabIndex = 24
+        Me.BtnEditar.FlatAppearance.BorderSize = 0
+        Me.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEditar.Location = New System.Drawing.Point(201, 0)
+        Me.BtnEditar.Name = "BtnEditar"
+        Me.BtnEditar.Size = New System.Drawing.Size(199, 88)
+        Me.BtnEditar.TabIndex = 1
+        Me.BtnEditar.Text = "Editar"
+        Me.BtnEditar.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'BtnEliminar
         '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Enabled = False
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(282, 88)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.BtnEliminar.FlatAppearance.BorderSize = 0
+        Me.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEliminar.Location = New System.Drawing.Point(0, 0)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(199, 88)
+        Me.BtnEliminar.TabIndex = 2
+        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.UseVisualStyleBackColor = True
         '
-        'Panel1
+        'LineShape2
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.BtnMinimizeListarPersonas)
-        Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(740, 85)
-        Me.Panel1.TabIndex = 28
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 400
+        Me.LineShape2.X2 = 400
+        Me.LineShape2.Y1 = 0
+        Me.LineShape2.Y2 = 88
         '
-        'Button1
+        'BtnModerar
         '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.Enabled = False
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Snow
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(458, 85)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Lista Personas"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'BtnMinimizeListarPersonas
-        '
-        Me.BtnMinimizeListarPersonas.BackgroundImage = CType(resources.GetObject("BtnMinimizeListarPersonas.BackgroundImage"), System.Drawing.Image)
-        Me.BtnMinimizeListarPersonas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnMinimizeListarPersonas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnMinimizeListarPersonas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.BtnMinimizeListarPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMinimizeListarPersonas.Location = New System.Drawing.Point(393, 12)
-        Me.BtnMinimizeListarPersonas.Name = "BtnMinimizeListarPersonas"
-        Me.BtnMinimizeListarPersonas.Size = New System.Drawing.Size(24, 24)
-        Me.BtnMinimizeListarPersonas.TabIndex = 7
-        Me.BtnMinimizeListarPersonas.UseVisualStyleBackColor = True
-        '
-        'Panel3
-        '
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel3.Enabled = False
-        Me.Panel3.Location = New System.Drawing.Point(458, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(282, 85)
-        Me.Panel3.TabIndex = 1
+        Me.BtnModerar.FlatAppearance.BorderSize = 0
+        Me.BtnModerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModerar.Location = New System.Drawing.Point(401, 0)
+        Me.BtnModerar.Name = "BtnModerar"
+        Me.BtnModerar.Size = New System.Drawing.Size(199, 88)
+        Me.BtnModerar.TabIndex = 3
+        Me.BtnModerar.Text = "Moderar"
+        Me.BtnModerar.UseVisualStyleBackColor = True
         '
         'PantallaListar
         '
@@ -242,19 +207,18 @@ Partial Class PantallaListar
         Me.BackColor = System.Drawing.Color.Plum
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(740, 460)
+        Me.ClientSize = New System.Drawing.Size(740, 465)
+        Me.Controls.Add(Me.BtnExitListarPersonas)
+        Me.Controls.Add(Me.BtnMinimizeListarPersonas)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LVListadoUsuarios)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "PantallaListar"
         Me.Text = "s"
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents LVListadoUsuarios As ListView
@@ -265,16 +229,14 @@ Partial Class PantallaListar
     Friend WithEvents FechaNac As ColumnHeader
     Friend WithEvents rol As ColumnHeader
     Friend WithEvents id As ColumnHeader
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents BtnExitListarPersonas As Button
+    Friend WithEvents BtnMinimizeListarPersonas As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents BtnEliminar As Button
+    Friend WithEvents BtnEditar As Button
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As PowerPacks.LineShape
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents BtnMinimizeListarPersonas As Button
+    Friend WithEvents LineShape2 As PowerPacks.LineShape
+    Friend WithEvents BtnModerar As Button
 End Class
