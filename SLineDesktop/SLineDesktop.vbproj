@@ -129,10 +129,10 @@
   <ItemGroup>
     <Compile Include="Entidades\caso.vb" />
     <Compile Include="Entidades\usuario.vb" />
-    <Compile Include="Inicio.Designer.vb">
-      <DependentUpon>Inicio.vb</DependentUpon>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.vb">
+    <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Logica\logicaUsuario.vb" />
@@ -194,8 +194,8 @@
     <EmbeddedResource Include="PantallaListar.resx">
       <DependentUpon>PantallaListar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio.resx">
-      <DependentUpon>Inicio.vb</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

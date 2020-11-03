@@ -290,9 +290,9 @@ C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaModificar.
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaModificar.resources
-C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Login.resources
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Registro.resources
 C:\Proyecto\SLine-Desktop\SLineDesktop\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Proyecto\SLine-Desktop\SLineDesktop\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Inicio.resources
 C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Registro.resources
+C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Login.resources

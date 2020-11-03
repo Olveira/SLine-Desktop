@@ -24,7 +24,7 @@
             user = New usuario(username, email, password, sexo, fechaNac, rol)
             Dim logicaUsuario As New logicaUsuario
             logicaUsuario.AltaUser(user)
-            Inicio.Show()
+            Login.Show()
             Hide()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -58,7 +58,7 @@
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnback.Click
         Try
-            Inicio.Show()
+            Login.Show()
             Me.Hide()
         Catch ex As Exception
             MessageBox.Show(ex.Message)

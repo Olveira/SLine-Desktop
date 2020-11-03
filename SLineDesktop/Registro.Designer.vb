@@ -61,13 +61,12 @@ Partial Class Registro
         'TbxUserReg
         '
         Me.TbxUserReg.BackColor = System.Drawing.Color.LavenderBlush
-        Me.TbxUserReg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TbxUserReg.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TbxUserReg.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TbxUserReg.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.TbxUserReg.Location = New System.Drawing.Point(14, 98)
-        Me.TbxUserReg.Margin = New System.Windows.Forms.Padding(5)
+        Me.TbxUserReg.Location = New System.Drawing.Point(12, 100)
         Me.TbxUserReg.Name = "TbxUserReg"
-        Me.TbxUserReg.Size = New System.Drawing.Size(400, 31)
+        Me.TbxUserReg.Size = New System.Drawing.Size(420, 24)
         Me.TbxUserReg.TabIndex = 1
         Me.TbxUserReg.Tag = ""
         Me.TbxUserReg.Text = "Nombre de Usuario"
@@ -75,24 +74,24 @@ Partial Class Registro
         'TbxEmailReg
         '
         Me.TbxEmailReg.BackColor = System.Drawing.Color.LavenderBlush
-        Me.TbxEmailReg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TbxEmailReg.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TbxEmailReg.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TbxEmailReg.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.TbxEmailReg.Location = New System.Drawing.Point(14, 137)
+        Me.TbxEmailReg.Location = New System.Drawing.Point(12, 137)
         Me.TbxEmailReg.Name = "TbxEmailReg"
-        Me.TbxEmailReg.Size = New System.Drawing.Size(400, 31)
+        Me.TbxEmailReg.Size = New System.Drawing.Size(420, 24)
         Me.TbxEmailReg.TabIndex = 2
         Me.TbxEmailReg.Text = "Email"
         '
         'TbxContraseñaReg
         '
         Me.TbxContraseñaReg.BackColor = System.Drawing.Color.LavenderBlush
-        Me.TbxContraseñaReg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TbxContraseñaReg.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TbxContraseñaReg.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TbxContraseñaReg.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.TbxContraseñaReg.Location = New System.Drawing.Point(14, 174)
+        Me.TbxContraseñaReg.Location = New System.Drawing.Point(12, 174)
         Me.TbxContraseñaReg.Name = "TbxContraseñaReg"
-        Me.TbxContraseñaReg.Size = New System.Drawing.Size(400, 31)
+        Me.TbxContraseñaReg.Size = New System.Drawing.Size(420, 24)
         Me.TbxContraseñaReg.TabIndex = 3
         Me.TbxContraseñaReg.Text = "Contraseña"
         '
@@ -102,9 +101,9 @@ Partial Class Registro
         Me.CbxSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CbxSexo.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbxSexo.FormattingEnabled = True
-        Me.CbxSexo.Location = New System.Drawing.Point(14, 211)
+        Me.CbxSexo.Location = New System.Drawing.Point(12, 211)
         Me.CbxSexo.Name = "CbxSexo"
-        Me.CbxSexo.Size = New System.Drawing.Size(400, 30)
+        Me.CbxSexo.Size = New System.Drawing.Size(420, 30)
         Me.CbxSexo.TabIndex = 4
         Me.CbxSexo.Text = "Sexo"
         '
@@ -114,9 +113,9 @@ Partial Class Registro
         Me.DTPFechaNac.CalendarTitleBackColor = System.Drawing.Color.Lavender
         Me.DTPFechaNac.CalendarTrailingForeColor = System.Drawing.Color.LavenderBlush
         Me.DTPFechaNac.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DTPFechaNac.Location = New System.Drawing.Point(14, 283)
+        Me.DTPFechaNac.Location = New System.Drawing.Point(12, 283)
         Me.DTPFechaNac.Name = "DTPFechaNac"
-        Me.DTPFechaNac.Size = New System.Drawing.Size(400, 31)
+        Me.DTPFechaNac.Size = New System.Drawing.Size(420, 31)
         Me.DTPFechaNac.TabIndex = 6
         Me.DTPFechaNac.Value = New Date(2020, 10, 29, 10, 13, 7, 0)
         '
@@ -141,9 +140,9 @@ Partial Class Registro
         Me.CbxRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CbxRol.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbxRol.FormattingEnabled = True
-        Me.CbxRol.Location = New System.Drawing.Point(14, 247)
+        Me.CbxRol.Location = New System.Drawing.Point(12, 247)
         Me.CbxRol.Name = "CbxRol"
-        Me.CbxRol.Size = New System.Drawing.Size(400, 30)
+        Me.CbxRol.Size = New System.Drawing.Size(420, 30)
         Me.CbxRol.TabIndex = 5
         Me.CbxRol.Text = "Rol"
         '

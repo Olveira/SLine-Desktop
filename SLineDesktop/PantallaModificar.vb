@@ -27,7 +27,7 @@
         PantallaListar.ListarUsuarios()
         PantallaListar.Show()
     End Sub
-    Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModerarToolStripMenuItem.Click
+    Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Try
             PantallaModerar.Show()
             Me.Hide()
@@ -55,5 +55,13 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub lblModificarUsuario_Click(sender As Object, e As EventArgs) Handles lblModificarUsuario.Click
+
+    End Sub
+
+    Private Sub TbxEmailMod_TextChanged(sender As Object, e As EventArgs) Handles TbxEmailMod.TextChanged
+
     End Sub
 End Class

@@ -25,11 +25,11 @@
         Dim height = (pantalla.Bounds.Height / 2) - 190
         Dim width = (pantalla.Bounds.Width / 2) - 360
         Try
-            With Inicio
+            With Login
                 .Location = New Point(width, height)
                 .StartPosition = FormStartPosition.Manual
             End With
-            Inicio.Show()
+            Login.Show()
             Me.Hide()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
