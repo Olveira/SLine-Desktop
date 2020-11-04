@@ -137,7 +137,8 @@
             conection.close
         End Try
     End Sub
-    Function BuscarPorID(UnEm As String, Selector As Integer)
+    Function BuscarPorID(UnEm As String)
+        'esto es para Cases'
         If Selector = 1 Then
             Try
                 Dim Conn = New Conexion
