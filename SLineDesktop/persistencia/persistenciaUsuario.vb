@@ -109,7 +109,7 @@
         If Selector Then
             Try
                 conection = New Conexion().AbrirConexion()
-                Dim cmd = New Npgsql.NpgsqlCommand("select * from persona where username = @username") With {
+                Dim cmd = New Npgsql.NpgsqlCommand("select * from _user where username = @username") With {
                     .Connection = conection
                 }
                 cmd.Parameters.Add("@username", NpgsqlTypes.NpgsqlDbType.Varchar, 50).Value = UnEm
@@ -134,7 +134,7 @@
         Else
             Try
                 conection = New Conexion().AbrirConexion()
-                Dim cmd = New Npgsql.NpgsqlCommand("select * from persona where email = @email") With {
+                Dim cmd = New Npgsql.NpgsqlCommand("select * from _user where email = @email") With {
                     .Connection = conection
                 }
                 cmd.Parameters.Add("@email", NpgsqlTypes.NpgsqlDbType.Varchar, 70).Value = UnEm

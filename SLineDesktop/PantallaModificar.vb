@@ -19,16 +19,27 @@
         Dim pantalla = Screen.PrimaryScreen
         Dim width = (pantalla.Bounds.Width / 2) - 370
         Location = New Point(width, 100)
+        CbxSexoMod.Items.Add("Masculino")
+        CbxSexoMod.Items.Add("Femenino")
+        CbxSexoMod.Items.Add("Otro")
+        CbxRolMod.Items.Add("Admin")
+        CbxRolMod.Items.Add("User")
+        CbxRolMod.Text = "Rol"
+        CbxSexoMod.Text = "Sexo"
     End Sub
     Public Sub SetUser(Usuario As usuario)
         Try
             user = Usuario
-            TbxContraseñaMod.Text = user.Password
-            TbxEmailMod.Text = user.Email
-            TbxUserMod.Text = user.Username
-            CbxRolMod.Text = user.Rol
-            CbxSexoMod.Text = user.Sexo
-            DTPFechaNacMod.Value = user.FechaNac
+            If user.Email = "" Then
+                MessageBox.Show("No Existe el Usuario")
+            Else
+                TbxContraseñaMod.Text = user.Password
+                TbxEmailMod.Text = user.Email
+                TbxUserMod.Text = user.Username
+                CbxRolMod.Text = user.Rol
+                CbxSexoMod.Text = user.Sexo
+                DTPFechaNacMod.Value = user.FechaNac
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

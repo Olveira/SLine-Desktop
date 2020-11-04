@@ -45,6 +45,8 @@
             CbxSexo.Items.Add("Otro")
             CbxRol.Items.Add("Admin")
             CbxRol.Items.Add("User")
+            CbxRol.Text = "Rol"
+            CbxSexo.Text = "Sexo"
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

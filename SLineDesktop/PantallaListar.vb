@@ -109,16 +109,4 @@
             Cursor = Cursors.Default
         End If
     End Sub
-    Private Sub LVListadoUsuarios_ItemCheck(sender As Object, e As EventArgs) Handles LVListadoUsuarios.Click
-
-    End Sub
-    Private Sub LVListadoUsuarios_IstemCsheck(sender As Object, e As EventArgs) Handles LVListadoUsuarios.SelectedIndexChanged
-        Dim index = LVListadoUsuarios.FocusedItem.Index
-        Bool = -Bool
-        If Bool = -1 Then
-            BtnEliminar.Text = "Eliminar"
-        Else
-            BtnEliminar.Text = "Registrar"
-        End If
-    End Sub
 End Class
