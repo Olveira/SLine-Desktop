@@ -33,9 +33,15 @@ Partial Class PantallaModerar
         Me.Veri = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.FechaReg = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnTodos = New System.Windows.Forms.Button()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.BtnExitModerarCasos = New System.Windows.Forms.Button()
         Me.BtnMinimizeModerarCasos = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelBienvenido
@@ -52,22 +58,28 @@ Partial Class PantallaModerar
         '
         'BtnAcep
         '
+        Me.BtnAcep.FlatAppearance.BorderSize = 0
+        Me.BtnAcep.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.BtnAcep.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAcep.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAcep.Location = New System.Drawing.Point(216, 26)
+        Me.BtnAcep.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAcep.ForeColor = System.Drawing.Color.Snow
+        Me.BtnAcep.Location = New System.Drawing.Point(201, 0)
         Me.BtnAcep.Name = "BtnAcep"
-        Me.BtnAcep.Size = New System.Drawing.Size(180, 40)
+        Me.BtnAcep.Size = New System.Drawing.Size(199, 88)
         Me.BtnAcep.TabIndex = 10
         Me.BtnAcep.Text = "Verificar"
         Me.BtnAcep.UseVisualStyleBackColor = True
         '
         'BtnDec
         '
+        Me.BtnDec.FlatAppearance.BorderSize = 0
+        Me.BtnDec.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.BtnDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDec.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDec.Location = New System.Drawing.Point(3, 15)
+        Me.BtnDec.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDec.ForeColor = System.Drawing.Color.Snow
+        Me.BtnDec.Location = New System.Drawing.Point(0, 0)
         Me.BtnDec.Name = "BtnDec"
-        Me.BtnDec.Size = New System.Drawing.Size(180, 40)
+        Me.BtnDec.Size = New System.Drawing.Size(199, 88)
         Me.BtnDec.TabIndex = 11
         Me.BtnDec.Text = "Declinar"
         Me.BtnDec.UseVisualStyleBackColor = True
@@ -78,10 +90,10 @@ Partial Class PantallaModerar
         Me.ListaCasos.FullRowSelect = True
         Me.ListaCasos.GridLines = True
         Me.ListaCasos.HideSelection = False
-        Me.ListaCasos.Location = New System.Drawing.Point(0, 88)
+        Me.ListaCasos.Location = New System.Drawing.Point(12, 98)
         Me.ListaCasos.MultiSelect = False
         Me.ListaCasos.Name = "ListaCasos"
-        Me.ListaCasos.Size = New System.Drawing.Size(734, 217)
+        Me.ListaCasos.Size = New System.Drawing.Size(716, 263)
         Me.ListaCasos.TabIndex = 24
         Me.ListaCasos.UseCompatibleStateImageBehavior = False
         Me.ListaCasos.View = System.Windows.Forms.View.Details
@@ -114,12 +126,56 @@ Partial Class PantallaModerar
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.BtnTodos)
         Me.Panel1.Controls.Add(Me.BtnDec)
         Me.Panel1.Controls.Add(Me.BtnAcep)
-        Me.Panel1.Location = New System.Drawing.Point(0, 329)
+        Me.Panel1.Controls.Add(Me.ShapeContainer1)
+        Me.Panel1.Location = New System.Drawing.Point(0, 377)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(399, 100)
+        Me.Panel1.Size = New System.Drawing.Size(600, 88)
         Me.Panel1.TabIndex = 25
+        '
+        'BtnTodos
+        '
+        Me.BtnTodos.FlatAppearance.BorderSize = 0
+        Me.BtnTodos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.BtnTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnTodos.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnTodos.ForeColor = System.Drawing.Color.Snow
+        Me.BtnTodos.Location = New System.Drawing.Point(401, 0)
+        Me.BtnTodos.Name = "BtnTodos"
+        Me.BtnTodos.Size = New System.Drawing.Size(199, 88)
+        Me.BtnTodos.TabIndex = 12
+        Me.BtnTodos.Text = "Todos"
+        Me.BtnTodos.UseVisualStyleBackColor = True
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(600, 88)
+        Me.ShapeContainer1.TabIndex = 13
+        Me.ShapeContainer1.TabStop = False
+        '
+        'LineShape2
+        '
+        Me.LineShape2.BorderColor = System.Drawing.Color.Snow
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 400
+        Me.LineShape2.X2 = 400
+        Me.LineShape2.Y1 = 0
+        Me.LineShape2.Y2 = 88
+        '
+        'LineShape1
+        '
+        Me.LineShape1.BorderColor = System.Drawing.Color.Snow
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 200
+        Me.LineShape1.X2 = 200
+        Me.LineShape1.Y1 = 0
+        Me.LineShape1.Y2 = 88
         '
         'BtnExitModerarCasos
         '
@@ -127,7 +183,7 @@ Partial Class PantallaModerar
         Me.BtnExitModerarCasos.BackgroundImage = CType(resources.GetObject("BtnExitModerarCasos.BackgroundImage"), System.Drawing.Image)
         Me.BtnExitModerarCasos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnExitModerarCasos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnExitModerarCasos.Location = New System.Drawing.Point(698, 12)
+        Me.BtnExitModerarCasos.Location = New System.Drawing.Point(704, 12)
         Me.BtnExitModerarCasos.Name = "BtnExitModerarCasos"
         Me.BtnExitModerarCasos.Size = New System.Drawing.Size(24, 24)
         Me.BtnExitModerarCasos.TabIndex = 33
@@ -139,11 +195,22 @@ Partial Class PantallaModerar
         Me.BtnMinimizeModerarCasos.BackgroundImage = CType(resources.GetObject("BtnMinimizeModerarCasos.BackgroundImage"), System.Drawing.Image)
         Me.BtnMinimizeModerarCasos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnMinimizeModerarCasos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMinimizeModerarCasos.Location = New System.Drawing.Point(668, 12)
+        Me.BtnMinimizeModerarCasos.Location = New System.Drawing.Point(674, 12)
         Me.BtnMinimizeModerarCasos.Name = "BtnMinimizeModerarCasos"
         Me.BtnMinimizeModerarCasos.Size = New System.Drawing.Size(24, 24)
         Me.BtnMinimizeModerarCasos.TabIndex = 32
         Me.BtnMinimizeModerarCasos.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(650, 375)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(78, 78)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 34
+        Me.PictureBox1.TabStop = False
         '
         'PantallaModerar
         '
@@ -152,7 +219,8 @@ Partial Class PantallaModerar
         Me.BackColor = System.Drawing.Color.Plum
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(734, 407)
+        Me.ClientSize = New System.Drawing.Size(740, 465)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.BtnExitModerarCasos)
         Me.Controls.Add(Me.BtnMinimizeModerarCasos)
         Me.Controls.Add(Me.Panel1)
@@ -162,6 +230,7 @@ Partial Class PantallaModerar
         Me.Name = "PantallaModerar"
         Me.Text = "Administrador SLine! - Moderar"
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -178,4 +247,9 @@ Partial Class PantallaModerar
     Friend WithEvents Panel1 As Panel
     Friend WithEvents BtnExitModerarCasos As Button
     Friend WithEvents BtnMinimizeModerarCasos As Button
+    Friend WithEvents BtnTodos As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Friend WithEvents LineShape2 As PowerPacks.LineShape
+    Friend WithEvents LineShape1 As PowerPacks.LineShape
 End Class

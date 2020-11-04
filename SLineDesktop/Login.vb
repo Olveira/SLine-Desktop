@@ -64,6 +64,8 @@
         Dim pantalla = Screen.PrimaryScreen
         Dim width = (pantalla.Bounds.Width / 2) - 360
         Location = New Point(width, 100)
+        TbxUserLog.Text = "Nombre de Usuario"
+        TbxPasswordLog.Text = "Contraseña"
     End Sub
 
     'move'
@@ -87,5 +89,9 @@
             MoveForm = False
             Me.Cursor = Cursors.Default
         End If
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+
     End Sub
 End Class

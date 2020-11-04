@@ -32,9 +32,11 @@ Partial Class PantallaModificar
         Me.DTPFechaNacMod = New System.Windows.Forms.DateTimePicker()
         Me.CbxRolMod = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnBuscarMod = New System.Windows.Forms.Button()
         Me.BtnExitMod = New System.Windows.Forms.Button()
         Me.BtnMinimizeMod = New System.Windows.Forms.Button()
-        Me.BtnBuscarMod = New System.Windows.Forms.Button()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,11 +54,15 @@ Partial Class PantallaModificar
         '
         'BtnAceptarMod
         '
+        Me.BtnAceptarMod.Dock = System.Windows.Forms.DockStyle.Left
+        Me.BtnAceptarMod.FlatAppearance.BorderSize = 0
+        Me.BtnAceptarMod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.BtnAceptarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAceptarMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnAceptarMod.Location = New System.Drawing.Point(69, 16)
+        Me.BtnAceptarMod.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAceptarMod.ForeColor = System.Drawing.Color.Snow
+        Me.BtnAceptarMod.Location = New System.Drawing.Point(0, 0)
         Me.BtnAceptarMod.Name = "BtnAceptarMod"
-        Me.BtnAceptarMod.Size = New System.Drawing.Size(85, 40)
+        Me.BtnAceptarMod.Size = New System.Drawing.Size(218, 88)
         Me.BtnAceptarMod.TabIndex = 17
         Me.BtnAceptarMod.Text = "Modificar"
         Me.BtnAceptarMod.UseVisualStyleBackColor = True
@@ -139,10 +145,26 @@ Partial Class PantallaModificar
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.BtnBuscarMod)
         Me.Panel1.Controls.Add(Me.BtnAceptarMod)
-        Me.Panel1.Location = New System.Drawing.Point(0, 330)
+        Me.Panel1.Controls.Add(Me.ShapeContainer1)
+        Me.Panel1.Location = New System.Drawing.Point(0, 332)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(291, 100)
+        Me.Panel1.Size = New System.Drawing.Size(438, 88)
         Me.Panel1.TabIndex = 28
+        '
+        'BtnBuscarMod
+        '
+        Me.BtnBuscarMod.Dock = System.Windows.Forms.DockStyle.Right
+        Me.BtnBuscarMod.FlatAppearance.BorderSize = 0
+        Me.BtnBuscarMod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.BtnBuscarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnBuscarMod.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBuscarMod.ForeColor = System.Drawing.Color.Snow
+        Me.BtnBuscarMod.Location = New System.Drawing.Point(219, 0)
+        Me.BtnBuscarMod.Name = "BtnBuscarMod"
+        Me.BtnBuscarMod.Size = New System.Drawing.Size(219, 88)
+        Me.BtnBuscarMod.TabIndex = 18
+        Me.BtnBuscarMod.Text = "Buscar(Un, Em)"
+        Me.BtnBuscarMod.UseVisualStyleBackColor = True
         '
         'BtnExitMod
         '
@@ -168,16 +190,24 @@ Partial Class PantallaModificar
         Me.BtnMinimizeMod.TabIndex = 34
         Me.BtnMinimizeMod.UseVisualStyleBackColor = False
         '
-        'BtnBuscarMod
+        'ShapeContainer1
         '
-        Me.BtnBuscarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnBuscarMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.BtnBuscarMod.Location = New System.Drawing.Point(160, 16)
-        Me.BtnBuscarMod.Name = "BtnBuscarMod"
-        Me.BtnBuscarMod.Size = New System.Drawing.Size(85, 40)
-        Me.BtnBuscarMod.TabIndex = 18
-        Me.BtnBuscarMod.Text = "Buscar(CI)"
-        Me.BtnBuscarMod.UseVisualStyleBackColor = True
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(438, 88)
+        Me.ShapeContainer1.TabIndex = 19
+        Me.ShapeContainer1.TabStop = False
+        '
+        'LineShape1
+        '
+        Me.LineShape1.BorderColor = System.Drawing.Color.Snow
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 218
+        Me.LineShape1.X2 = 218
+        Me.LineShape1.Y1 = 0
+        Me.LineShape1.Y2 = 88
         '
         'PantallaModificar
         '
@@ -185,7 +215,7 @@ Partial Class PantallaModificar
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(720, 424)
+        Me.ClientSize = New System.Drawing.Size(720, 420)
         Me.Controls.Add(Me.BtnExitMod)
         Me.Controls.Add(Me.BtnMinimizeMod)
         Me.Controls.Add(Me.Panel1)
@@ -216,4 +246,6 @@ Partial Class PantallaModificar
     Friend WithEvents BtnExitMod As Button
     Friend WithEvents BtnMinimizeMod As Button
     Friend WithEvents BtnBuscarMod As Button
+    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Friend WithEvents LineShape1 As PowerPacks.LineShape
 End Class

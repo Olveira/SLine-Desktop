@@ -2,19 +2,19 @@
     Private list As New List(Of caso)
     Private CasoS As New caso
     Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnExitModerarCasos.Click
-
+        PantallaListar.Show()
+        Hide()
     End Sub
     Private Sub BtnMinimizeListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnMinimizeModerarCasos.Click
-
+        WindowState = FormWindowState.Minimized
     End Sub
-    Private Sub tsmiListar_Click(sender As Object, e As EventArgs)
+    Private Sub TsmiListar_Click(sender As Object, e As EventArgs)
         Try
             PantallaListar.Show()
             Me.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-
     End Sub
     Private Sub ListarCasos()
         Try
@@ -44,6 +44,9 @@
         End Try
     End Sub
     Private Sub MeLoad(sender As Object, e As EventArgs) Handles Me.Load
+        Dim pantalla = Screen.PrimaryScreen
+        Dim width = (pantalla.Bounds.Width / 2) - 370
+        Location = New Point(width, 100)
         ListarCasos()
     End Sub
     Private Sub BtnVerif_Click(sender As Object, e As EventArgs) Handles BtnAcep.Click
@@ -91,20 +94,20 @@
     Public Sub MoveForm_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         If e.Button = MouseButtons.Left Then
             MoveForm = True
-            Me.Cursor = Cursors.NoMove2D
+            Cursor = Cursors.NoMove2D
             MoveForm_MousePosition = e.Location
         End If
     End Sub
     Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
         If MoveForm Then
-            Me.Location = Me.Location + (e.Location - MoveForm_MousePosition)
+            Location += e.Location - MoveForm_MousePosition
         End If
     End Sub
 
     Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
         If e.Button = MouseButtons.Left Then
             MoveForm = False
-            Me.Cursor = Cursors.Default
+            Cursor = Cursors.Default
         End If
     End Sub
 End Class

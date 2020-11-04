@@ -1,11 +1,18 @@
 ﻿Public Class PantallaListar
     Public user As New usuario
+    Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnExitListarPersonas.Click
+        Welcome.Show()
+        Hide()
+    End Sub
+    Private Sub BtnMinimizeListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnMinimizeListarPersonas.Click
+        WindowState = FormWindowState.Minimized
+    End Sub
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         tomarUsuarioLV()
         PantallaModificar.Show()
-        Me.Hide()
+        Hide()
     End Sub
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
         tomarUsuarioLV()
         Dim logica As New LogicaUsuario
         logica.EliminarUsuario(user.Id)
@@ -14,13 +21,6 @@
     Private Sub BtnModerar_Click(sender As Object, e As EventArgs) Handles BtnModerar.Click
         PantallaModerar.Show()
         Hide()
-    End Sub
-    Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnExitListarPersonas.Click
-        Welcome.Show()
-        Me.Hide()
-    End Sub
-    Private Sub BtnMinimizeListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnMinimizeListarPersonas.Click
-        WindowState = FormWindowState.Minimized
     End Sub
     Private Sub PantallaListar_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim pantalla = Screen.PrimaryScreen

@@ -35,13 +35,15 @@ Partial Class PantallaListar
         Me.BtnExitListarPersonas = New System.Windows.Forms.Button()
         Me.BtnMinimizeListarPersonas = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.BtnEditar = New System.Windows.Forms.Button()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.BtnModerar = New System.Windows.Forms.Button()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
+        Me.BtnEditar = New System.Windows.Forms.Button()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LVListadoUsuarios
@@ -72,7 +74,7 @@ Partial Class PantallaListar
         'Password
         '
         Me.Password.Text = "Password"
-        Me.Password.Width = 122
+        Me.Password.Width = 93
         '
         'sexo
         '
@@ -111,7 +113,7 @@ Partial Class PantallaListar
         Me.BtnExitListarPersonas.BackgroundImage = CType(resources.GetObject("BtnExitListarPersonas.BackgroundImage"), System.Drawing.Image)
         Me.BtnExitListarPersonas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnExitListarPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnExitListarPersonas.Location = New System.Drawing.Point(704, 9)
+        Me.BtnExitListarPersonas.Location = New System.Drawing.Point(704, 12)
         Me.BtnExitListarPersonas.Name = "BtnExitListarPersonas"
         Me.BtnExitListarPersonas.Size = New System.Drawing.Size(24, 24)
         Me.BtnExitListarPersonas.TabIndex = 31
@@ -123,7 +125,7 @@ Partial Class PantallaListar
         Me.BtnMinimizeListarPersonas.BackgroundImage = CType(resources.GetObject("BtnMinimizeListarPersonas.BackgroundImage"), System.Drawing.Image)
         Me.BtnMinimizeListarPersonas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnMinimizeListarPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMinimizeListarPersonas.Location = New System.Drawing.Point(674, 9)
+        Me.BtnMinimizeListarPersonas.Location = New System.Drawing.Point(674, 12)
         Me.BtnMinimizeListarPersonas.Name = "BtnMinimizeListarPersonas"
         Me.BtnMinimizeListarPersonas.Size = New System.Drawing.Size(24, 24)
         Me.BtnMinimizeListarPersonas.TabIndex = 30
@@ -141,6 +143,48 @@ Partial Class PantallaListar
         Me.Panel1.Size = New System.Drawing.Size(600, 88)
         Me.Panel1.TabIndex = 32
         '
+        'BtnModerar
+        '
+        Me.BtnModerar.FlatAppearance.BorderSize = 0
+        Me.BtnModerar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.BtnModerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModerar.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModerar.ForeColor = System.Drawing.Color.Snow
+        Me.BtnModerar.Location = New System.Drawing.Point(401, 0)
+        Me.BtnModerar.Name = "BtnModerar"
+        Me.BtnModerar.Size = New System.Drawing.Size(199, 88)
+        Me.BtnModerar.TabIndex = 3
+        Me.BtnModerar.Text = "Moderar"
+        Me.BtnModerar.UseVisualStyleBackColor = True
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.FlatAppearance.BorderSize = 0
+        Me.BtnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEliminar.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminar.ForeColor = System.Drawing.Color.Snow
+        Me.BtnEliminar.Location = New System.Drawing.Point(0, 0)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(199, 88)
+        Me.BtnEliminar.TabIndex = 2
+        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.UseVisualStyleBackColor = True
+        '
+        'BtnEditar
+        '
+        Me.BtnEditar.FlatAppearance.BorderSize = 0
+        Me.BtnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEditar.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEditar.ForeColor = System.Drawing.Color.Snow
+        Me.BtnEditar.Location = New System.Drawing.Point(201, 0)
+        Me.BtnEditar.Name = "BtnEditar"
+        Me.BtnEditar.Size = New System.Drawing.Size(199, 88)
+        Me.BtnEditar.TabIndex = 1
+        Me.BtnEditar.Text = "Editar"
+        Me.BtnEditar.UseVisualStyleBackColor = True
+        '
         'ShapeContainer1
         '
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
@@ -151,54 +195,34 @@ Partial Class PantallaListar
         Me.ShapeContainer1.TabIndex = 0
         Me.ShapeContainer1.TabStop = False
         '
-        'LineShape1
-        '
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 200
-        Me.LineShape1.X2 = 200
-        Me.LineShape1.Y1 = 0
-        Me.LineShape1.Y2 = 88
-        '
-        'BtnEditar
-        '
-        Me.BtnEditar.FlatAppearance.BorderSize = 0
-        Me.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnEditar.Location = New System.Drawing.Point(201, 0)
-        Me.BtnEditar.Name = "BtnEditar"
-        Me.BtnEditar.Size = New System.Drawing.Size(199, 88)
-        Me.BtnEditar.TabIndex = 1
-        Me.BtnEditar.Text = "Editar"
-        Me.BtnEditar.UseVisualStyleBackColor = True
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.FlatAppearance.BorderSize = 0
-        Me.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnEliminar.Location = New System.Drawing.Point(0, 0)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(199, 88)
-        Me.BtnEliminar.TabIndex = 2
-        Me.BtnEliminar.Text = "Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
-        '
         'LineShape2
         '
+        Me.LineShape2.BorderColor = System.Drawing.Color.Snow
         Me.LineShape2.Name = "LineShape2"
         Me.LineShape2.X1 = 400
         Me.LineShape2.X2 = 400
         Me.LineShape2.Y1 = 0
         Me.LineShape2.Y2 = 88
         '
-        'BtnModerar
+        'LineShape1
         '
-        Me.BtnModerar.FlatAppearance.BorderSize = 0
-        Me.BtnModerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnModerar.Location = New System.Drawing.Point(401, 0)
-        Me.BtnModerar.Name = "BtnModerar"
-        Me.BtnModerar.Size = New System.Drawing.Size(199, 88)
-        Me.BtnModerar.TabIndex = 3
-        Me.BtnModerar.Text = "Moderar"
-        Me.BtnModerar.UseVisualStyleBackColor = True
+        Me.LineShape1.BorderColor = System.Drawing.Color.Snow
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 200
+        Me.LineShape1.X2 = 200
+        Me.LineShape1.Y1 = 0
+        Me.LineShape1.Y2 = 88
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(650, 377)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(78, 78)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 33
+        Me.PictureBox1.TabStop = False
         '
         'PantallaListar
         '
@@ -208,6 +232,7 @@ Partial Class PantallaListar
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(740, 465)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.BtnExitListarPersonas)
         Me.Controls.Add(Me.BtnMinimizeListarPersonas)
         Me.Controls.Add(Me.Label1)
@@ -217,6 +242,7 @@ Partial Class PantallaListar
         Me.Name = "PantallaListar"
         Me.Text = "s"
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -224,11 +250,9 @@ Partial Class PantallaListar
     Friend WithEvents LVListadoUsuarios As ListView
     Friend WithEvents Username As ColumnHeader
     Friend WithEvents Email As ColumnHeader
-    Friend WithEvents Password As ColumnHeader
     Friend WithEvents sexo As ColumnHeader
     Friend WithEvents FechaNac As ColumnHeader
     Friend WithEvents rol As ColumnHeader
-    Friend WithEvents id As ColumnHeader
     Friend WithEvents Label1 As Label
     Friend WithEvents BtnExitListarPersonas As Button
     Friend WithEvents BtnMinimizeListarPersonas As Button
@@ -239,4 +263,7 @@ Partial Class PantallaListar
     Friend WithEvents LineShape1 As PowerPacks.LineShape
     Friend WithEvents LineShape2 As PowerPacks.LineShape
     Friend WithEvents BtnModerar As Button
+    Friend WithEvents Password As ColumnHeader
+    Friend WithEvents id As ColumnHeader
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

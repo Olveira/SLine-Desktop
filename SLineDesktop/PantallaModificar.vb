@@ -1,36 +1,24 @@
 ﻿Public Class PantallaModificar
     Public user As New usuario
-    Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Try
-            PantallaListar.LVListadoUsuarios.Clear()
-            PantallaListar.Update()
-            PantallaListar.Show()
-            Me.Hide()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+    Private Sub BtnExitMod_Click(sender As Object, e As EventArgs) Handles BtnExitMod.Click
+        PantallaListar.Show()
+        Hide()
+    End Sub
+    Private Sub BtnMinimizeMod_Click(sender As Object, e As EventArgs) Handles BtnMinimizeMod.Click
+        WindowState = FormWindowState.Minimized
     End Sub
     Private Sub PantallaEliminar_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Dim pantalla = Screen.PrimaryScreen
+        Dim width = (pantalla.Bounds.Width / 2) - 370
+        Location = New Point(width, 100)
         Try
-            Me.user = PantallaListar.user
-            tbxContraseñaMod.Text = user.Password
-            tbxEmailMod.Text = user.Email
-            tbxUserMod.Text = user.Username
-            cbxRolMod.Text = user.Rol
-            cbxSexoMod.Text = user.Sexo
+            user = PantallaListar.user
+            TbxContraseñaMod.Text = user.Password
+            TbxEmailMod.Text = user.Email
+            TbxUserMod.Text = user.Username
+            CbxRolMod.Text = user.Rol
+            CbxSexoMod.Text = user.Sexo
             DTPFechaNacMod.Value = user.FechaNac
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
-    Private Sub MeLoad(sender As Object, e As EventArgs) Handles Me.Closed
-        PantallaListar.ListarUsuarios()
-        PantallaListar.Show()
-    End Sub
-    Private Sub ModerarToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Try
-            PantallaModerar.Show()
-            Me.Hide()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -48,21 +36,6 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-    End Sub
-    Private Sub btnCancelarMod_Click(sender As Object, e As EventArgs)
-        Try
-            Me.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
-
-    Private Sub lblModificarUsuario_Click(sender As Object, e As EventArgs) Handles lblModificarUsuario.Click
-
-    End Sub
-
-    Private Sub TbxEmailMod_TextChanged(sender As Object, e As EventArgs) Handles TbxEmailMod.TextChanged
-
     End Sub
     'move'
     Public MoveForm As Boolean
@@ -84,6 +57,12 @@
         If e.Button = MouseButtons.Left Then
             MoveForm = False
             Me.Cursor = Cursors.Default
+        End If
+    End Sub
+
+    Private Sub BtnBuscarMod_Click(sender As Object, e As EventArgs) Handles BtnBuscarMod.Click
+        If TbxUserMod.Text <> "" Then
+
         End If
     End Sub
 End Class

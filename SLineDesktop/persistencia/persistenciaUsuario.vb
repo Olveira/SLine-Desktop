@@ -137,29 +137,57 @@
             conection.close
         End Try
     End Sub
-    Function BuscarPorID(ci As Integer)
-        Try
-            Dim Conn = New conexion
-            Dim cmd = New Npgsql.NpgsqlCommand
-            conection = Conn.abrirConexion()
-            cmd.Connection = conection
+    Function BuscarPorID(UnEm As String, Selector As Integer)
+        If Selector = 1 Then
+            Try
+                Dim Conn = New Conexion
+                conection = Conn.AbrirConexion()
+                Dim cmd = New Npgsql.NpgsqlCommand
+                cmd.Connection = conection
 
-            Dim cadenadecomandos = "select * from persona where ci = @ci"
+                Dim cadenadecomandos = "select * from _case where id_usuario = @UnEm;"
 
-            cmd.CommandText = cadenadecomandos
-            cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value = ci
-            Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
+                cmd.CommandText = cadenadecomandos
+                cmd.Parameters.Add("@UnEm", NpgsqlTypes.NpgsqlDbType.).Value = UnEm
+                Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
 
-            Dim Usuario As New usuario
-            If Lector.Read() Then
-                Usuario.Id = Convert.ToInt32(Lector(0).ToString)
-                Usuario.Username = Lector(1).ToString
-            End If
-            Return Usuario
-        Catch ex As Exception
-            Throw ex
-        Finally
-            conection.close
-        End Try
+                Dim Usuario As New usuario
+                If Lector.Read() Then
+                    Usuario.Id = Convert.ToInt32(Lector(0).ToString)
+                    Usuario.Username = Lector(1).ToString
+                End If
+                Return Usuario
+            Catch ex As Exception
+                Throw ex
+            Finally
+                conection.close
+            End Try
+        ElseIf Selector = 2 Then
+            Try
+                Dim Conn = New Conexion
+                Dim cmd = New Npgsql.NpgsqlCommand
+                conection = Conn.AbrirConexion()
+                cmd.Connection = conection
+
+                Dim cadenadecomandos = "select * from persona where ci = @ci"
+
+                cmd.CommandText = cadenadecomandos
+                cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value = UnEm
+                Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
+
+                Dim Usuario As New usuario
+                If Lector.Read() Then
+                    Usuario.Id = Convert.ToInt32(Lector(0).ToString)
+                    Usuario.Username = Lector(1).ToString
+                End If
+                Return Usuario
+            Catch ex As Exception
+                Throw ex
+            Finally
+                conection.close
+            End Try
+        End If
+
+
     End Function
 End Class
