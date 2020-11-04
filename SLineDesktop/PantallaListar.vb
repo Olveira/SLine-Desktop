@@ -1,5 +1,6 @@
 ﻿Public Class PantallaListar
     Public user As New usuario
+    Private Bool = 1
     Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnExitListarPersonas.Click
         Welcome.Show()
         Hide()
@@ -8,24 +9,38 @@
         WindowState = FormWindowState.Minimized
     End Sub
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
-        tomarUsuarioLV()
-        PantallaModificar.Show()
-        Hide()
+        If TomarUsuarioLV() Then
+            PantallaModificar.Show()
+            PantallaModificar.SetUser(user)
+            Hide()
+        Else
+            PantallaModificar.Show()
+            Hide()
+        End If
     End Sub
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
-        tomarUsuarioLV()
-        Dim logica As New LogicaUsuario
-        logica.EliminarUsuario(user.Id)
-        ListarUsuarios()
+        If Bool Then
+            TomarUsuarioLV()
+            Dim logica As New LogicaUsuario
+            logica.EliminarUsuario(user.Id)
+            ListarUsuarios()
+        Else
+            Registro.Show()
+            Hide()
+        End If
     End Sub
     Private Sub BtnModerar_Click(sender As Object, e As EventArgs) Handles BtnModerar.Click
-        PantallaModerar.Show()
-        Hide()
+        If TomarUsuarioLV() Then
+            PantallaModerar.Show()
+            PantallaModerar.ListarCasosUsuario(user.Id)
+            Hide()
+        End If
     End Sub
     Private Sub PantallaListar_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim pantalla = Screen.PrimaryScreen
         Dim width = (pantalla.Bounds.Width / 2) - 370
         Location = New Point(width, 100)
+        BtnEliminar.Text = "Registrar"
         ListarUsuarios()
     End Sub
     Public Sub ListarUsuarios()
@@ -51,14 +66,13 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-    Private Sub CloseMe(sender As Object, e As EventArgs) Handles Me.Closed
-        welcome.Show()
-    End Sub
-    Private Sub tomarUsuarioLV()
+    Private Function TomarUsuarioLV()
+        Dim bool As Boolean
         Try
             Dim itemSelected = LVListadoUsuarios.SelectedItems.Count
             If itemSelected = 0 Then
                 MessageBox.Show("Primero selecciona un usuario")
+                bool = False
             Else
                 user.Username = LVListadoUsuarios.FocusedItem.SubItems(0).Text
                 user.Email = LVListadoUsuarios.FocusedItem.SubItems(1).Text
@@ -67,31 +81,44 @@
                 user.FechaNac = Convert.ToDateTime(LVListadoUsuarios.FocusedItem.SubItems(4).Text)
                 user.Rol = LVListadoUsuarios.FocusedItem.SubItems(5).Text
                 user.Id = Convert.ToInt32(LVListadoUsuarios.FocusedItem.SubItems(6).Text)
+                bool = True
             End If
         Catch ex As Exception
             MessageBox.Show("error interno")
         End Try
-    End Sub
+        Return bool
+    End Function
     'move'
     Public MoveForm As Boolean
     Public MoveForm_MousePosition As Point
     Public Sub MoveForm_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         If e.Button = MouseButtons.Left Then
             MoveForm = True
-            Me.Cursor = Cursors.NoMove2D
+            Cursor = Cursors.NoMove2D
             MoveForm_MousePosition = e.Location
         End If
     End Sub
     Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
         If MoveForm Then
-            Me.Location = Me.Location + (e.Location - MoveForm_MousePosition)
+            Location += (e.Location - MoveForm_MousePosition)
         End If
     End Sub
-
     Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
         If e.Button = MouseButtons.Left Then
             MoveForm = False
-            Me.Cursor = Cursors.Default
+            Cursor = Cursors.Default
+        End If
+    End Sub
+    Private Sub LVListadoUsuarios_ItemCheck(sender As Object, e As EventArgs) Handles LVListadoUsuarios.Click
+
+    End Sub
+    Private Sub LVListadoUsuarios_IstemCsheck(sender As Object, e As EventArgs) Handles LVListadoUsuarios.SelectedIndexChanged
+        Dim index = LVListadoUsuarios.FocusedItem.Index
+        Bool = -Bool
+        If Bool = -1 Then
+            BtnEliminar.Text = "Eliminar"
+        Else
+            BtnEliminar.Text = "Registrar"
         End If
     End Sub
 End Class

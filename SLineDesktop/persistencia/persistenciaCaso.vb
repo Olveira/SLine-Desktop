@@ -58,9 +58,10 @@
             Dim cmd = New Npgsql.NpgsqlCommand
             cmd.Connection = conection
 
-            Dim cadenaDeComandos = "SELECT * FROM _case WHERE "
+            Dim cadenaDeComandos = "SELECT * FROM _case WHERE id_usuario = @id_Usuario"
 
             cmd.CommandText = cadenaDeComandos
+            cmd.Parameters.Add("@id_Usuario", NpgsqlTypes.NpgsqlDbType.Integer).Value = idUsuario
             Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
             While Lector.Read()
                 Dim newCaso As New caso With {

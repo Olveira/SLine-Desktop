@@ -11,6 +11,10 @@
         Dim persistencia As New PersistenciaUsuario
         Return persistencia.PersistenciaLog(user, pass)
     End Function
+    Public Function BuscarPorUserEmail(UnEm As String, Selector As Boolean)
+        Dim persistencia As New PersistenciaUsuario
+        Return persistencia.BuscarPorUserEmail(UnEm, Selector)
+    End Function
     Public Sub ModificarUsuario(user As usuario)
         Dim persistencia As New PersistenciaUsuario
         persistencia.ModificarPersona(user)

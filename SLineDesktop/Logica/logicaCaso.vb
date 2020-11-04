@@ -1,13 +1,17 @@
 ﻿Public Class LogicaCaso
-    Public Function listarCaso() As List(Of caso)
+    Public Function ListarCasos()
         Dim persistencia As New PersistenciaCaso
         Return persistencia.ListarCasos()
     End Function
-    Public Sub eliminarCaso(idCaso As Integer)
+    Public Function ListarCasosUsuario(id As Integer)
+        Dim persistencia As New PersistenciaCaso
+        Return persistencia.ListarCasosUsuario(id)
+    End Function
+    Public Sub EliminarCaso(idCaso As Integer)
         Dim persistencia As New PersistenciaCaso
         persistencia.EliminarCaso(idCaso)
     End Sub
-    Public Function aceptarCasos(idCaso As Integer) As List(Of caso)
+    Public Function AceptarCasos(idCaso As Integer)
         Dim persistencia As New PersistenciaCaso
         persistencia.AceptarCasos(idCaso)
         Return persistencia.ListarCasos()

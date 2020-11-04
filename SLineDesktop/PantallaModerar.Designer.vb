@@ -86,7 +86,12 @@ Partial Class PantallaModerar
         '
         'ListaCasos
         '
+        Me.ListaCasos.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.ListaCasos.BackgroundImage = CType(resources.GetObject("ListaCasos.BackgroundImage"), System.Drawing.Image)
+        Me.ListaCasos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ListaCasos.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.IDCaso, Me.Desc, Me.IDUsuario, Me.Veri, Me.FechaReg})
+        Me.ListaCasos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ListaCasos.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListaCasos.FullRowSelect = True
         Me.ListaCasos.GridLines = True
         Me.ListaCasos.HideSelection = False
@@ -116,7 +121,7 @@ Partial Class PantallaModerar
         'Veri
         '
         Me.Veri.Text = "Verificado"
-        Me.Veri.Width = 78
+        Me.Veri.Width = 74
         '
         'FechaReg
         '
@@ -205,7 +210,7 @@ Partial Class PantallaModerar
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(650, 375)
+        Me.PictureBox1.Location = New System.Drawing.Point(650, 377)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(78, 78)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage

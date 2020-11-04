@@ -1,6 +1,7 @@
 ﻿Public Class PantallaModerar
     Private list As New List(Of caso)
-    Private CasoS As New caso
+    Private ReadOnly CasoS As New caso
+    Private Todos As Boolean = False
     Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnExitModerarCasos.Click
         PantallaListar.Show()
         Hide()
@@ -8,46 +9,10 @@
     Private Sub BtnMinimizeListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnMinimizeModerarCasos.Click
         WindowState = FormWindowState.Minimized
     End Sub
-    Private Sub TsmiListar_Click(sender As Object, e As EventArgs)
-        Try
-            PantallaListar.Show()
-            Me.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
-    Private Sub ListarCasos()
-        Try
-            ListaCasos.Items.Clear()
-
-            Dim logica As New LogicaCaso
-            list = logica.listarCaso()
-            Dim x As Integer
-            x = list.Count - 1
-            Dim item As ListViewItem
-            Dim arra(5) As String
-
-
-            While x <> -1
-                arra(0) = list(x).IdCaso
-                arra(1) = list(x).Descripcion
-                arra(2) = list(x).IdUsuario
-                arra(3) = list(x).Verificado
-                arra(4) = list(x).Fecharegistro
-
-                item = New ListViewItem(arra)
-                ListaCasos.Items.Add(item)
-                x -= 1
-            End While
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
     Private Sub MeLoad(sender As Object, e As EventArgs) Handles Me.Load
         Dim pantalla = Screen.PrimaryScreen
         Dim width = (pantalla.Bounds.Width / 2) - 370
         Location = New Point(width, 100)
-        ListarCasos()
     End Sub
     Private Sub BtnVerif_Click(sender As Object, e As EventArgs) Handles BtnAcep.Click
         Try
@@ -65,6 +30,64 @@
             Dim logicaEliminar As New LogicaCaso
             logicaEliminar.eliminarCaso(CasoS.IdCaso)
             ListarCasos()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Private Sub BtnTodos_Click(sender As Object, e As EventArgs) Handles BtnTodos.Click
+        If Todos Then
+            PantallaListar.Show()
+            Hide()
+        Else
+            ListarCasos()
+        End If
+    End Sub
+    Private Sub ListarCasos()
+        Todos = True
+        BtnTodos.Text = "Por Usuario"
+        Try
+            ListaCasos.Items.Clear()
+            Dim logica As New LogicaCaso
+            list = logica.ListarCasos()
+            Dim x As Integer
+            x = list.Count - 1
+            Dim item As ListViewItem
+            Dim arra(5) As String
+            While x <> -1
+                arra(0) = list(x).IdCaso
+                arra(1) = list(x).Descripcion
+                arra(2) = list(x).IdUsuario
+                arra(3) = list(x).Verificado
+                arra(4) = list(x).Fecharegistro
+                item = New ListViewItem(arra)
+                ListaCasos.Items.Add(item)
+                x -= 1
+            End While
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Public Sub ListarCasosUsuario(id As Integer)
+        Todos = False
+        BtnTodos.Text = "Todos"
+        Try
+            ListaCasos.Items.Clear()
+            Dim logica As New LogicaCaso
+            list = logica.ListarCasosUsuario(id)
+            Dim x As Integer
+            x = list.Count - 1
+            Dim item As ListViewItem
+            Dim arra(5) As String
+            While x <> -1
+                arra(0) = list(x).IdCaso
+                arra(1) = list(x).Descripcion
+                arra(2) = list(x).IdUsuario
+                arra(3) = list(x).Verificado
+                arra(4) = list(x).Fecharegistro
+                item = New ListViewItem(arra)
+                ListaCasos.Items.Add(item)
+                x -= 1
+            End While
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -109,5 +132,9 @@
             MoveForm = False
             Cursor = Cursors.Default
         End If
+    End Sub
+
+    Private Sub ListaCasos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListaCasos.SelectedIndexChanged
+
     End Sub
 End Class

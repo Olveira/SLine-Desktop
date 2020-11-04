@@ -7,12 +7,22 @@
     Private Sub BtnMinimizeMod_Click(sender As Object, e As EventArgs) Handles BtnMinimizeMod.Click
         WindowState = FormWindowState.Minimized
     End Sub
-    Private Sub PantallaEliminar_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub BtnBuscarMod_Click(sender As Object, e As EventArgs) Handles BtnBuscarMod.Click
+        Dim logica As New LogicaUsuario
+        If TbxUserMod.Text <> "" Then
+            SetUser(logica.BuscarPorUserEmail(TbxUserMod.Text, True))
+        ElseIf TbxEmailMod.Text <> "" Then
+            SetUser(logica.BuscarPorUserEmail(TbxEmailMod.Text, False))
+        End If
+    End Sub
+    Private Sub MeLoad_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim pantalla = Screen.PrimaryScreen
         Dim width = (pantalla.Bounds.Width / 2) - 370
         Location = New Point(width, 100)
+    End Sub
+    Public Sub SetUser(Usuario As usuario)
         Try
-            user = PantallaListar.user
+            user = Usuario
             TbxContraseñaMod.Text = user.Password
             TbxEmailMod.Text = user.Email
             TbxUserMod.Text = user.Username
@@ -37,6 +47,7 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
     'move'
     Public MoveForm As Boolean
     Public MoveForm_MousePosition As Point
@@ -49,20 +60,13 @@
     End Sub
     Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
         If MoveForm Then
-            Me.Location = Me.Location + (e.Location - MoveForm_MousePosition)
+            Location += e.Location - MoveForm_MousePosition
         End If
     End Sub
-
     Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
         If e.Button = MouseButtons.Left Then
             MoveForm = False
-            Me.Cursor = Cursors.Default
-        End If
-    End Sub
-
-    Private Sub BtnBuscarMod_Click(sender As Object, e As EventArgs) Handles BtnBuscarMod.Click
-        If TbxUserMod.Text <> "" Then
-
+            Cursor = Cursors.Default
         End If
     End Sub
 End Class

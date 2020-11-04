@@ -48,8 +48,12 @@ Partial Class PantallaListar
         '
         'LVListadoUsuarios
         '
+        Me.LVListadoUsuarios.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.LVListadoUsuarios.BackgroundImage = CType(resources.GetObject("LVListadoUsuarios.BackgroundImage"), System.Drawing.Image)
         Me.LVListadoUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.LVListadoUsuarios.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Username, Me.Email, Me.Password, Me.sexo, Me.FechaNac, Me.rol, Me.id})
+        Me.LVListadoUsuarios.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LVListadoUsuarios.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LVListadoUsuarios.FullRowSelect = True
         Me.LVListadoUsuarios.GridLines = True
         Me.LVListadoUsuarios.HideSelection = False
@@ -69,7 +73,7 @@ Partial Class PantallaListar
         'Email
         '
         Me.Email.Text = "Email"
-        Me.Email.Width = 190
+        Me.Email.Width = 201
         '
         'Password
         '
@@ -84,16 +88,17 @@ Partial Class PantallaListar
         'FechaNac
         '
         Me.FechaNac.Text = "FechaNac"
-        Me.FechaNac.Width = 93
+        Me.FechaNac.Width = 97
         '
         'rol
         '
         Me.rol.Text = "rol"
-        Me.rol.Width = 55
+        Me.rol.Width = 78
         '
         'id
         '
         Me.id.Text = "id"
+        Me.id.Width = 54
         '
         'Label1
         '
@@ -104,7 +109,7 @@ Partial Class PantallaListar
         Me.Label1.Location = New System.Drawing.Point(68, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(354, 58)
-        Me.Label1.TabIndex = 28
+        Me.Label1.TabIndex = 0
         Me.Label1.Text = "Listar Personas"
         '
         'BtnExitListarPersonas
@@ -168,7 +173,7 @@ Partial Class PantallaListar
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(199, 88)
         Me.BtnEliminar.TabIndex = 2
-        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.Text = "Registrar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
         '
         'BtnEditar
