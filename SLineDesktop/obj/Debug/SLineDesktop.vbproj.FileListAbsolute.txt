@@ -293,6 +293,6 @@ C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaMod
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Registro.resources
 C:\Proyecto\SLine-Desktop\SLineDesktop\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Proyecto\SLine-Desktop\SLineDesktop\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
-C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Inicio.resources
 C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Registro.resources
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Login.resources
+C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Login.resources

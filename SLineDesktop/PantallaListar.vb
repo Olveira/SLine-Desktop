@@ -1,6 +1,6 @@
 ﻿Public Class PantallaListar
     Public user As New usuario
-    Private Bool = 1
+    Private Bool As Boolean = False
     Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnExitListarPersonas.Click
         Welcome.Show()
         Hide()
@@ -66,13 +66,16 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+    Private Sub LVListadoUsuarios_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LVListadoUsuarios.SelectedIndexChanged
+        Bool = True
+        BtnEliminar.Text = "Eliminar"
+    End Sub
     Private Function TomarUsuarioLV()
-        Dim bool As Boolean
         Try
             Dim itemSelected = LVListadoUsuarios.SelectedItems.Count
             If itemSelected = 0 Then
                 MessageBox.Show("Primero selecciona un usuario")
-                bool = False
+                Bool = False
             Else
                 user.Username = LVListadoUsuarios.FocusedItem.SubItems(0).Text
                 user.Email = LVListadoUsuarios.FocusedItem.SubItems(1).Text
@@ -81,12 +84,12 @@
                 user.FechaNac = Convert.ToDateTime(LVListadoUsuarios.FocusedItem.SubItems(4).Text)
                 user.Rol = LVListadoUsuarios.FocusedItem.SubItems(5).Text
                 user.Id = Convert.ToInt32(LVListadoUsuarios.FocusedItem.SubItems(6).Text)
-                bool = True
+                Bool = True
             End If
         Catch ex As Exception
             MessageBox.Show("error interno")
         End Try
-        Return bool
+        Return Bool
     End Function
     'move'
     Public MoveForm As Boolean

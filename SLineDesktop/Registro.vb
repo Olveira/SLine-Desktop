@@ -5,16 +5,15 @@
     Dim sexo As String
     Dim fechaNac As Date
     Dim rol As String
-    Dim token As Integer
     Private Sub BtnExitRegistro_Click(sender As Object, e As EventArgs) Handles BtnExitRegistro.Click
         Welcome.Show()
-        Hide()
         Limpiar()
+        Hide()
     End Sub
     Private Sub BtnMinimizeRegistro_Click(sender As Object, e As EventArgs) Handles BtnMinimizeRegistro.Click
         WindowState = FormWindowState.Minimized
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAceptarReg.Click
+    Private Sub BtnAceptarReg_Click(sender As Object, e As EventArgs) Handles btnAceptarReg.Click
         Try
             username = TbxUserReg.Text
             email = TbxEmailReg.Text
@@ -27,19 +26,27 @@
             Dim logicaUsuario As New LogicaUsuario
             logicaUsuario.AltaUser(user)
             Login.Show()
+            Limpiar()
             Hide()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
     Private Sub MeClose(sender As Object, e As EventArgs) Handles Me.Closed
+        Limpiar()
         Dispose()
     End Sub
     Private Sub PantallaRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim pantalla = Screen.PrimaryScreen
         Dim width = (pantalla.Bounds.Width / 2) - 360
         Location = New Point(width, 100)
+        Limpiar()
+    End Sub
+    Private Sub Limpiar()
         Try
+            TextBox()
+            CbxSexo.Items.Clear()
+            CbxRol.Items.Clear()
             CbxSexo.Items.Add("Masculino")
             CbxSexo.Items.Add("Femenino")
             CbxSexo.Items.Add("Otro")
@@ -51,36 +58,28 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-    Private Sub Limpiar()
-        Try
-            TbxContraseñaReg.Text = ""
-            TbxEmailReg.Text = ""
-            TbxUserReg.Text = ""
-            CbxSexo.Items.Clear()
-            CbxRol.Items.Clear()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+    Private Sub TextBox()
+        TbxContraseñaReg.Text = "Contraseña"
+        TbxContraseñaReg.PasswordChar = ""
+        TbxContraseñaReg.ForeColor = Color.Gray
+        TbxUserReg.Text = "Nombre de Usuario"
+        TbxUserReg.ForeColor = Color.Gray
+        TbxEmailReg.Text = "Email"
+        TbxEmailReg.ForeColor = Color.Gray
     End Sub
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnback.Click
+    Private Sub Contraseña()
+        TbxContraseñaReg.Text = "Contraseña"
+        TbxContraseñaReg.PasswordChar = ""
+        TbxContraseñaReg.ForeColor = Color.Gray
+    End Sub
+    Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnback.Click
         Try
             Login.Show()
-            Me.Hide()
+            Contraseña()
+            Hide()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-    End Sub
-
-    Private Sub tbxUserReg_TextChanged(sender As Object, e As EventArgs) Handles TbxUserReg.Click
-        TbxUserReg.Text = ""
-    End Sub
-
-    Private Sub tbxEmailReg_TextChanged(sender As Object, e As EventArgs) Handles TbxEmailReg.Click
-        TbxEmailReg.Text = ""
-    End Sub
-
-    Private Sub tbxContraseñaReg1_TextChanged(sender As Object, e As EventArgs) Handles TbxContraseñaReg.Click
-        TbxContraseñaReg.Text = ""
     End Sub
     'textbox'
     Private Sub TbxUserReg_Enter(sender As Object, e As EventArgs) Handles TbxUserReg.Enter
@@ -89,24 +88,36 @@
             TbxUserReg.ForeColor = Color.Black
         End If
     End Sub
-    Private Sub TbxUserLog_Leave(sender As Object, e As EventArgs) Handles TbxUserReg.Leave
+    Private Sub TbxUserReg_Leave(sender As Object, e As EventArgs) Handles TbxUserReg.Leave
         If TbxUserReg.Text = "" Then
             TbxUserReg.Text = "Nombre de Usuario"
             TbxUserReg.ForeColor = Color.Gray
         End If
     End Sub
-    Private Sub TbxPasswordLog_Enter(sender As Object, e As EventArgs) Handles TbxContraseñaReg.Enter
-        If TbxContraseñaReg.Text = "Password" Then
+    Private Sub TbxPasswordReg_Enter(sender As Object, e As EventArgs) Handles TbxContraseñaReg.Enter
+        If TbxContraseñaReg.Text = "Contraseña" Then
             TbxContraseñaReg.Text = ""
             TbxContraseñaReg.ForeColor = Color.Black
             TbxContraseñaReg.PasswordChar = "*"
         End If
     End Sub
-    Private Sub TbxPasswordLog_Leave(sender As Object, e As EventArgs) Handles TbxContraseñaReg.Leave
+    Private Sub TbxPasswordReg_Leave(sender As Object, e As EventArgs) Handles TbxContraseñaReg.Leave
         If TbxContraseñaReg.Text = "" Then
-            TbxContraseñaReg.Text = "Password"
+            TbxContraseñaReg.Text = "Contraseña"
             TbxContraseñaReg.PasswordChar = ""
             TbxContraseñaReg.ForeColor = Color.Gray
+        End If
+    End Sub
+    Private Sub TbxEmailReg_Enter(sender As Object, e As EventArgs) Handles TbxEmailReg.Enter
+        If TbxEmailReg.Text = "Email" Then
+            TbxEmailReg.Text = ""
+            TbxEmailReg.ForeColor = Color.Black
+        End If
+    End Sub
+    Private Sub TbxEmailReg_Leave(sender As Object, e As EventArgs) Handles TbxEmailReg.Leave
+        If TbxEmailReg.Text = "" Then
+            TbxEmailReg.Text = "Email"
+            TbxEmailReg.ForeColor = Color.Gray
         End If
     End Sub
     'move'
@@ -118,7 +129,7 @@
 
         If e.Button = MouseButtons.Left Then
             MoveForm = True
-            Me.Cursor = Cursors.NoMove2D
+            Cursor = Cursors.NoMove2D
             MoveForm_MousePosition = e.Location
         End If
 
@@ -128,7 +139,7 @@
     MyBase.MouseMove ' Add more handles here (Example: PictureBox1.MouseMove)
 
         If MoveForm Then
-            Me.Location = Me.Location + (e.Location - MoveForm_MousePosition)
+            Location += e.Location - MoveForm_MousePosition
         End If
 
     End Sub
@@ -138,7 +149,7 @@
 
         If e.Button = MouseButtons.Left Then
             MoveForm = False
-            Me.Cursor = Cursors.Default
+            Cursor = Cursors.Default
         End If
 
     End Sub

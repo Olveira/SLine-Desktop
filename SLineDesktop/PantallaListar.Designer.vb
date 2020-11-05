@@ -156,6 +156,7 @@ Partial Class PantallaListar
         Me.BtnModerar.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnModerar.ForeColor = System.Drawing.Color.Snow
         Me.BtnModerar.Location = New System.Drawing.Point(401, 0)
+        Me.BtnModerar.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnModerar.Name = "BtnModerar"
         Me.BtnModerar.Size = New System.Drawing.Size(199, 88)
         Me.BtnModerar.TabIndex = 3
@@ -170,6 +171,7 @@ Partial Class PantallaListar
         Me.BtnEliminar.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEliminar.ForeColor = System.Drawing.Color.Snow
         Me.BtnEliminar.Location = New System.Drawing.Point(0, 0)
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(199, 88)
         Me.BtnEliminar.TabIndex = 2
@@ -184,6 +186,7 @@ Partial Class PantallaListar
         Me.BtnEditar.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEditar.ForeColor = System.Drawing.Color.Snow
         Me.BtnEditar.Location = New System.Drawing.Point(201, 0)
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(199, 88)
         Me.BtnEditar.TabIndex = 1

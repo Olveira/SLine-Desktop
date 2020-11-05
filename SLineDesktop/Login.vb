@@ -5,7 +5,7 @@
         Dim width = pantalla.Bounds.Width / 2 - 370
         Welcome.Show()
         TbxPasswordLog.Text = "Nombre de Usuario"
-        TbxUserLog.Text = "Contraseña"
+        Contraseña()
         Hide()
     End Sub
     Private Sub BtnMinimizeLogin_Click(sender As Object, e As EventArgs) Handles BtnMinimizeLogin.Click
@@ -19,14 +19,35 @@
 
             If niceLogIn Then
                 PantallaListar.Show()
+                Contraseña()
                 Hide()
             Else
-                TbxPasswordLog.Text = ""
+                Contraseña()
                 MessageBox.Show("Creenciales incorrectas")
             End If
         Catch ex As Exception
             MessageBox.Show("Fallo interno")
         End Try
+    End Sub
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+
+    End Sub
+    Private Sub Contraseña()
+        TbxPasswordLog.Text = "Contraseña"
+        TbxPasswordLog.PasswordChar = ""
+        TbxPasswordLog.ForeColor = Color.Gray
+    End Sub
+    Private Sub MeLoad(sender As Object, e As EventArgs) Handles Me.Load
+        Dim pantalla = Screen.PrimaryScreen
+        Dim width = (pantalla.Bounds.Width / 2) - 360
+        Location = New Point(width, 100)
+        TbxUserLog.Text = "Nombre de Usuario"
+        Contraseña()
+    End Sub
+    Private Sub Registrar_Click(sender As Object, e As EventArgs) Handles Registrar.Click
+        Registro.Show()
+        Contraseña()
+        Hide()
     End Sub
     'textbox'
     Private Sub TbxUserLog_Enter(sender As Object, e As EventArgs) Handles TbxUserLog.Enter
@@ -50,48 +71,29 @@
     End Sub
     Private Sub TbxPasswordLog_Leave(sender As Object, e As EventArgs) Handles TbxPasswordLog.Leave
         If TbxPasswordLog.Text = "" Then
-            TbxPasswordLog.Text = "Contraseña"
-            TbxPasswordLog.PasswordChar = ""
-            TbxPasswordLog.ForeColor = Color.Gray
+            Contraseña()
         End If
     End Sub
-
-    Private Sub Registrar_Click(sender As Object, e As EventArgs) Handles Registrar.Click
-        Registro.Show()
-        Hide()
-    End Sub
-    Private Sub MeLoad(sender As Object, e As EventArgs) Handles Me.Load
-        Dim pantalla = Screen.PrimaryScreen
-        Dim width = (pantalla.Bounds.Width / 2) - 360
-        Location = New Point(width, 100)
-        TbxUserLog.Text = "Nombre de Usuario"
-        TbxPasswordLog.Text = "Contraseña"
-    End Sub
-
     'move'
     Public MoveForm As Boolean
     Public MoveForm_MousePosition As Point
     Public Sub MoveForm_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         If e.Button = MouseButtons.Left Then
             MoveForm = True
-            Me.Cursor = Cursors.NoMove2D
+            Cursor = Cursors.NoMove2D
             MoveForm_MousePosition = e.Location
         End If
     End Sub
     Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
         If MoveForm Then
-            Me.Location = Me.Location + (e.Location - MoveForm_MousePosition)
+            Location += e.Location - MoveForm_MousePosition
         End If
     End Sub
 
     Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
         If e.Button = MouseButtons.Left Then
             MoveForm = False
-            Me.Cursor = Cursors.Default
+            Cursor = Cursors.Default
         End If
-    End Sub
-
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-
     End Sub
 End Class
