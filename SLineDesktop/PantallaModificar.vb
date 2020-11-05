@@ -65,7 +65,7 @@
     Public Sub MoveForm_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         If e.Button = MouseButtons.Left Then
             MoveForm = True
-            Me.Cursor = Cursors.NoMove2D
+            Cursor = Cursors.NoMove2D
             MoveForm_MousePosition = e.Location
         End If
     End Sub
