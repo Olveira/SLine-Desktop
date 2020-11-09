@@ -23,14 +23,14 @@
                 Hide()
             Else
                 Contraseña()
-                MessageBox.Show("Creenciales incorrectas")
+                MessageBox.Show("Creenciales incorrectas", "Alerta")
             End If
         Catch ex As Exception
-            MessageBox.Show("Fallo interno")
+            MessageBox.Show("Fallo interno", "Alerta")
         End Try
     End Sub
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-
+        System.Diagnostics.Process.Start("https://support.google.com/")
     End Sub
     Private Sub Contraseña()
         TbxPasswordLog.Text = "Contraseña"

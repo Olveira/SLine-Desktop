@@ -2,9 +2,10 @@
     Public Function AbrirConexion() As Npgsql.NpgsqlConnection
         Dim conexionPg As Npgsql.NpgsqlConnection
         Try
-            conexionPg = New Npgsql.NpgsqlConnection()
             'Cambiar conexión dependiendo del puerto que tenga cada quien la DB'
-            conexionPg.ConnectionString = "Server=localhost;Port=5432;User Id='postgres';Password='root';Database=sline"
+            conexionPg = New Npgsql.NpgsqlConnection With {
+                .ConnectionString = "Server=10.1.14.144;Port=5432;User Id='postgres';Password='root';Database=sline"
+            }
             conexionPg.Open()
         Catch ex As Exception
             Throw ex

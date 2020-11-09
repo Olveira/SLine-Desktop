@@ -29,7 +29,7 @@
             Limpiar()
             Hide()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "Alerta")
         End Try
     End Sub
     Private Sub MeClose(sender As Object, e As EventArgs) Handles Me.Closed
@@ -55,7 +55,7 @@
             CbxRol.Text = "Rol"
             CbxSexo.Text = "Sexo"
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "Alerta")
         End Try
     End Sub
     Private Sub TextBox()
@@ -78,7 +78,7 @@
             Contraseña()
             Hide()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "Alerta")
         End Try
     End Sub
     'textbox'
@@ -123,34 +123,22 @@
     'move'
     Public MoveForm As Boolean
     Public MoveForm_MousePosition As Point
-
-    Public Sub MoveForm_MouseDown(sender As Object, e As MouseEventArgs) Handles _
-    MyBase.MouseDown ' Add more handles here (Example: PictureBox1.MouseDown)
-
+    Public Sub MoveForm_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         If e.Button = MouseButtons.Left Then
             MoveForm = True
             Cursor = Cursors.NoMove2D
             MoveForm_MousePosition = e.Location
         End If
-
     End Sub
-
-    Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles _
-    MyBase.MouseMove ' Add more handles here (Example: PictureBox1.MouseMove)
-
+    Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
         If MoveForm Then
             Location += e.Location - MoveForm_MousePosition
         End If
-
     End Sub
-
-    Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles _
-    MyBase.MouseUp ' Add more handles here (Example: PictureBox1.MouseUp)
-
+    Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
         If e.Button = MouseButtons.Left Then
             MoveForm = False
             Cursor = Cursors.Default
         End If
-
     End Sub
 End Class

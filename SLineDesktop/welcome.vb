@@ -6,20 +6,13 @@
         WindowState = FormWindowState.Minimized
     End Sub
     Private Sub btnGoRegistrar_Click(sender As Object, e As EventArgs) Handles btnGoRegistrar.Click
-        Try
-            Registro.Show()
-            Me.Hide()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        Registro.Show()
+        Hide()
     End Sub
     Private Sub BtnGoLogin_Click(sender As Object, e As EventArgs) Handles btnGoLogin.Click
-        Try
-            Login.Show()
-            Me.Hide()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+
+        Login.Show()
+            Hide()
     End Sub
     Private Sub MeLoad(sender As Object, e As EventArgs) Handles Me.Load
         Dim pantalla = Screen.PrimaryScreen
@@ -30,33 +23,22 @@
     Public MoveForm As Boolean
     Public MoveForm_MousePosition As Point
 
-    Public Sub MoveForm_MouseDown(sender As Object, e As MouseEventArgs) Handles _
-    MyBase.MouseDown ' Add more handles here (Example: PictureBox1.MouseDown)
-
+    Public Sub MoveForm_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         If e.Button = MouseButtons.Left Then
             MoveForm = True
-            Me.Cursor = Cursors.NoMove2D
+            Cursor = Cursors.NoMove2D
             MoveForm_MousePosition = e.Location
         End If
-
     End Sub
-
-    Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles _
-    MyBase.MouseMove ' Add more handles here (Example: PictureBox1.MouseMove)
-
+    Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
         If MoveForm Then
-            Me.Location = Me.Location + (e.Location - MoveForm_MousePosition)
+            Location += e.Location - MoveForm_MousePosition
         End If
-
     End Sub
-
-    Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles _
-    MyBase.MouseUp ' Add more handles here (Example: PictureBox1.MouseUp)
-
+    Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
         If e.Button = MouseButtons.Left Then
             MoveForm = False
-            Me.Cursor = Cursors.Default
+            Cursor = Cursors.Default
         End If
-
     End Sub
 End Class

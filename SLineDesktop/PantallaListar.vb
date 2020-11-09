@@ -3,10 +3,13 @@
     Private Bool As Boolean = False
     Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnExitListarPersonas.Click
         Welcome.Show()
-        Hide()
+        Close()
     End Sub
     Private Sub BtnMinimizeListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnMinimizeListarPersonas.Click
         WindowState = FormWindowState.Minimized
+    End Sub
+    Private Sub MeClose(sender As Object, e As EventArgs) Handles Me.Closed
+        Dispose()
     End Sub
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         If TomarUsuarioLV() Then
@@ -19,15 +22,19 @@
         End If
     End Sub
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
-        If Bool Then
-            TomarUsuarioLV()
-            Dim logica As New LogicaUsuario
-            logica.EliminarUsuario(user.Id)
-            ListarUsuarios()
-        Else
-            Registro.Show()
-            Hide()
-        End If
+        Try
+            If Bool Then
+                TomarUsuarioLV()
+                Dim logica As New LogicaUsuario
+                logica.EliminarUsuario(user.Id)
+                ListarUsuarios()
+            Else
+                Registro.Show()
+                Hide()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Alerta")
+        End Try
     End Sub
     Private Sub BtnModerar_Click(sender As Object, e As EventArgs) Handles BtnModerar.Click
         If TomarUsuarioLV() Then
@@ -63,7 +70,7 @@
                 i -= 1
             End While
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "Alerta")
         End Try
     End Sub
     Private Sub LVListadoUsuarios_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LVListadoUsuarios.SelectedIndexChanged
@@ -87,7 +94,7 @@
                 Bool = True
             End If
         Catch ex As Exception
-            MessageBox.Show("error interno")
+            MessageBox.Show("error interno", "Alerta")
         End Try
         Return Bool
     End Function
@@ -103,7 +110,7 @@
     End Sub
     Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
         If MoveForm Then
-            Location += (e.Location - MoveForm_MousePosition)
+            Location += e.Location - MoveForm_MousePosition
         End If
     End Sub
     Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp

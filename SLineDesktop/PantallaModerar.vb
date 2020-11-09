@@ -21,7 +21,7 @@
             logicaAceptar.aceptarCasos(CasoS.IdCaso)
             ListarCasos()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "Alerta")
         End Try
     End Sub
     Private Sub BtnDec_Click(sender As Object, e As EventArgs) Handles BtnDec.Click
@@ -64,7 +64,7 @@
                 x -= 1
             End While
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "Alerta")
         End Try
     End Sub
     Public Sub ListarCasosUsuario(id As Integer)
@@ -89,7 +89,7 @@
                 x -= 1
             End While
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "Alerta")
         End Try
     End Sub
     Private Sub CasoSelected()
@@ -105,7 +105,7 @@
                 CasoS.Fecharegistro = Convert.ToDateTime(ListaCasos.FocusedItem.SubItems(4).Text)
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "Alerta")
         End Try
     End Sub
     Private Sub MeClosed(sender As Object, e As EventArgs) Handles Me.Closed
@@ -132,9 +132,5 @@
             MoveForm = False
             Cursor = Cursors.Default
         End If
-    End Sub
-
-    Private Sub ListaCasos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListaCasos.SelectedIndexChanged
-
     End Sub
 End Class
