@@ -1,9 +1,16 @@
 ﻿Public Class PantallaListar
+    Public userLog As New usuario
     Public user As New usuario
     Private Bool As Boolean = False
     Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnExitListarPersonas.Click
         Welcome.Show()
+        LogUser(userLog.Username, userLog.Id, False)
         Close()
+    End Sub
+    Public Sub LogUser(nombre As String, id As Integer, log As Boolean)
+        userLog.Id = id
+        userLog.Username = nombre
+        userLog.Log = log
     End Sub
     Private Sub BtnMinimizeListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnMinimizeListarPersonas.Click
         WindowState = FormWindowState.Minimized
@@ -13,12 +20,16 @@
     End Sub
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         If TomarUsuarioLV() Then
-            PantallaModificar.Show()
-            PantallaModificar.SetUser(user)
-            Hide()
+            If userLog.Log Then
+                PantallaModificar.Show()
+                PantallaModificar.SetUser(user)
+                Hide()
+            End If
         Else
-            PantallaModificar.Show()
-            Hide()
+            If userLog.Log Then
+                PantallaModificar.Show()
+                Hide()
+            End If
         End If
     End Sub
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
@@ -38,9 +49,11 @@
     End Sub
     Private Sub BtnModerar_Click(sender As Object, e As EventArgs) Handles BtnModerar.Click
         If TomarUsuarioLV() Then
-            PantallaModerar.Show()
-            PantallaModerar.ListarCasosUsuario(user.Id)
-            Hide()
+            If userLog.Log Then
+                PantallaModerar.Show()
+                PantallaModerar.ListarCasosUsuario(user.Id)
+                Hide()
+            End If
         End If
     End Sub
     Private Sub PantallaListar_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -54,7 +67,7 @@
         Try
             LVListadoUsuarios.Items.Clear()
             Dim logica As New LogicaUsuario
-            Dim lista = logica.listarPersona()
+            Dim lista = logica.ListarPersona()
             Dim i = lista.Count - 1
             Dim arra(7) As String
             While i <> -1

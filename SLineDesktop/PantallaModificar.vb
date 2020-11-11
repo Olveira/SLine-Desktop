@@ -2,6 +2,7 @@
     Public user As New usuario
     Private Sub BtnExitMod_Click(sender As Object, e As EventArgs) Handles BtnExitMod.Click
         PantallaListar.Show()
+        PantallaListar.ListarUsuarios()
         Limpiar()
         Hide()
     End Sub
@@ -44,7 +45,14 @@
             user.Email = tbxEmailMod.Text
             user.FechaNac = DTPFechaNacMod.Value
             user.Sexo = cbxSexoMod.Text
-            user.Rol = cbxRolMod.Text
+            user.Rol = CbxRolMod.Text
+            If TbxContraseñaMod.Text = "Contraseña" Then
+                MessageBox.Show("No escribiste tu contraseña")
+            ElseIf TbxContraseñaMod.Text = "" Then
+                MessageBox.Show("escribi algo")
+            Else
+                user.Password = TbxContraseñaMod.Text
+            End If
             user.Password = tbxContraseñaMod.Text
             user.Username = tbxUserMod.Text
             Dim logica As New LogicaUsuario

@@ -6,6 +6,7 @@
     Private _fechaNac As Date
     Private _rol As String
     Private _id As Integer
+    Private _log As Boolean
 
     Public Property Username As String
         Get
@@ -63,7 +64,14 @@
             _id = value
         End Set
     End Property
-
+    Public Property Log As Boolean
+        Get
+            Return _log
+        End Get
+        Set(value As Boolean)
+            _log = value
+        End Set
+    End Property
     Public Sub New(username As String, email As String, password As String, sexo As String, fechaNac As Date, rol As String)
         _username = username
         _email = email

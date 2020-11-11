@@ -19,6 +19,7 @@
 
             If niceLogIn Then
                 PantallaListar.Show()
+                PantallaListar.userLog.Log = True
                 Contraseña()
                 Hide()
             Else

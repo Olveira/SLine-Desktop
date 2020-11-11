@@ -4,7 +4,7 @@
         Try
             'Cambiar conexión dependiendo del puerto que tenga cada quien la DB'
             conexionPg = New Npgsql.NpgsqlConnection With {
-                .ConnectionString = "Server=10.1.14.144;Port=5432;User Id='postgres';Password='root';Database=sline"
+                .ConnectionString = "Server=localhost;Port=5432;User Id='postgres';Password='root';Database=sline"
             }
             conexionPg.Open()
         Catch ex As Exception
