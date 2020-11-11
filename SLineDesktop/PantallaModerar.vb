@@ -27,20 +27,15 @@
     Private Sub BtnDec_Click(sender As Object, e As EventArgs) Handles BtnDec.Click
         Try
             CasoSelected()
-            Dim Msg, Style, Title, Help, Ctxt, Response, MyString
-            Msg = "Alert"
-            Style = vbYesNo + vbCritical + vbDefaultButton2    ' Define buttons.
-            Title = "¿Seguro que quieres Declinar?"    ' Define title.
-            Help = "DEMO.HLP"    ' Define Help file.
-            Ctxt = 1000    ' Define topic context. 
-            ' Display message.
+            Dim Msg, Style, Title, Response
+            Msg = "¿Seguro que quieres Declinar?"
+            Style = vbOKCancel + vbCritical + vbDefaultButton1
+            Title = "Alert"
             Response = MsgBox(Msg, Style, Title)
-            If Response = vbYes Then
-
-            Else
+            If Response = vbOK Then
                 Dim logicaEliminar As New LogicaCaso
                 logicaEliminar.EliminarCaso(CasoS.IdCaso)
-                MyString = "No"
+            Else
             End If
             ListarCasos()
         Catch ex As Exception
