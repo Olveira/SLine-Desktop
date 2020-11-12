@@ -186,7 +186,7 @@ Partial Class PantallaListar
         Me.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEditar.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEditar.ForeColor = System.Drawing.Color.Snow
-        Me.BtnEditar.Location = New System.Drawing.Point(201, 0)
+        Me.BtnEditar.Location = New System.Drawing.Point(199, 0)
         Me.BtnEditar.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(199, 88)
