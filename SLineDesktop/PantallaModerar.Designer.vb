@@ -40,6 +40,7 @@ Partial Class PantallaModerar
         Me.BtnExitModerarCasos = New System.Windows.Forms.Button()
         Me.BtnMinimizeModerarCasos = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -217,6 +218,18 @@ Partial Class PantallaModerar
         Me.PictureBox1.TabIndex = 34
         Me.PictureBox1.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(704, 68)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(24, 24)
+        Me.Button1.TabIndex = 35
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'PantallaModerar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -225,6 +238,7 @@ Partial Class PantallaModerar
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(740, 465)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.BtnExitModerarCasos)
         Me.Controls.Add(Me.BtnMinimizeModerarCasos)
@@ -257,4 +271,5 @@ Partial Class PantallaModerar
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents LineShape2 As PowerPacks.LineShape
     Friend WithEvents LineShape1 As PowerPacks.LineShape
+    Friend WithEvents Button1 As Button
 End Class

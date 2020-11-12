@@ -119,6 +119,9 @@
     Private Sub MeClosed(sender As Object, e As EventArgs) Handles Me.Closed
         PantallaListar.Show()
     End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ListarCasos()
+    End Sub
     'move'
     Public MoveForm As Boolean
     Public MoveForm_MousePosition As Point
