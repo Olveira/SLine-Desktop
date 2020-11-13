@@ -118,6 +118,7 @@ Partial Class PantallaListar
         Me.BtnExitListarPersonas.BackColor = System.Drawing.Color.Transparent
         Me.BtnExitListarPersonas.BackgroundImage = CType(resources.GetObject("BtnExitListarPersonas.BackgroundImage"), System.Drawing.Image)
         Me.BtnExitListarPersonas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExitListarPersonas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.BtnExitListarPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnExitListarPersonas.Location = New System.Drawing.Point(704, 12)
         Me.BtnExitListarPersonas.Name = "BtnExitListarPersonas"
@@ -130,6 +131,7 @@ Partial Class PantallaListar
         Me.BtnMinimizeListarPersonas.BackColor = System.Drawing.Color.Transparent
         Me.BtnMinimizeListarPersonas.BackgroundImage = CType(resources.GetObject("BtnMinimizeListarPersonas.BackgroundImage"), System.Drawing.Image)
         Me.BtnMinimizeListarPersonas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizeListarPersonas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.BtnMinimizeListarPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnMinimizeListarPersonas.Location = New System.Drawing.Point(674, 12)
         Me.BtnMinimizeListarPersonas.Name = "BtnMinimizeListarPersonas"
@@ -238,6 +240,7 @@ Partial Class PantallaListar
         Me.Button1.BackColor = System.Drawing.Color.Transparent
         Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(704, 68)
         Me.Button1.Name = "Button1"

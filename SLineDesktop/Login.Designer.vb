@@ -163,6 +163,7 @@ Partial Class Login
         Me.BtnMinimizeLogin.BackColor = System.Drawing.Color.Transparent
         Me.BtnMinimizeLogin.BackgroundImage = CType(resources.GetObject("BtnMinimizeLogin.BackgroundImage"), System.Drawing.Image)
         Me.BtnMinimizeLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizeLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.BtnMinimizeLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnMinimizeLogin.Location = New System.Drawing.Point(654, 12)
         Me.BtnMinimizeLogin.Name = "BtnMinimizeLogin"
@@ -175,6 +176,7 @@ Partial Class Login
         Me.BtnExitLogin.BackColor = System.Drawing.Color.Transparent
         Me.BtnExitLogin.BackgroundImage = CType(resources.GetObject("BtnExitLogin.BackgroundImage"), System.Drawing.Image)
         Me.BtnExitLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExitLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.BtnExitLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnExitLogin.Location = New System.Drawing.Point(684, 12)
         Me.BtnExitLogin.Name = "BtnExitLogin"

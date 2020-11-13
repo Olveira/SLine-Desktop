@@ -188,6 +188,7 @@ Partial Class PantallaModerar
         Me.BtnExitModerarCasos.BackColor = System.Drawing.Color.Transparent
         Me.BtnExitModerarCasos.BackgroundImage = CType(resources.GetObject("BtnExitModerarCasos.BackgroundImage"), System.Drawing.Image)
         Me.BtnExitModerarCasos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExitModerarCasos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.BtnExitModerarCasos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnExitModerarCasos.Location = New System.Drawing.Point(704, 12)
         Me.BtnExitModerarCasos.Name = "BtnExitModerarCasos"
@@ -200,6 +201,7 @@ Partial Class PantallaModerar
         Me.BtnMinimizeModerarCasos.BackColor = System.Drawing.Color.Transparent
         Me.BtnMinimizeModerarCasos.BackgroundImage = CType(resources.GetObject("BtnMinimizeModerarCasos.BackgroundImage"), System.Drawing.Image)
         Me.BtnMinimizeModerarCasos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizeModerarCasos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.BtnMinimizeModerarCasos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnMinimizeModerarCasos.Location = New System.Drawing.Point(674, 12)
         Me.BtnMinimizeModerarCasos.Name = "BtnMinimizeModerarCasos"
@@ -223,6 +225,7 @@ Partial Class PantallaModerar
         Me.Button1.BackColor = System.Drawing.Color.Transparent
         Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(704, 68)
         Me.Button1.Name = "Button1"

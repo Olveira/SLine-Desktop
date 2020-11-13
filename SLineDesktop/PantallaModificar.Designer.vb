@@ -33,10 +33,10 @@ Partial Class PantallaModificar
         Me.CbxRolMod = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BtnBuscarMod = New System.Windows.Forms.Button()
-        Me.BtnExitMod = New System.Windows.Forms.Button()
-        Me.BtnMinimizeMod = New System.Windows.Forms.Button()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.BtnExitMod = New System.Windows.Forms.Button()
+        Me.BtnMinimizeMod = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -166,30 +166,6 @@ Partial Class PantallaModificar
         Me.BtnBuscarMod.Text = "Buscar(Un, Em)"
         Me.BtnBuscarMod.UseVisualStyleBackColor = True
         '
-        'BtnExitMod
-        '
-        Me.BtnExitMod.BackColor = System.Drawing.Color.Transparent
-        Me.BtnExitMod.BackgroundImage = CType(resources.GetObject("BtnExitMod.BackgroundImage"), System.Drawing.Image)
-        Me.BtnExitMod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnExitMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnExitMod.Location = New System.Drawing.Point(684, 12)
-        Me.BtnExitMod.Name = "BtnExitMod"
-        Me.BtnExitMod.Size = New System.Drawing.Size(24, 24)
-        Me.BtnExitMod.TabIndex = 35
-        Me.BtnExitMod.UseVisualStyleBackColor = False
-        '
-        'BtnMinimizeMod
-        '
-        Me.BtnMinimizeMod.BackColor = System.Drawing.Color.Transparent
-        Me.BtnMinimizeMod.BackgroundImage = CType(resources.GetObject("BtnMinimizeMod.BackgroundImage"), System.Drawing.Image)
-        Me.BtnMinimizeMod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnMinimizeMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMinimizeMod.Location = New System.Drawing.Point(654, 12)
-        Me.BtnMinimizeMod.Name = "BtnMinimizeMod"
-        Me.BtnMinimizeMod.Size = New System.Drawing.Size(24, 24)
-        Me.BtnMinimizeMod.TabIndex = 34
-        Me.BtnMinimizeMod.UseVisualStyleBackColor = False
-        '
         'ShapeContainer1
         '
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
@@ -208,6 +184,32 @@ Partial Class PantallaModificar
         Me.LineShape1.X2 = 218
         Me.LineShape1.Y1 = 0
         Me.LineShape1.Y2 = 88
+        '
+        'BtnExitMod
+        '
+        Me.BtnExitMod.BackColor = System.Drawing.Color.Transparent
+        Me.BtnExitMod.BackgroundImage = CType(resources.GetObject("BtnExitMod.BackgroundImage"), System.Drawing.Image)
+        Me.BtnExitMod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExitMod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.BtnExitMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnExitMod.Location = New System.Drawing.Point(684, 12)
+        Me.BtnExitMod.Name = "BtnExitMod"
+        Me.BtnExitMod.Size = New System.Drawing.Size(24, 24)
+        Me.BtnExitMod.TabIndex = 35
+        Me.BtnExitMod.UseVisualStyleBackColor = False
+        '
+        'BtnMinimizeMod
+        '
+        Me.BtnMinimizeMod.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMinimizeMod.BackgroundImage = CType(resources.GetObject("BtnMinimizeMod.BackgroundImage"), System.Drawing.Image)
+        Me.BtnMinimizeMod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizeMod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.BtnMinimizeMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMinimizeMod.Location = New System.Drawing.Point(654, 12)
+        Me.BtnMinimizeMod.Name = "BtnMinimizeMod"
+        Me.BtnMinimizeMod.Size = New System.Drawing.Size(24, 24)
+        Me.BtnMinimizeMod.TabIndex = 34
+        Me.BtnMinimizeMod.UseVisualStyleBackColor = False
         '
         'PantallaModificar
         '

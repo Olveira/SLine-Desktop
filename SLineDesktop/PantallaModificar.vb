@@ -11,9 +11,9 @@
     End Sub
     Private Sub BtnBuscarMod_Click(sender As Object, e As EventArgs) Handles BtnBuscarMod.Click
         Dim logica As New LogicaUsuario
-        If TbxUserMod.Text <> "" Then
+        If TbxUserMod.Text <> "Nombre de Usuario" Then
             SetUser(logica.BuscarPorUserEmail(TbxUserMod.Text, True))
-        ElseIf TbxEmailMod.Text <> "" Then
+        ElseIf TbxEmailMod.Text <> "Email" Then
             SetUser(logica.BuscarPorUserEmail(TbxEmailMod.Text, False))
         End If
     End Sub
