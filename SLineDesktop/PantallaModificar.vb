@@ -27,7 +27,7 @@
         Try
             user = Usuario
             If user.Email = "" Then
-                MessageBox.Show("No Existe el Usuario")
+                MessageBox.Show("No Existe el Usuario", "Alerta")
                 Limpiar()
             Else
                 TbxEmailMod.Text = user.Email
@@ -35,6 +35,9 @@
                 CbxRolMod.Text = user.Rol
                 CbxSexoMod.Text = user.Sexo
                 DTPFechaNacMod.Value = user.FechaNac
+                TbxContraseñaMod.ForeColor = Color.Gray
+                TbxUserMod.ForeColor = Color.Gray
+                TbxEmailMod.ForeColor = Color.Gray
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)

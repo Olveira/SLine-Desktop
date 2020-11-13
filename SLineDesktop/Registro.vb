@@ -7,6 +7,7 @@
     Dim rol As String
     Private Sub BtnExitRegistro_Click(sender As Object, e As EventArgs) Handles BtnExitRegistro.Click
         Welcome.Show()
+        PantallaListar.user.Log = False
         Limpiar()
         Hide()
     End Sub
