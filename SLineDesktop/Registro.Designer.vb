@@ -200,6 +200,7 @@ Partial Class Registro
         Me.BtnMinimizeRegistro.BackColor = System.Drawing.Color.Transparent
         Me.BtnMinimizeRegistro.BackgroundImage = CType(resources.GetObject("BtnMinimizeRegistro.BackgroundImage"), System.Drawing.Image)
         Me.BtnMinimizeRegistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizeRegistro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.BtnMinimizeRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnMinimizeRegistro.Location = New System.Drawing.Point(654, 12)
         Me.BtnMinimizeRegistro.Name = "BtnMinimizeRegistro"
@@ -212,6 +213,7 @@ Partial Class Registro
         Me.BtnExitRegistro.BackColor = System.Drawing.Color.Transparent
         Me.BtnExitRegistro.BackgroundImage = CType(resources.GetObject("BtnExitRegistro.BackgroundImage"), System.Drawing.Image)
         Me.BtnExitRegistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExitRegistro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.BtnExitRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnExitRegistro.Location = New System.Drawing.Point(684, 12)
         Me.BtnExitRegistro.Name = "BtnExitRegistro"
