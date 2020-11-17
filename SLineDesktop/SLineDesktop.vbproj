@@ -155,6 +155,12 @@
     <Compile Include="PantallaListar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PantallaOrganizacion.Designer.vb">
+      <DependentUpon>PantallaOrganizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaOrganizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registro.Designer.vb">
       <DependentUpon>Registro.vb</DependentUpon>
     </Compile>
@@ -202,6 +208,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaOrganizacion.resx">
+      <DependentUpon>PantallaOrganizacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.vb</DependentUpon>

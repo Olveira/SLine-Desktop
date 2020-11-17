@@ -4,6 +4,7 @@
     Private Todos As Boolean = False
     Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnExitModerarCasos.Click
         PantallaListar.Show()
+        PantallaListar.ListarUsuarios()
         Hide()
     End Sub
     Private Sub BtnMinimizeListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnMinimizeModerarCasos.Click

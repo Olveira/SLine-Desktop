@@ -45,9 +45,9 @@
     End Sub
     Private Sub BtnAceptarMod_Click(sender As Object, e As EventArgs) Handles BtnAceptarMod.Click
         Try
-            user.Email = tbxEmailMod.Text
+            user.Email = TbxEmailMod.Text
             user.FechaNac = DTPFechaNacMod.Value
-            user.Sexo = cbxSexoMod.Text
+            user.Sexo = CbxSexoMod.Text
             user.Rol = CbxRolMod.Text
             If TbxContraseñaMod.Text = "Contraseña" Then
                 MessageBox.Show("No escribiste tu contraseña", "Alerta")

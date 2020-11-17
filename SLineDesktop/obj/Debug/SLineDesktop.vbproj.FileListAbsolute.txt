@@ -296,3 +296,4 @@ C:\Proyecto\SLine-Desktop\SLineDesktop\bin\Debug\Microsoft.VisualBasic.PowerPack
 C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Registro.resources
 C:\Proyectos\sline\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Login.resources
 C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.Login.resources
+C:\Proyecto\SLine-Desktop\SLineDesktop\obj\Debug\SLineDesktop.PantallaOrganizacion.resources
