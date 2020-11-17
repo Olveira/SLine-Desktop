@@ -2,6 +2,7 @@
     Public userLog As New usuario
     Public user As New usuario
     Private Bool As Boolean = False
+    Private list As List(Of usuario)
     Private Sub BtnExitListarPersonas_Click(sender As Object, e As EventArgs) Handles BtnExitListarPersonas.Click
         Welcome.Show()
         LogUser(userLog.Username, userLog.Id, False)
@@ -36,11 +37,13 @@
         Try
             If Bool Then
                 TomarUsuarioLV()
-                Dim logica As New LogicaUsuario
-                logica.EliminarUsuario(user.Id)
-                ListarUsuarios()
+                If Bool Then
+                    Dim logica As New LogicaUsuario
+                    logica.EliminarUsuario(user.Id)
+                    ListarUsuarios()
+                End If
             Else
-                Registro.Show()
+                    Registro.Show()
                 Hide()
             End If
         Catch ex As Exception
@@ -67,21 +70,20 @@
         Try
             LVListadoUsuarios.Items.Clear()
             Dim logica As New LogicaUsuario
-            Dim lista = logica.ListarPersona()
-            Dim i = lista.Count - 1
+            list = logica.ListarPersona()
+
             Dim arra(7) As String
-            While i <> -1
-                arra(0) = lista(i).Username
-                arra(1) = lista(i).Email
-                arra(2) = lista(i).Password
-                arra(3) = lista(i).Sexo
-                arra(4) = lista(i).FechaNac
-                arra(5) = lista(i).Rol
-                arra(6) = lista(i).Id.ToString
+            For i As Integer = 0 To list.Count - 1
+                arra(0) = list(i).Username
+                arra(1) = list(i).Email
+                arra(2) = list(i).Password
+                arra(3) = list(i).Sexo
+                arra(4) = list(i).FechaNac
+                arra(5) = list(i).Rol
+                arra(6) = list(i).Id.ToString
                 Dim item = New ListViewItem(arra)
                 LVListadoUsuarios.Items.Add(item)
-                i -= 1
-            End While
+            Next
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Alerta")
         End Try
@@ -92,22 +94,29 @@
     End Sub
     Private Function TomarUsuarioLV()
         Try
+            Dim index = LVListadoUsuarios.FocusedItem.Index
             Dim itemSelected = LVListadoUsuarios.SelectedItems.Count
             If itemSelected = 0 Then
-                MessageBox.Show("Primero selecciona un usuario")
+                MessageBox.Show("Primero selecciona un usuario", "Alerta")
                 Bool = False
             Else
-                user.Username = LVListadoUsuarios.FocusedItem.SubItems(0).Text
-                user.Email = LVListadoUsuarios.FocusedItem.SubItems(1).Text
-                user.Password = LVListadoUsuarios.FocusedItem.SubItems(2).Text
-                user.Sexo = LVListadoUsuarios.FocusedItem.SubItems(3).Text
-                user.FechaNac = Convert.ToDateTime(LVListadoUsuarios.FocusedItem.SubItems(4).Text)
-                user.Rol = LVListadoUsuarios.FocusedItem.SubItems(5).Text
-                user.Id = Convert.ToInt32(LVListadoUsuarios.FocusedItem.SubItems(6).Text)
-                Bool = True
+                If list(index).Email = LVListadoUsuarios.FocusedItem.SubItems(1).Text Then
+                    MessageBox.Show("Estas Logueado con este Usuario", "Alerta")
+                    Bool = False
+                Else
+
+                    user.Username = LVListadoUsuarios.FocusedItem.SubItems(0).Text
+                    user.Email = LVListadoUsuarios.FocusedItem.SubItems(1).Text
+                    user.Password = LVListadoUsuarios.FocusedItem.SubItems(2).Text
+                    user.Sexo = LVListadoUsuarios.FocusedItem.SubItems(3).Text
+                    user.FechaNac = Convert.ToDateTime(LVListadoUsuarios.FocusedItem.SubItems(4).Text)
+                    user.Rol = LVListadoUsuarios.FocusedItem.SubItems(5).Text
+                    user.Id = Convert.ToInt32(LVListadoUsuarios.FocusedItem.SubItems(6).Text)
+                    Bool = True
+                End If
             End If
         Catch ex As Exception
-            MessageBox.Show("error interno", "Alerta")
+            MessageBox.Show("Error interno", "Alerta")
         End Try
         Return Bool
     End Function

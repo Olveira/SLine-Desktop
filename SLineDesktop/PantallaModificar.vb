@@ -50,9 +50,9 @@
             user.Sexo = cbxSexoMod.Text
             user.Rol = CbxRolMod.Text
             If TbxContraseñaMod.Text = "Contraseña" Then
-                MessageBox.Show("No escribiste tu contraseña")
+                MessageBox.Show("No escribiste tu contraseña", "Alerta")
             ElseIf TbxContraseñaMod.Text = "" Then
-                MessageBox.Show("escribi algo")
+                MessageBox.Show("Escribe algo", "Alerta")
             Else
                 user.Password = TbxContraseñaMod.Text
             End If
